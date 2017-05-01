@@ -1,0 +1,3678 @@
+/************************************************
+
+Stylesheet: Main Stylesheet
+
+*************************************************/
+
+/*********************
+LINK / BUTTON STYLES
+*********************/
+a, a:visited {
+	color: $black;
+	// Mobile tap color
+	&:link {
+		//Highlight links on iOS, Similar to :hover for mobile devices.
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+.menu li.active > a {
+	background: none;
+	color: $black;
+	//border-bottom: 2px solid $pink-cl;
+}
+
+.story__header p,
+.story__content p,
+.story__footer p,
+.page__footer__copyright p,
+.archive__header p,
+.collaboration__participant__details p,
+.section__contactblock {
+	a {
+		border-bottom: 2px solid $pink-cl;
+		background-color: transparent;
+		transition: background-color 0.5s;
+		&:hover {
+			color: $body-font-color;
+			background-color: $pink-cl;
+		}
+	}
+}
+
+.page__footer__widgets p a {
+	color: $white;
+	background-color: transparent;
+	&:hover {
+		border-bottom: 2px solid $white;
+	}
+}
+
+.button--large,
+.button--small {
+	@include button;
+	border: 2px solid $black-tandem;
+	text-transform: uppercase;
+	font-weight: $global-weight-semibold;
+	min-width: 5em;
+	max-width: 90%;
+}
+
+.button--share-cta {
+	border: 2px solid $pink-cl;
+	background-color: transparent;
+	transition: background-color 0.5s;
+	&:hover {
+		color: $body-font-color;
+		background-color: $pink-cl;
+	}
+}
+
+.button--small {
+	padding: 0.2 * $global-padding;
+	font-size: $small-font-size;
+}
+
+.emphasisblock--cta button,
+.emphasisblock--cta a.button--small,
+.section__contactblock a.button--small,
+.emphasisblock--cta a.button--large {
+	border-color: $white;
+	&:hover {
+		background-color: $white;
+	}
+}
+
+.widget_nav_menu li {
+	display: block;
+	a, a:visited {
+		display: inline;
+		padding: 0;
+		color: $white;
+		font-weight: $global-weight-semibold;
+	}
+	a:hover {
+		border-bottom: 2px solid $white;
+	}
+}
+
+.footer__contactme,
+.team-member__contactme,
+.participant__contactme {
+	position: relative;
+	svg {
+		height: 2em;
+		max-height: 2em;
+		position: absolute;
+		margin-top: -0.125 * $global-margin;
+	}
+	a {
+		margin-left: 2.25em;
+	}
+}
+
+.footer__contactme {
+	svg path {
+		fill: $white;
+	}
+}
+
+/*********************
+H1, H2, H3, H4, H5 P STYLES
+*********************/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+
+	// Removing text decoration from all headline links
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+
+}
+
+h2, .h2 {
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+	text-transform: uppercase;
+}
+
+/*********************
+CONTENT STYLES
+*********************/
+
+
+figure {
+	margin: 0;
+}
+
+
+ul {
+	margin-left: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+svg image {
+	height: 100%;
+	width: 100%;
+}
+
+.alignleft, img.alignleft {
+	margin-right: 1.5em;
+	display: inline;
+	float: left;
+}
+.alignright, img.alignright {
+	margin-left: 1.5em;
+	display: inline;
+	float: right;
+}
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+}
+
+video, object {
+	max-width: 100%;
+	height: auto;
+}
+
+pre {
+	background: #eee;
+	border: 1px solid #cecece;
+	padding: 10px;
+}
+
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	padding: 5px;
+
+	// Images inside wp-caption
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: 0.85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
+}
+
+// Add Foundation styling to password protect button
+.post-password-form input[type="submit"] {
+	@include button;
+}
+
+/*********************
+IMAGE GALLERY STYLES
+*********************/
+.gallery {
+
+	dl {
+
+		a {}
+
+		img {}
+
+	}
+
+	dt {}
+
+	dd {}
+
+}
+
+// Gallery caption styles
+.gallery-caption {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.top-bar {
+	.title-area {
+		z-index: 1;
+	}
+}
+
+/*********************
+PAGE NAVI STYLES
+*********************/
+.page-navigation {
+	clear: both;
+	text-align: center;
+	margin-top: 1rem;
+	li {
+		padding: 0.5 * $global-padding;
+		margin: 0.5 * $global-margin;
+		display: inline;
+		text-align: center;
+		&.current {
+			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.73989 230.40498"><path fill="#fff" fill-rule="evenodd" d="M22.67 179.2c-.87.25-.57-2.36-1.37-1.04.6.02.7 2.23 1.37 1.03m-6.5-113.9c-.28 0-.4.2-.35.6.27-.1.4-.3.34-.7.48-.1.4-.8.7-1.1.42-.2.7-.5.67-1-1.45-.3-1.46.8-1.37 2m-1.7 3.1c.83.5 1-1.2.33-1.1-.1.2-.1.4-.4.3v.7zm13 119.3c-1.05 0-1.53-1.2-1.02-1.8-.22-1.1-1.3-1.2-1.02-2.8-.83-.2.2 1.5-1.03 1-.2-.7-.9-1-.7-2.1-.2-.5-.6-.8-1.1-1-.2-.5-.5-.9-.7-1.4-.8.1-.4-1-1.1-1-.2-.5-.5-.9-.7-1.4-.3-.6-.8-1.1-1.4-1.4 0-.4-.1-.6-.4-.7.3-1.9-1.1-2.1-1-3.8-.5.1-.5 1 0 1 .1.5-.3.6-.4 1-1 0-.5-1.5-1.1-2.1-.3-1 .6-1 .3-2.1-.3-.3-.6-.5-.7 0 0 .3-.5.2-.7.3 0-1.1-1.5-2 .3-2.1-.3-.3-.2-.9-.7-1-.2-.3-.4-.6-.3-1.1-.7-.2-.9-.9-1.1-1.7-.2.1-.6-.1-.7 0v.3c-.3 0-.4-.4-.7-.4 0-.6-.3-.9-.7-1 0-.5 0-1-.4-1 .1-1.1-.5-1.4-.7-2.1-.5-.1-.1-1-.7-1-.2-.3-.4-.6-.4-1-.2-.8-.9-1-.7-2.1.7-.1 1 0 1 .7.9-.1.7-1.2.7-2.1-.8-.1-1.3.1-1.4.7-.5-.1-.1-1-.7-1 .1-.6-.3-.6-.3-1.1-.2-1.1.2-1.6.3-2.4 0-.6-.3-.9-.7-1.1.1-.7-.2-.9-.3-1.3-1.1.4.3 1.1 0 2-.8.1-.4-1-1.1-1 0-.6-.4-.7-.4-1.4.5 0 1 0 1.1-.4.2-1.1-.9-.9-1-1.7v-1c-.1-.4 0-.6.3-.7 0-.7-1-.5-.7-1.4-1 0 .5 2.6-1 2.1v-3c.2-.2.5-.4 1-.3.2.5.3 0 .7 0 .1-.6-.3-.6-.7-.7-.3-.1-.3-.3-.7-.3.2-2.4-.4-3.9-.7-5.9-.9-.1.3 1.9-1 1.4-.2-.9-.7-1.8.7-1.7-.5-.5-.3-1.5-.3-2.4-.8-.1-.2-1.5-.4-2.1-1.1-.4-.3 1.1-1.4.7-.2-1.4.9-1.4.7-2.8-.8-.1.2 1.5-1 1-.4-.9-.4-2.1-.4-3.4.3-.1.2-.7.6-.7.3-.2.7-.3.7-.7-.1-.4-.6-.9-.7-.4-.4.4-.5.1-1 0-.3-1.3-.4-2.7-.3-4.5 1.3-.6.1 1.5 1 1.3v2c.5.1.6-.3.7-.7v-1.4c.2-1.1-1-.7-.7-1.7-.1-.9.5-1.1.7-1.8 0-1.4 0-2.8-.4-3.8.1-.3-.1-.7 0-1 0-.1.3-.5.3-.4 0-.6-.4-.8-.4-1.4.4-.2.6-.8.7-1.4-.1-.6.4-.7.3-1.4.3-.8.6-1.7.7-2.7 0-.6-.4-.7-.4-1.4-.2-.3-.3-.6-.3-1.1-.6.1-.7-.2-.7-.7 0-1.5.8-.4 1.4-1-.3-2.1.4-3.2.3-5.1-.4.2-.7.5-.7 1.1.1.3-.1.3-.4.3.3.8 1 2.9-.7 2.7 0-.1.2-.6 0-.7v-.7h.4v-2c.3-.8.2-2.1.7-2.8.9-.2-.3 1.7.62 1.4.5-.1.3-.8.4-1.4.3-.1.6-.3 1-.3-.3-.8-.7-2.6 0-3.4.24-1-.6-1-.36-2 .7-.2 1.1-.7 1.7-1.04-.4-1.25.9-.95.7-2-.1-.46-.7-.4-.7 0-.4-.1-.3-.65-.3-1.06V82c.2-1.1.6-2.1 1-3.1 1 .6.3.9.3 2.06-.1.47-.6.56-.7 1.05v1.4c.4 0 .3-.4.4-.7.3.1.4-.1.4-.3 0-.5 0-1 .4-1 .3-.8.7-1.3.7-2.4.4-.1.3-.7.7-.7.1-.3.4-.3.4-.7.7 0 .3-1.1 1-1-.2-1.3.7-1.3.7-2.4.9-.1.6-1.4 1.4-1.7 0-.5-.1-1 .3-1V69c1-.04.5-1.6 1.8-1.35.3-1.15.5-2.43 1.1-3.4v-2.4c.4-.47 1.63-.14 1.7-1.02.62-.14.6-.97 1.7-.7-.17-.52-1.1-.27-.7-1.35.5 0 1-.08 1.02.32.8.1.4-1 1-1 .2-.5.6-.84 1.1-1.03-.07-.6.4-.7.32-1.37.7-.1.7-.92 1.4-1.02-.25-.9.7-.65 1-1.02-.3-1.67 1.5-1.26 1-3.1 1.06.4 1.2.1 2.1-.35-.2-.3.3-.3.3-.3.1-.2-.6-.8-.3-1.3.36 0 .3-.4.37-.7.3.1.3-.1.3-.3.4 0 .3-.6.3-1 .7-.1.6-.9 1.3-1 0-1 0-1.9 1.1-1.7.1.6-.3.6-.3 1.1.8.1.4-1 1-1 .4-.3.1-1.2 1-1 .5-.1-.1-.4 0-1 .45-.4.5-.1 1 0 .6-.3.6-1.2 1.4-1.3.3-.6.74-1.1 1.34-1.4.2-.7.7-1.1 1-1.7.4-.1.26-.7.7-.7.2-.3.4-.5.36-1 .8-.1.7-1.2 1.7-1 .1-.6.3-1.1.7-1.4.2-.8-.6-.7-.3-1.7.6-.1.7.3.7.7.9.1 1.1-.5 1.4-1 .4-.1.2-.7.7-.7.22 0 .3-.3.7-.3-.2-.4-.68-.5-.7-1V28c.3 0 .2-.45.3-.7h.7c.3 0 .3-.4.3-.7.3.06.3-.14.35-.35.3 0 .3-.3.7-.3-.1 0 .1.36.3.37h.4c0-.6-.4-.77-.4-1.4.5-.05 1.3.15 1.3-.36.5 0 1 .05 1.1-.35.5 0 1.3-.2 1.3.3.5-.2.8-.5 1-1h2c.3 0 .3-.4.3-.6.3.1.4-.1.4-.3.3-.1.6-.3.7-.6 1.2-.1 1.9-.9 2.4-1.7.3.1.37.4.7.3.6-.3 1.06-.7 1.37-1.3H59c.3 0 .2-.4.3-.7.3.1.3-.1.3-.3.4-.1.3-.6.3-1h1.4c.9-.4 1.7-.8 2.1-1.7h1.05c.8-.1.65-1.2 1.7-1 .3-.6 1.3-.6 1.4-1.4.4 0 .6.1.7.4.5-.2.85-.5 1.04-1 1 .3 1.2-.3 2-.3.4-.1.7-.4.7-1h1c.6-.3 1.1-.8 1.4-1.4.3-.1.7.2 1 0 .2-.1.2-.6.3-.7.1 0 .6.1.7 0 0 0-.1-.3 0-.3.3-.1.7.1 1 0 .7-.2.6-1 1.7-.7 0-.4.6-.3 1-.3 0-.3.4-.3.7-.3.1-.4.7-.2.7-.7h1c-.2-.9 1.6.3 1.4-.7h2c.9-.4 1.7-1 3.1-1 .6-.1.6-1 1.7-.7.4-.4.1-.5 0-1-.1-.6.3-.6.3-1 .7-.2.6.5.7 1 .5.1.5-.4 1-.4 1-.4-1.3-.3-.7-1.4h2c.7-.1.6-.9 1.3-1H98c.9-.1.8.6 1.7.3.8-.1.9.3 1.4.4 3.6-.2 5.8.9 9.3.7 1.7.3 3.1.8 5.2.7.6-.1.6.3 1.1.3 3.3-.1 5.4.8 8.6.7.6-.1.6.3 1.1.4h2.7c2.3.6 4.8 1 7.6 1 .6-.1.6.3 1 .3h3.1c.6-.1.6.3 1.1.4 3.4-.1 5.6.8 8.9.7.8 0 1 .6 2.1.3.3.2.5.4 1 .4.4 0 .6.1.7.4.2.1.5 0 .7 0 .3.1.1.3.3.4.1.1.6-.1.7 0 .6.2 1.3.2 2.1.4.1.7 1.2.2 1.1 1 1.1-.2 1.3.6 2.4.4.1.3.5.2.7.3.3.9 1.6.7 1.7 1.7.8.4 1.4 1 2.1 1.4 0 .7 1 .5.7 1.4.5.2.9.6 1 1.1 1.4.4 1.8 1.7 3.1 2.1 0 .7 1 .5.7 1.4.5.2.9.5 1.4.7.1.4.4.7 1 .7.3.9 1.4 1.2 1.7 2.1 1-.3.9.5 1.7.3.2.3.3.6.7.7.1.4.7.2.7.7 1.1-.2.7 1 1.7.7.4.7 1 1.3 1.4 2.1.7-.1.9.3 1.4.4.1.4.7.3.7.7 1 .1 1.5.7 2.4.7.3.8 1.1 1 1.7 1.4.4.6 1.3.6 1.4 1.4.6 0 .8.5 1.4.4.5.2.5.6 1 .7-.1 1.8.6 2.7 1.1 3.8.8.1.7-.6 1.7-.3-.3 1.3.8 1.2 1 2.1.36 0 .2.6.67.6.2.3.34.6.33 1 .3.6.78 1.1 1.4 1.4-.1 1 .75 1.1.66 2.1.1.5.6.6.7 1.1.3 0 .27.4.35.7.3-.02.3.1.3.38.4.2.7.5.7 1.1.4.16.7.45.7 1.04 1 .1.8 1.5 1.7 1.7-.2 1.2 1.2.8 1.1 2.1.5.3 1.3.3 1.7.7 0 .6.4.7.4 1.3.3.1.2.7.7.7-.2 1.1.9.9 1 1.7.3.6.8 1 1 1.7.7.2.9.9 1 1.7.5.1.5.6 1 .7.6-.1.6.3 1.1.3v1c.3.7.7 1.37 1 2.07 0 .6.3.9.7 1 0 .5 0 1 .4 1.05.3.3.2.9.7 1 .2.3.4.6.4 1 .5 0 .1 1 .7 1 .1.3.3.6.7.7V71c0 .6 1.1.2 1 1 .1.4.6.5.7 1 .4.8 1.2 1.1 1 2.4.3.6.8 1 1 1.7.3.6.9 1 1.1 1.7.7 1 .8 2.5 1.3 3.7v2.4c0 .4.1.6.4.7 0 .4.1.6.4.7-.2.8-.4 1.5-.3 2.7.1.8.4 1.5 1.1 1.7 0 .8 0 1.6.7 1.7-.1.8.1 1.3.4 1.7v2c-.05.6.4.72.3 1.37.5.1.1 1.04.7 1.04 0 .9 0 1.7.4 2.1-.3 1.3-.5 2.5-.4 4.1 0 .5 1 .2 1 .7.4.1.2.7.7.7-.4 1.4-.4 3-.4 4.8 0 .9.53 1.1.7 1.8v2.4c-.1.6.3.6.33 1.08.1 1.16-.24 2.78.37 3.4.3 1.1-.6 1.08-.7 1.7-.3.96.7.7.7 1.4-.2 1.6.6 2.36.3 4.1.3.95-.6.7-.7 1.4 0 .54.4.58.4 1 .3.95-.6.7-.7 1.38-.4.1-.1 1.04-.6 1.04-.1 1-.57 1.8-1 2.4-.2.9.6.8.3 1.7-.4.1-.3.7-.3 1.1-.4.1-.3.7-.4 1.1-.4 0-.6.1-.7.4.1.3-.1.4-.3.4v1.4c-.1.5-.1 1 .3 1.1-.3.3-.4.8-.4 1.4-.2 1-.5 1.8-.7 2.8-.45.1-.3.9-.3 1.4-.4.1-.3.6-.3 1-.8.1-.75 1.1-1.4 1.4v2.1c-.3 0-.2.4-.3.7-.3-.1-.3.1-.3.4-.3 0-.3.4-.3.7-.3 0-.4.2-.4.4-.3.3-.4.8-.4 1.4-.3.1-.2.7-.7.7 0 .6.5.7.4 1.4-.4.1-.5.6-1 .7-.3.2-.2.9-.7 1l-1.03 2c-.1.7.2.9.4 1.4-.1 1.2-.9 1.7-.7 3.1-.5.3-.6.8-.7 1.4-.8.3-.9 1.2-1.7 1.4.1 1.6-1.2 1.8-1.1 3.4-.8-.1-.4 1-1 1 .1.8-.63.8-.35 1.7-.8-.1-.4 1-1.1 1.1-.2.3-.3.8-.3 1.4-.7.4-1.3 1-1.7 1.7-1.2-.2-.9 1.2-2.1 1 0 .6-.2 1.1-.6 1.3-.5.1-.54.6-1 .7.1.9-.6.8-.3 1.7-.6.3-1.2.7-1 1.7-.6.4-1.1.8-1.4 1.4-.3.6-.9 1-1.1 1.8-.5.2-.8.5-1 1-.9-.3-.67.7-1.04 1H199c-.3.7-1.1 1-1.07 2-1 .3-1.7 1-2.03 2.1-.6-.1-.7.4-1.38.3.2 1-.6 1-.36 2-.5.2-.9.5-1.4.7.26 1-.7.7-.7 1.4-.7.2-1.1.7-1.7 1.1-.32 0-.3.45-.33.7-.3-.05-.3.15-.3.36-.6 0-.9.24-1 .7-.72.4-1.34.9-2.06 1.35-1.6 1.1-2.6 2.7-4.18 3.8.3 1-.5.9-.4 1.7-1 .1-1.3.8-1.7 1.4-.6.3-1.1.8-1.4 1.4-.9-.2-.7.7-1.4.7s-.5.98-1.4.7c-.2.87.6.8.3 1.7-.6.3-1.1.8-1.4 1.4h-1.4c-.3.17-.6.3-.7.7-.4-.1-.6.08-.7.3-1.1-.2-1 .6-2.1.38-.1.7-1.3.3-1.4 1-1.4.2-2.2 1-3.8 1-.7.5-1.8.5-2.1 1.4-.6 0-1.3-.2-1.4.3-.3.2-.8.3-1.4.3-.9.3-1.4.9-2.4 1-.9.3-1.5.8-2.8.7-.1.5-1.1.1-1.1.7-.6-.1-.7.4-1.4.3-.6.3-1 .8-1.7 1-.1.8-1.1.8-1.4 1.4h-2.1c-.3.3-1 .2-1 .7-.5 0-1-.05-1.1.35-.5 0-1.3-.13-1.4.38-.5 0-1-.1-1 .3-3.5-.1-5.7 1.1-8.9 1.3-.6-.1-.6.3-1 .3-.1.4-.7.2-.7.7-.4-.4-1.2-.4-2.1-.3-.3-.1-.6 0-.6.3-.4-.1-.6.08-.7.3-.9 0-2-.1-2.4.3H124c-.55-.1-.6.4-1 .4h-3c-.5-.1-.97-.1-1.03.3-.8-.1-1.3-.5-2.4-.3-2.45.6-5.92.26-8.9.36-.4.1-.6 0-.7-.3-.4.1-.6-.1-.67-.3-1.4.1-2.2-.4-3.1-.7h-2.4c-1 .1-1.05-.8-2.05-.7-.44-.5-1.62-.2-2.06-.7-1.9.04-3.3-.4-4.8-.7-1.1-.2-1.3.4-2.1.4-.8-.1-1.3-.6-2.4-.4-.6 0-.9-.3-1-.7-.5 0-1 .04-1.1-.3h-1.7c-.1-.5-1-.1-1.1-.7h-1.7c-1 .2-.7-.7-1.4-.7-.7-.1-1.2-.2-1.4-.7h-1.7c-.1-.6-.6-.8-1.4-.7-.1-.4-.9-.27-1.4-.3 0-.37-.4-.3-.7-.4-.3 0-.4-.3-.7-.3-.3-.3-.8-.4-1.4-.4-.1-.5-.6-.5-.7-1-.9.07-1.4-.2-2.1-.7-.1 0-.3.1-.4 0-.1 0 0-.3 0-.3-.5-.23-.9-.1-1.4-.4-.2-.1 0-.3-.4-.3-.3 0-.3-.4-.7-.3-.3-.9-2-.3-2.1-1.4-1.1 0-1.2-.9-2.4-.7-.3-.5-.5-1.1-1.4-1 .1-.4-.5-.14-.7-.3 0 0 .1-.3 0-.3-.3-.1-.7.07-1 0-.5-.85-1.2-1.6-2.4-1.7-.2-.5-.5-.84-1-1 .1-.8-1-.4-1.1-1.1-1.3.28-1.6-.4-2.7-.33-.1-.4-.7-.26-.7-.7-.3-.2-.6-.4-1-.4.1-.8-.1-1.3-.7-1.4-.2-.5-.5-.9-.7-1.4H46c-.6-1.13-2-1.44-2.1-3.1-.3-.23-.78-.33-1.38-.3.1-.6-.3-.64-.7-.7-.27-.3-.38-.8-.35-1.4-1-.23-.9-1.6-2.4-1.34-.03-.3-.3-.35-.3-.7.37 0 .3-.4.4-.7-.28-.2-.57-.34-1.04-.33-.4.1-.6-.1-.7-.3-.24-1.2.7-.6 1-.4.1-.6-.3-.6-.33-1.07 0-.3-.42-.3-.7-.3v.7c-.6-.3-1.2-.6-1-1.7-1.1.3-1.05-.53-1.7-.7-1.05.3-.65-.9-1.7-.66.13-.84-.64-.76-.35-1.7-.3-.2-.6-.4-.7 0-.54.1-.58-.3-1-.35-.28-1 .5-.9.35-1.7-.07-.4-.64-.3-1.04-.36h-1c-.2-.4-.5-.7-1.08-.7.4-1.22-.83-.92-.66-2-.3-.1-.4-.4-.7-.4.2.3.35.6.3 1" class="circle"/></svg>');
+			background-repeat: no-repeat;
+			background-position: 40% center;
+		}
+	}
+}
+
+
+.section__slice p,
+.story__editorialintro p {
+	@include breakpoint( small ) {
+		font-size: 0.8 * $body-font-size;
+	}
+	@include breakpoint( medium ) {
+		font-size: 0.95 * $body-font-size;
+	}
+	@include breakpoint( large ) {
+		font-size: $body-font-size;
+	}
+}
+
+cite {
+	font-size: $global-font-size;
+	color: $black;
+}
+
+figcaption,
+caption {
+	margin-top: $caption-margin;
+	font-size: $small-font-size;
+	color: $gray;
+}
+
+.section--coloured figcaption,
+.section--coloured caption {
+	color: $black;
+}
+
+/*********************
+BANNER STYLES
+*********************/
+
+#header {
+	width: 100%;
+	background-color: $white;
+}
+
+.inner-header {
+	position: fixed;
+	width: 100%;
+	height: 3.6rem;
+	z-index: 9997;
+}
+
+#main {
+	background-color: $sandbox-cl;
+	padding-top: 5.6em;
+}
+
+.main-inner {
+	min-height: calc(100vh - 410px);
+}
+
+.page:not(.home) .main-inner,
+.single-story .main-inner,
+.single-participant .main-inner {
+	max-width: 1170px;
+	background: $white;
+	margin: 0 auto;
+	position: relative;
+}
+
+@include breakpoint( medium ) {
+	.single .inner-header,
+	.page-child .inner-header {
+		position: relative;
+	}
+	.single #main,
+	.page-child #main {
+		padding-top: 2em;
+	}
+}
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+nav.top-bar {
+	height: 100%;
+	padding: 0;
+	position: relative;
+	background: $white;
+}
+
+#responsive-menu {
+	width: 100%;
+	background-color: $white;
+	border-bottom: 1px solid transparentize( $light-gray, 0.6 );
+	@include breakpoint( small ) {
+		position: absolute;
+		left: 0;
+		top: 3.6rem;
+		height: 100vh;
+		ul#menu-main-menu-left,
+		ul#menu-main-menu-right {
+			display: none;
+		}
+		ul#menu-mobile-menu {
+			display: block;
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			float: none;
+			background-color: $white;
+			li {
+				display: block;
+				background-color: $white;
+				width: 100%;
+				float: none;
+				a {
+					display: block;
+					height: 100%;
+					width: 100%;
+					text-align: center;
+					padding: $global-padding;
+				}
+				&:hover,
+				&:active {
+					background: $pink-cl;
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	@include breakpoint( large ) {
+		height: auto;
+		top: 0;
+		ul#menu-mobile-menu {
+			display: none;
+		}
+		ul#menu-main-menu-left,
+		ul#menu-main-menu-right {
+			width: 50%;
+			display: block;
+			float: left;
+			box-sizing: border-box;
+			background-color: $white;
+			li {
+				display: inline-block;
+				padding: 0;
+				text-align: center;
+				width: auto;
+				border-bottom: 2px solid $white;
+				a {
+					direction: ltr;
+					text-align: center;
+					font-size: $global-font-size;
+					display: block;
+					padding: 1.25 * $global-padding 0.5 * $global-padding;
+				}
+				&:hover {
+					background-color: $white;
+					a {
+						color: $black;
+					}
+				}
+				&.current-menu-item,
+				&.current-page-ancestor {
+					border-bottom-color: $pink-cl;
+				}
+			}
+
+		}
+		ul#menu-main-menu-right {
+			padding-left: 5em;
+			li {
+			}
+		}
+		ul#menu-main-menu-left {
+			padding-right: 5em;
+			text-align: right;
+			li {
+				direction: rtl;
+			}
+		}
+	}
+}
+
+.top-bar__center {
+	background-color: $white;
+	@include breakpoint( small ) {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		margin: auto;
+		border-bottom: 1px solid transparentize( $light-gray, 0.6 );
+		a {
+			display: block;
+			float: left;
+			max-width: 10em;
+			margin: auto;
+			width: 100%;
+			height: 100%;
+			line-height:0;
+			text-align: center;
+			box-sizing: border-box;
+			svg {
+				width: 80%;
+				height: 2.15em;
+				margin: 0.75em auto;
+			}
+		}
+		.menu-toggle {
+			display: block;
+			float: right;
+			padding: 0.75 * $global-padding;
+		}
+	}
+	@include breakpoint( large ) {
+		border-bottom: 0;
+		width: 10em;
+		float: none;
+		left: 50%;
+		margin-left: -5em;
+		z-index: 2;
+		a {
+			width: 100%;
+			line-height: 0;
+		}
+		.menu-toggle {
+			display: none;
+		}
+	}
+}
+
+.top-bar__search {
+	display: none;
+}
+
+.breadcrumbs-bar-inner {
+	background-color: $white;
+	position: fixed;
+	z-index: 9998;
+	width: 100%;
+	top: -5em;
+	left: 0;
+	transition: top 0.5s;
+	border-bottom: 1px solid transparentize( $light-gray, 0.6 );
+}
+
+.breadcrumbs-bar__logo {
+	width: 10em;
+	height: 100%;
+	position: absolute;
+	top: 0;
+    left: 0;
+	a {
+		display: block;
+		width: 10em;
+		height: 100%;
+		line-height:0;
+		vertical-align: middle;
+		text-align: center;
+		box-sizing: border-box;
+		svg {
+				width: 80%;
+				height: 2.15em;
+				margin: 0.75em auto;
+		}
+	}
+}
+
+.breadcrumbs-bar__path {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	ol {
+		margin: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	li {
+		text-align: left;
+		height: 100%;
+		display: inline-block;
+		margin-right: 0.75em;
+		padding: $global-padding 0;
+		a:hover {
+			color: $black;
+		}
+	}
+	li > svg {
+		width: 1em;
+		height: 0.8em;
+	}
+}
+
+.breadcrumbs-bar {
+	position: relative;
+	width: 100%;
+	height: auto;
+	@include breakpoint( small ) {
+		display: none;
+	}
+	@include breakpoint( medium ) {
+		display: block;
+		&.scrolled {
+			.breadcrumbs-bar-inner {
+				top: 0;
+				transition: top 0.5s;
+			}
+		}
+		.breadcrumbs-bar__path {
+			ol {
+				width: 100%;
+				padding: 0 0 0 25%;
+				font-size: $small-font-size;
+			}
+		}
+	}
+	@include breakpoint( large ) {
+		.breadcrumbs-bar__path {
+			text-align: center;
+			ol {
+				padding: 0 0 0 10%;
+				font-size: inherit;
+			}
+		}
+	}
+	@include breakpoint( xlarge ) {
+		.breadcrumbs-bar__path {
+			ol {
+				padding: 0%;
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+/*********************
+ARTICLE STYLES
+*********************/
+
+// Rows (max 1200px);
+.story__header__introduction,
+.archive__header__introduction,
+.collaboration__header,
+.section-inner,
+.archive__interface-inner {
+	@include grid-row;
+}
+
+// Sections need
+.section-inner,
+.search .archive__interface-inner {
+	padding-bottom: 2 * $global-padding;
+	padding-top: 2 * $global-padding;
+}
+
+// Readable-width columns
+.story__editorialintro,
+.story__title-wrapper,
+.story__intro,
+.story__footer__byline,
+.section__slice:not(.simplegrid),
+.section--has_form .section-inner > div,
+.story__meta-wrapper,
+.archive__title-wrapper {
+	@include grid-column();
+	@include breakpoint( small ) {
+		@include grid-column( 95% );
+		@include grid-column-position(center);
+	}
+	@include breakpoint( medium ) {
+		@include grid-column( 85% );
+		@include grid-column-position(center);
+	}
+	@include breakpoint( large ) {
+		@include grid-column( 66.666667% );
+		@include grid-column-position(center);
+	}
+	@include breakpoint( xlarge ) {
+		@include grid-column( 60% );
+		@include grid-column-position(center);
+	}
+}
+
+// Readable width columns
+.story__editorialintro,
+.story__title-wrapper,
+.story__intro,
+.story__footer__byline,
+.section--has_gravity_forms .section-inner > div,
+.story__meta-wrapper,
+.archive__title-wrapper {
+	margin-bottom: 2 * $global-margin;
+	margin-top: 2 * $global-margin;
+	clear: both;
+}
+
+.page__footer__widgets-inner,
+.section__slice.section__imageduo,
+.section__simplemap.simplemap--wide {
+	@include grid-column(12);
+	@include breakpoint( small ) {
+		@include grid-column-collapse();
+		@include grid-column-position(center);
+	}
+	@include breakpoint( medium ) {
+		@include grid-column( 95% );
+		@include grid-column-position(center);
+	}
+}
+
+@include breakpoint( large ) {
+	.section--has_grid .section__slice.section__simplegrid {
+		width: 100%;
+	}
+}
+
+.section__featuredgrid {
+	@include grid-column();
+	@include grid-column( 12 );
+	@include breakpoint( small ) {
+		@include grid-column-collapse();
+		@include grid-column-position(center);
+	}
+	@include breakpoint( medium ) {
+		@include grid-column( 95% );
+		@include grid-column-position(center);
+	}
+	overflow: hidden;
+}
+
+.story__section.section--has_contact_details {
+	max-width: inherit;
+}
+
+.focus img {
+	transition: visibility .2s, opacity 2.4s;
+}
+
+
+/*********************
+SECTION STYLES
+*********************/
+
+.section--custom-colour {
+	background-color: $white !important;
+	svg polygon {
+		fill: $white !important;
+	}
+}
+
+.section--blue-1-web,
+.section--blue-1-web .section__imageduo {
+	background-color: $blue-1-web;
+}
+
+.section--blue-2-web {
+	background-color: $blue-2-web;
+}
+
+.section--yellow-1-web,
+.section--yellow-1-web .section__imageduo {
+	background-color: $yellow-1-web;
+}
+
+.section--yellow-2-web {
+	background-color: $yellow-2;
+}
+
+.section--sandbox,
+.section--sandbox .section__imageduo {
+	background-color: $sandbox-cl;
+}
+
+.page__footer__widgets > svg,
+.section--coloured > svg {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	top: -19px;
+	&.section__edge--bottom {
+		top: 20px;
+	}
+}
+
+// Remove top-padding for first section in the story.
+.story__section:first-child .section-inner,
+.home .section--featured-grid .section-inner {
+	padding-top: 0;
+}
+
+// Add top margin if the first section is coloured.
+.story__section:first-child.section--coloured {
+	margin-top: 2 * $global-margin;
+}
+
+// Remove bottom-padding from the last section in the story and coloured sections
+.story__section:last-child .section-inner,
+.story__section:last-child.section--coloured {
+	padding-bottom: 0;
+}
+
+.story__section:last-child.section--coloured > .section-inner:first-of-type {
+	padding-bottom: 2 * $global-padding;
+}
+
+.footer__section {
+	margin: 2 * $global-margin auto;
+	.section-inner {
+		padding: 0;
+	}
+	&:first-of-type {
+		.section-inner {
+			padding-top: 2 * $global-padding;
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+		.section-inner {
+		padding-bottom: 4 * $global-padding;
+		}
+	}
+	&.section--coloured {
+		margin-top: 4 * $global-margin;
+	}
+}
+
+.footer__section,
+.search .archive__interface,
+.home .story__section:last-child {
+	svg.section__edge--bottom {
+		display: none;
+	}
+}
+
+.archive__footer__section:first-of-type {
+	.section-inner {
+		padding-top: 2 * $global-padding;
+	}
+}
+
+.section--coloured + .section--coloured {
+	svg.section__edge--top {
+		display: none;
+	}
+}
+
+.post-it-bg {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: rotate(0.75deg);
+	border-width: 1px;
+	border-top-width: 0;
+	border-style: solid;
+}
+
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
+/***************
+Pattern styles
+***************/
+
+.section__slice {
+	margin: 4 * $global-margin 0 2 * $global-margin;
+}
+
+.section__slice p,
+.section__slice li {
+	font-weight: $global-weight-normal;
+	line-height: $paragraph-lineheight;
+	hyphens: none;
+}
+
+/* Remove top margin for the first element in the first section,
+ * unless it's a sectionheader or a paragraph. */
+.story__section:first-child:not(.section--coloured),
+.story__section {
+	.section__slice:first-child {
+		margin-top: 2 * $global-margin;
+	}
+}
+
+/* Remove top margin for the first element in a coloured section
+ * unless it's in the first section */
+.story__section.section--coloured:not(:first-child) {
+	.section__slice:first-child {
+		margin-top: 0;
+	}
+}
+
+/* Remove top margin for the last element in a section
+ * unless it's in the first section */
+.story__section.section--coloured .section__slice:last-child {
+	margin-bottom: 0;
+}
+
+/***************
+Pattern 1. Title
+****************/
+
+.story__title-wrapper,
+.archive__title-wrapper {
+	margin-top: 4 * $global-margin;
+}
+
+.search .archive__title-wrapper {
+	margin-bottom: 4 * $global-margin;
+}
+
+.page .story__title-wrapper,
+.single-story .story__title-wrapper,
+.single-participant .story__title-wrapper,
+.archive .story__title-wrapper,
+.archive__title-wrapper {
+	text-align: center;
+}
+
+.page .story__title-wrapper,
+.single-story .story__title-wrapper,
+.single-participant .story__title-wrapper {
+	@include breakpoint( large ) {
+		text-align: left;
+	}
+}
+
+
+/*****************
+Pattern 2. Bylines
+******************/
+
+// Remove byline top padding if the first footer section is a byline
+.footer__section:first-child.section--byline {
+	margin-top: 0;
+	.section-inner {
+		padding-top: 0;
+	}
+}
+
+.story__footer__byline {
+	font-size: $lead-font-size;
+	line-height: $lead-lineheight;
+	font-style: italic;
+}
+
+/********************************
+Pattern 3. Editorial introduction
+*********************************/
+
+.story__editorialintro {
+	font-size: $lead-font-size;
+	line-height: $lead-lineheight;
+	float: none !important;
+}
+
+.page .story__editorialintro,
+.archive .story__editorialintro {
+	font-style: normal;
+ }
+
+/******************
+Pattern 4. Tag list
+******************/
+
+.story__meta__item--tags ol,
+.griditem__tags ol {
+	list-style: none;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.griditem__tags ol li,
+.collaboration__tags ol li,
+.story__meta__item--tags ol li {
+	display: inline-block;
+	margin: 0.5 * $global-margin 0.5 * $global-margin 0 0;
+	&:first-of-type {
+		margin-left: 0;
+	}
+}
+
+.tag,
+.collaboration__tag,
+.griditem__tag,
+.story__meta__tag {
+	@include label;
+	font-weight: $global-weight-bold;
+	border: 1px solid $pink-cl;
+	&[href] {
+		cursor: pointer;
+	}
+	&[href]:hover {
+		color: $white;
+	}
+	&.lab {
+		border-color: $orange-cl;
+		&[href]:hover {
+			background-color: $orange-cl;
+		}
+	}
+	&.topic {
+		border-color: $green-cl;
+		&[href]:hover {
+			background-color: $green-cl;
+		}
+	}
+	&.discipline {
+		border-color: $purple-cl;
+		&[href]:hover {
+			background-color: $purple-cl;
+		}
+	}
+	&.language,
+	&.resource {
+		border-color: $yellow-cl;
+		&[href]:hover {
+			background-color: $yellow-cl;
+		}
+	}
+	&.location {
+		border-color: $blue-cl;
+		&[href]:hover {
+			background-color: $blue-cl;
+		}
+	}
+}
+
+.griditem__tag.category {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.collaboration__header .collaboration__tag {
+	color: $black;
+	border-color: $white;
+	&[href]:hover {
+		background-color: $white;
+		color: $black;
+	}
+}
+
+/****************************
+Pattern 5. Hero / cover image
+*****************************/
+
+.story__header__image-wrapper,
+.story__header__lowres-image-wrapper {
+	position: relative;
+	.story__header__image {
+		overflow: hidden;
+		font-size: inherit;
+		img {
+			max-width: 100%;
+			height: auto !important;
+			width: auto;
+			-ms-interpolation-mode: bicubic;
+		}
+	}
+	.image__caption {
+		position: absolute;
+		width: 100%;
+		// z-index: 20;
+		text-align: right;
+		padding-right: $global-padding;
+	}
+}
+
+
+/*********************
+Pattern 6. Paragraph
+*********************/
+
+// Remove top margin for the first paragraph in the first section
+.story__section:first-child:not(.section--coloured) {
+	.section__slice:first-child.section__paragraph {
+		margin-top: 0
+	}
+}
+
+/* Reduce top margin from the first paragraph section slice after a header,
+ * image, duo-image */
+
+.section__sectionheader + .section__paragraph,
+.section__image + .section__paragraph {
+	margin-top: 2 * $global-margin;
+}
+
+
+// Remove margin almost completely if the header is a subheader.
+.section__subheader + .section__paragraph {
+	margin-top: 0.5 * $global-margin;
+}
+
+// Remove the last paragraph's margin in the last section slice
+.section__slice:last-child.section__paragraph p:last-of-type {
+	margin-bottom: 0;
+}
+
+.translatedparagraph__paragraph {
+	display: none;
+	&.show {
+		display: block;
+	}
+}
+
+.translatedparagraph__translation-select-wrapper {
+	text-align: center;
+}
+
+.translatedparagraph--has_translations select {
+	margin: $global-margin auto;
+}
+
+/********************
+Pattern 7a Subheader
+********************/
+
+.section__subheader {
+	margin-bottom: 0;
+}
+
+// Reduce subheader's top-margin {
+.section__subheader {
+	margin-top: 2 * $global-margin;
+}
+
+/************************
+Pattern 7b Sectionheader
+************************/
+
+.section__slice.sectionheader {
+	margin-bottom: 0;
+}
+
+.relatedgrid__sectionheader {
+	text-align: center;
+}
+
+// Reduce top margin for the first header in a section.
+.section__slice:first-child.section__sectionheader {
+	margin-top: 2 * $global-margin;
+}
+
+.footer__section .sectionheader {
+	margin-top: 2 * $global-margin;
+}
+
+h3.share-cta-header,
+.section__sectionheader h3,
+.sectionheader--grid_header h3,
+.relatedgrid__sectionheader h3 {
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 auto 2 * $global-margin;
+	font-weight: $global-weight-semibold;
+}
+
+.sectionheader--taped_header {
+	text-align: center;
+	.sectionheader-inner {
+		display: inline-block;
+		height: auto;
+		position: relative;
+		padding: 0 1.5em;
+
+	}
+	h4 {
+		position: relative;
+		display: block;
+		margin: 0;
+		z-index: 1;
+		font-size: $lead-font-size;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		text-align: center;
+		padding: 0.25em;
+	}
+	svg {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.sectionheader--decorated_header {
+	text-align: center;
+	h4 {
+		position: relative;
+		display: inline-block;
+		min-width: 6em;
+	}
+	span {
+		position: relative;
+		z-index: 3;
+	}
+	.sectionheader__decoration {
+		position: absolute;
+		z-index: 2;
+		height: 6em;
+		top: -4em;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+	}
+	@include breakpoint( small ) {
+		.sectionheader__decoration {
+			&.sectionheader__decoration--pink-cl {
+				background-image: url( '../images/png/CL_Default_Bubble_simple.png');
+			}
+			&.sectionheader__decoration--green-cl {
+				background-image: url( '../images/png/CL_Urban_Transformation_Bubble_simple.png');
+			}
+			&.sectionheader__decoration--purple-cl {
+				background-image: url( '../images/png/CL_Culture_and_Arts_Bubble_simple.png');
+			}
+			&.sectionheader__decoration--yellow-cl {
+				background-image: url( '../images/png/CL_Inclusion_Bubble_simple.png');
+			}
+			&.sectionheader__decoration--blue-cl {
+				background-image: url( '../images/png/CL_Education_Bubble_simple.png');
+			}
+			&.sectionheader__decoration--orange-cl {
+				background-image: url( '../images/png/CL_Democracy_Bubble_simple.png');
+			}
+		}
+	}
+	@include breakpoint( medium ) {
+		&.sectionheader--left .sectionheader__decoration {
+ 			left: 0;
+			transform: translateX( -3em );
+		}
+		&.sectionheader--right .sectionheader__decoration {
+	 		right: 0;
+			transform: translateX( 3em );
+		}
+		.sectionheader__decoration {
+			position: absolute;
+			z-index: 2;
+			height: 6em;
+			width: 6em;
+			top: -2.5em;
+			&.sectionheader__decoration--pink-cl {
+				background-image: url( '../images/png/CL_Default_Bubble.png');
+			}
+			&.sectionheader__decoration--green-cl {
+				background-image: url( '../images/png/CL_Urban_Transformation_Bubble.png');
+			}
+			&.sectionheader__decoration--purple-cl {
+				background-image: url( '../images/png/CL_Culture_and_Arts_Bubble.png');
+			}
+			&.sectionheader__decoration--yellow-cl {
+				background-image: url( '../images/png/CL_Inclusion_Bubble.png');
+			}
+			&.sectionheader__decoration--blue-cl {
+				background-image: url( '../images/png/CL_Education_Bubble.png');
+			}
+			&.sectionheader__decoration--orange-cl {
+				background-image: url( '../images/png/CL_Democracy_Bubble.png');
+			}
+		}
+	}
+}
+
+
+
+
+.sectionheader__text--white {
+	color: $white;
+}
+
+
+/************************
+Pattern 8. Embedded Video
+*************************/
+
+/* https://www.advancedcustomfields.com/resources/oembed/ */
+
+.flex-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/****************
+Pattern 9. Image
+****************/
+
+.section__paragraph + .section__image {
+	margin-top: 2 * $global-margin;
+}
+
+.section__image--programme-logo {
+	width: 50%;
+	max-width: 17.5em;
+	margin: auto;
+}
+
+.section__imageduo,
+.section__simplemap.simplemap--wide,
+.collaboration__simplemap {
+	background-color: $white;
+	z-index: 10;
+	position: relative;
+	z-index: 10;
+	padding: $global-padding;
+}
+
+.imageduo__wrapper {
+	@include grid-row;
+	@include breakpoint( medium ) {
+		@include grid-row-nest;
+	}
+}
+
+.imageduo__image {
+	@include grid-column;
+	@include grid-column-collapse;
+	@include breakpoint( small ) {
+		margin-bottom: 2*$global-margin;
+		@include grid-column( 12 );
+		@include grid-column-uncollapse;
+ 	}
+	@include breakpoint( medium ) {
+		@include grid-column( 6 );
+		&.image--landscape.image--right {
+		@include grid-column( 5 );
+		@include grid-col-end();
+		}
+		&.image--portrait.image--right {
+			@include grid-column( 5 );
+			@include grid-col-end();
+		}
+		&.image--landscape.image--left {
+			@include grid-column( 5 );
+			@include grid-column-offset( 1 );
+		}
+		&.image--portrait.image--left {
+			@include grid-column( 5 );
+			@include grid-column-offset( 1 );
+		}
+	}
+}
+
+.image__placeholder {
+  background-color: $white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.griditem__pattern__image .image__placeholder {
+	background: none;
+}
+
+.image--main {
+	visibility: hidden;
+	opacity: 0;
+}
+.contactblock__image {
+	.image--main {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.image--main.lazyload,
+.image--main.lazyloading,
+.image--main.lazyloaded + .image__placeholder__thumb,
+.no-js .image__placeholder__thumb {
+	opacity: 0;
+	transition: opacity .6s linear;
+}
+
+.image--main.lazyloaded + .image__placeholder__thumb {
+	transition-delay: .2s;
+}
+
+.image__placeholder__thumb,
+.image--main.lazyloaded {
+	position: absolute;
+	top: 0;
+	left: 0;
+	// height: 100%;
+	// width: auto;
+	// max-width: none;
+	// min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	min-height: 100%;
+}
+
+/* Add min-width for anything on a card */
+.gallery__item .image--main {
+	min-width: inherit;
+}
+
+.image__placeholder__thumb {
+	height: 100%;
+	min-width: 100%;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	/* this is needed so Safari keeps sharp edges */
+	transform: scale(1);
+}
+
+.image--main.lazyloaded {
+	visibility: visible;
+	transition: visibility .1s linear .1s;
+	opacity: 1;
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+.image--portrait {
+	@include breakpoint( large ) {
+		max-width: 40%;
+	}
+}
+
+/***********************
+Pattern 10. Block quote
+***********************/
+
+.section__slice.section__blockquote {
+	position: relative;
+	padding: 0 3 * $global-padding 0 1.5 * $global-padding;
+}
+
+blockquote {
+	border-width: 0;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.blockquote__border-image {
+	position: absolute;
+	top: 0;
+	width: 0.5em;
+	height: 100%;
+}
+
+.blockquote__border-image--right {
+	right: 0;
+}
+
+.blockquote__border-image--left {
+	left: 0;
+}
+
+.blockquote__caption cite,
+.pullquote__caption cite {
+	text-align: right;
+	font-style: normal;
+	&::before {
+		content: '';
+	}
+}
+
+.pullquote__source-name,
+.blockquote__source-name {
+	font-weight: $global-weight-semibold;
+}
+
+p.pullquote__source-info,
+p.blockquote__source-name, {
+	font-size: $small-font-size;
+}
+
+/**********************************************
+Pattern 11. Pull quote (options for alignment)
+**********************************************/
+
+.griditem__pattern__pullquote,
+aside.section__pullquote {
+	padding: $global-padding 2 * $global-padding;
+	box-sizing: padding-box;
+	box-shadow: inset 0 0 0 $global-margin transparent;
+	&.pullquote--blue-1-web {
+		background-color: $blue-1-web;
+	}
+	&.pullquote--salmon-1-web {
+		background-color: $salmon-1-web;
+	}
+	&.pullquote--yellow-1-web {
+		background-color: $yellow-1-web;
+	}
+	@include breakpoint( small ) {
+		& > p {
+			padding: 0 $global-padding;
+			margin-top: 1.5 * $global-margin;
+			font-size: 1.25 * $body-font-size;
+			font-style: italic;
+		}
+		div.pullquote__quote--open {
+			float: left;
+
+		}
+		div.pullquote__quote--close {
+			float: right;
+		}
+		div.pullquote__quote--open {
+			width: 4em;
+			margin-left: -1 * $global-margin;
+			margin-top: -2 * $global-margin;
+		}
+		div.pullquote__quote--close {
+			width: 4em;
+			margin-top: -1 * $global-margin;
+			margin-right: -1 * $global-margin;
+		}
+		.pullquote__caption cite {
+			margin-right: 2 * $global-margin;
+		}
+	}
+	@include breakpoint( large ) {
+		padding: 3 * $global-padding 4 * $global-padding;
+		box-shadow: inset 0 0 0 3 * $global-margin transparent;
+		.pullquote__caption cite {
+			margin-right: 3 * $global-margin;
+		}
+		& > p {
+			padding: $global-padding 3 * $global-padding 0;
+			margin-top: 0;
+		}
+		div.pullquote__quote--open {
+			width: 6em;
+			margin-left: -3 * $global-margin;
+			margin-top: -2 * $global-margin;
+		}
+		div.pullquote__quote--close {
+			width: 6em;
+			margin-top: -1 * $global-margin;
+			margin-right: -3 * $global-margin;
+		}
+	}
+}
+
+.pullquote--blue-1-web,
+.section--blue-1-web .griditem__pattern__pullquote,
+.section--blue-1-web aside.section__pullquote {
+	.pullquote__quote--close svg path,
+	.pullquote__quote--open svg path {
+		fill: $blue-3;
+	}
+}
+.pullquote--salmon-1-web,
+.section--sandbox .griditem__pattern__pullquote,
+.section--sandbox aside.section__pullquote  {
+	.pullquote__quote--close svg path,
+	.pullquote__quote--open svg path {
+		fill: $salmon-4;
+	}
+}
+
+.griditem__pattern__pullquote {
+	padding: 2 * $global-padding 4 * $global-padding;
+}
+
+/*************************
+Pattern 12. Embedded Tweet
+**************************/
+
+/**********************************
+Pattern 13. Embedded Instagram-post
+***********************************/
+
+/****************************************************
+Pattern 14. Interview (two styles: QA and name-based)
+*****************************************************/
+
+.paragraph--question p {
+	font-weight: $global-weight-semibold;
+	margin-bottom: 0.5 * $global-margin;
+	margin-top: 1.5 * $global-margin;
+	line-height: $header-lineheight;
+}
+
+.interviewconversation__paragraph {
+	td.interviewconversation__voice {
+		font-size: $body-font-size;
+		line-height: $paragraph-lineheight;
+		font-weight: $global-weight-semibold;
+		vertical-align: top;
+		padding-right: $global-padding;
+
+	}
+	tr:nth-of-type(even) td.interviewconversation__voice {
+		color: $yellow-4;
+	}
+	tr:nth-of-type(odd) td.interviewconversation__voice {
+		color: $blue-3;
+	}
+	@include breakpoint( small ) {
+		td {
+			display: table-row;
+			&.interviewconversation__voice::after {
+				content: ':';
+			}
+		}
+	}
+	@include breakpoint( large ) {
+		td {
+			display: table-cell;
+			&.interviewconversation__voice::after {
+				content: '';
+			}
+		}
+	}
+}
+
+.section__sectionheader + .section__interviewqa,
+.section__sectionheader + .section__interviewconversation {
+	margin-top: 2 * $global-margin;
+}
+
+/***********************************************
+Pattern 15. Contact block for TANDEM team member
+************************************************/
+
+.section__contactblock:first-child {
+	margin-top: 0;
+}
+
+.section__contactblock:last-child {
+	margin-bottom: 0;
+}
+
+.section__sectionheader + .section__contactblock {
+	margin-top: 2 * $global-margin;
+}
+
+// Add bottom  padding to story-inner if the last section is a contact-block
+.story__section:last-child.section--has_contact_details .section-inner {
+	padding-bottom: 2 * $global-padding;
+}
+
+.contactblock__team-member,
+.contactblock__cta {
+	overflow: hidden;
+	@include grid_column( 8 );
+	@include grid-column-position( center );
+	@include breakpoint( small ) {
+		@include grid_column( 12 );
+		text-align: center;
+	}
+	@include breakpoint( medium ) {
+		@include grid_column( 10 );
+		@include grid-column-position( center );
+		text-align: left;
+	}
+
+}
+
+.contactblock__team-member:not(:first-child) {
+	margin-top: 2 * $global-margin;
+}
+
+.contactblock__cta {
+	padding: 1.5 * $global-padding 0.75 * $global-padding;
+	font-size: $small-font-size;
+	margin-bottom: 2 * $global-margin;
+}
+
+.contactblock__cta:last-of-type {
+	margin-bottom: 0
+}
+
+.team-member__info__contact-details:first-child {
+	margin-bottom: $global-margin;
+}
+
+.team-member__info__contact-details:last-child {
+	margin-bottom: 0;
+}
+
+li.team-member__name {
+	font-weight: $global-weight-semibold;
+}
+
+li.team-member__story-link {
+	margin-top: $global-margin;
+	.button--small {
+		margin-bottom: 0;
+	}
+}
+
+.section--has_contact_details:not(.section--coloured) {
+	.button--small {
+		border-color: $blue-2-web;
+	}
+	.button--small:hover {
+		background-color: $blue-2-web;
+		color: white;
+	}
+}
+
+.section--has_contact_details.section--yellow-1-web {
+	.button--small {
+		border-color: $yellow-3;
+	}
+	.button--small:hover {
+		background-color: $yellow-3;
+		color: white;
+	}
+}
+
+.contactblock__image {
+	@include breakpoint( small ) {
+		@include grid_column( 7 );
+		@include grid-column-position( center );
+		margin-bottom: $global-margin;
+	}
+	@include breakpoint( medium ) {
+		@include grid_column( 4 );
+		margin-bottom: 0;
+	}
+	img {
+		border-radius: 50%;
+	}
+}
+
+.contactblock__info {
+	@include breakpoint( small ) {
+		@include grid_column( 12 );
+	}
+	@include breakpoint( medium ) {
+		@include grid_column( 8 );
+	}
+}
+
+/**************************************************
+Pattern 16 becomes Content block for TANDEM partner
+***************************************************/
+
+/*************************************
+Pattern 17. List/Grid of partner logos
+**************************************/
+
+/************************************************
+Pattern 18. Embedded Gravity forms / Form styles
+*************************************************/
+
+select {
+	font-size: 0.9rem;
+	border-color: $black;
+	width: auto;
+	background-color: transparent;
+	border-width: 2px;
+	text-transform: uppercase;
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.23728 67.289766"><path d="M99.2 13v1.3c-.4 0-.2 1-.8 1v1c-.8.2-.4 1.6-1.2 1.7v2.5c-1.6.3-1 2.8-2.5 3.3.3 1.2-1 .8-.8 2-.6.3-1 1-1 1.7-.5.2-1 .6-1 1.2-.2.4-.6.3-1 .4 0 .5 0 .5-.4.5.2 1-.7 1-.4 2-.5.2-.8.6-.8 1.3-.4 0-.3.5-.4.8-.4 0-.4.2-.4.4-.2.6-.7.7-.8 1.2-.3.3-.3.6-.5 1v.3s-1.2.4-.8 1.6c-1 .6-1.5 1.4-1.6 2.6-.5 0-.4.5-.5.8-.4 0-.4.2-.4.4-.3 0-.2.5-.3.8-.4 0-.4.2-.4.4-.6.8-.7 2.2-1.7 2.5-.6.8-.6 2-1.6 2.5-.4 1-1 1.6-1.3 2.8-1.2.6-1.7 2-2.4 3-.8 0-.3 1.2-1.2 1-.2.7-.6 1-1.2 1.4 0 1.2-1 1.2-.8 2.4-.8 0-.8 1-1.6 1.2-.2.4-.4.8-1 1 .2.3 0 .6-.3.7.3.5 1.2.3 1.8.4 0-.6.8-.4.8-1 .7.4 0 .8 0 1.3-.4.2-.7.4-.8.8-.6.3-.7.8-1.3 1-1.2.2-.7-1.2-2-1-.2.2-.7 0-.8 0v.5l-.8.4c-.4.2-.3.5-.6.8 0 0-.5 0-.4.4-1 0-1.7.4-2.4.8v.4h-.4v.4h-.4l-1 .4c-1 .3-1.4-.4-2.3-.4 0-.4-.5-.3-.8-.4-.4 0-.4-.4-1-.4-1.7 0-3 .6-5.2.4 0-.4-.5-.3-.8-.4 0-.4-.2-.4-.4-.4-.3-.4-.5-1-.4-1.7-2.3 0-3.8-.7-6.3-.5-1.6 0-2-1.4-3.7-1.2-.2-.6-.6-1-1.2-1.2 0-.7-1.3-.2-1.2-1.2-.2 0-.7.2-.8 0v-.4l-1-.4c0-.2 0-.6-.3-.8 0 0-.5 0-.4-.4h-.7v-.4h-.8c-.2 0-.3-.8-.4-.8h-.7c0-.4-.6-.4-1-.4.2-.4 0-.4-.3-.5-.3-.3-1-.4-1.6-.4-.7-1-1.6-2-3-2.4-.4-1.4-1.2-2.3-2.3-3-.5-1-1-2.3-2.4-2.5 0-1-.6-1.2-.8-2-.8 0-.3-1.4-1.3-1.2 0-.8-1-.6-.8-1.7-.6-.2-1-.6-1.2-1.2-.4-.5-.4-1.5-1.2-1.6 0-1-1.2-.6-1-1.7-1-.2-1-2-2.3-2.3 0-1.2-1-1.3-.8-2.5-.3-1-1.4-1-1.7-2 0-.6-.7-.7-.8-1.3-.2-.4-.4-.8-.8-1 0-.6-.4-1-1-1 0-.7 0-1.3-.3-1.4.2-1.2-1.3-1-1-2.4-.2-.7-1-1.2-1-2-.5-.8-1-1.3-1.7-1.7.2-1.3-1-1-1.3-2C3 18.2 3 17.2 2 17c.3-2-1.3-2.4-2-3.7-.2-1 1-.8 1-1.6 0-1-1-1-.5-2.2 1 0 .5-1.6 1.6-1.6.4-1.3-.6-1.2-.3-2.5.5 0 .7 0 .8-.4 0-.3.2-.4.4-.4.6-.2.6.3 1 .3.3-.8 0-1-.3-1.6-.7-.3 0-.8 0-1.2.8 0 1-.5 1.7-.5 0 .6 1 .4 1.6.5.5 0 .4-.8.4-1.3 0-.3.4-.4.4-.8.7 0 1.6-.2 1.7.4.3-.3 1-.2 1.2-.8.5 0 .7.7 1.2.8.6 0 .6.4 1.2.4 1.4-.2 2.3.2 3.2.4 1.3.3 1.2-.7 2.5-.4 1.5 0 2.4.8 4 .8.3 1 1 1 2 1.3A3.7 3.7 0 0 0 26.8 5a3.7 3.7 0 0 0 1.6 1.6c0 .6.4.7.4 1.2.5 0 .3.8 1 .8.3.6.2 1.5 1 1.6.3 1 1 1.4 1.3 2 .6.5 1.3.7 1.2 1.7 1.3 0 1.6.8 2.5 1.2l1.2 2.4c1 .3.8 1.6 1.2 2.5 1 .2.7 1.8 1.6 2 .4.5.2 1.3.8 1.4.2.3.5.6.4 1.2.2 1 1.5.8 1.3 2 .8.2.8 1 1.6 1.3-.2.3 0 .6.3.7.3 1 .4 2 .8 3 0 .8 1.3.3 1.4 1 .4 0 .3.6.4 1 .3-.2.4 0 .4.3 1 .3 1 1.7 2.4 1.7H51c1 0 1.5-.6 1.5-1.7 1 0 1-1 .8-2 1 0 .4-1.6 1.7-1.3.4-.5.4-1.5 1.2-1.6-.2-1 .8-.8.4-2 .6-.2 1-.6 1.2-1.2.2-.5.8-.6 1-1.2 0-.2 0-.6.3-.8.2-.2.8-.3 1-.4 0-.2-.2-.8 0-1 0 0 .3.2.3 0v-.7c.6-.2 1-.6 1.2-1.2.5-.2 1-.5.8-1.2 1-.5 1.5-1.3 1.7-2.5.6-.2 1-.6 1.2-1.2.4-.4.3-1 .8-1.3.5-1 1-2 2-2.4-.2-1.2 1-1 1-1.8 0-.5.6-.6.7-1.2.4-.3.3-1 .8-1.2.2-.6.8-.7 1-1.2h2c.3 0 .2-.5.3-1 .5.2.8 0 .8-.3.5 0 .8 0 1-.4-.2-.4 0-.5.3-.5.2-1 1.7-1 2-2 2 .3 2.5-1 3.6-1.7 1 .2 1.7.5 2.5.8h5c0 .4 0 .4.4.4 1-.2.8 1 1.2 1.3.6.2 1 .6 1.3 1.2.4 0 1 0 1-.4.4.3.8.5 1.3.5 0 1 1.5.7 2 1.2 0 2.4-.3 5 2.5 4.5.4 1.7-1.2 1.3-.8 3h1.2z" class="caret" fill="#000" fill-rule="evenodd"/></svg>');
+	background-position: right -1 * $global-padding center;
+}
+
+// Makes Gravity Forms play nice with Foundation Form styles
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+// Fixing long checkbox list styling
+.gform_wrapper ul.gfield_checkbox li {
+	display: inline-block;
+	height: 1.5em;
+	label {
+		white-space: nowrap;
+	}
+	input[type=checkbox] {
+		vertical-align: inherit;
+		margin-top: 0;
+		margin-left: $global-margin;
+	}
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+.collaboration__translatedparagraph select {
+	color: $white;
+	border-color: $white;
+	outline: none;
+	min-width: 10.75em;
+	min-height: 2.95em;
+	font-weight: $global-weight-semibold;
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.23728 67.289766"><path d="M99.2 13v1.3c-.4 0-.2 1-.8 1v1c-.8.2-.4 1.6-1.2 1.7v2.5c-1.6.3-1 2.8-2.5 3.3.3 1.2-1 .8-.8 2-.6.3-1 1-1 1.7-.5.2-1 .6-1 1.2-.2.4-.6.3-1 .4 0 .5 0 .5-.4.5.2 1-.7 1-.4 2-.5.2-.8.6-.8 1.3-.4 0-.3.5-.4.8-.4 0-.4.2-.4.4-.2.6-.7.7-.8 1.2-.3.3-.3.6-.5 1v.3s-1.2.4-.8 1.6c-1 .6-1.5 1.4-1.6 2.6-.5 0-.4.5-.5.8-.4 0-.4.2-.4.4-.3 0-.2.5-.3.8-.4 0-.4.2-.4.4-.6.8-.7 2.2-1.7 2.5-.6.8-.6 2-1.6 2.5-.4 1-1 1.6-1.3 2.8-1.2.6-1.7 2-2.4 3-.8 0-.3 1.2-1.2 1-.2.7-.6 1-1.2 1.4 0 1.2-1 1.2-.8 2.4-.8 0-.8 1-1.6 1.2-.2.4-.4.8-1 1 .2.3 0 .6-.3.7.3.5 1.2.3 1.8.4 0-.6.8-.4.8-1 .7.4 0 .8 0 1.3-.4.2-.7.4-.8.8-.6.3-.7.8-1.3 1-1.2.2-.7-1.2-2-1-.2.2-.7 0-.8 0v.5l-.8.4c-.4.2-.3.5-.6.8 0 0-.5 0-.4.4-1 0-1.7.4-2.4.8v.4h-.4v.4h-.4l-1 .4c-1 .3-1.4-.4-2.3-.4 0-.4-.5-.3-.8-.4-.4 0-.4-.4-1-.4-1.7 0-3 .6-5.2.4 0-.4-.5-.3-.8-.4 0-.4-.2-.4-.4-.4-.3-.4-.5-1-.4-1.7-2.3 0-3.8-.7-6.3-.5-1.6 0-2-1.4-3.7-1.2-.2-.6-.6-1-1.2-1.2 0-.7-1.3-.2-1.2-1.2-.2 0-.7.2-.8 0v-.4l-1-.4c0-.2 0-.6-.3-.8 0 0-.5 0-.4-.4h-.7v-.4h-.8c-.2 0-.3-.8-.4-.8h-.7c0-.4-.6-.4-1-.4.2-.4 0-.4-.3-.5-.3-.3-1-.4-1.6-.4-.7-1-1.6-2-3-2.4-.4-1.4-1.2-2.3-2.3-3-.5-1-1-2.3-2.4-2.5 0-1-.6-1.2-.8-2-.8 0-.3-1.4-1.3-1.2 0-.8-1-.6-.8-1.7-.6-.2-1-.6-1.2-1.2-.4-.5-.4-1.5-1.2-1.6 0-1-1.2-.6-1-1.7-1-.2-1-2-2.3-2.3 0-1.2-1-1.3-.8-2.5-.3-1-1.4-1-1.7-2 0-.6-.7-.7-.8-1.3-.2-.4-.4-.8-.8-1 0-.6-.4-1-1-1 0-.7 0-1.3-.3-1.4.2-1.2-1.3-1-1-2.4-.2-.7-1-1.2-1-2-.5-.8-1-1.3-1.7-1.7.2-1.3-1-1-1.3-2C3 18.2 3 17.2 2 17c.3-2-1.3-2.4-2-3.7-.2-1 1-.8 1-1.6 0-1-1-1-.5-2.2 1 0 .5-1.6 1.6-1.6.4-1.3-.6-1.2-.3-2.5.5 0 .7 0 .8-.4 0-.3.2-.4.4-.4.6-.2.6.3 1 .3.3-.8 0-1-.3-1.6-.7-.3 0-.8 0-1.2.8 0 1-.5 1.7-.5 0 .6 1 .4 1.6.5.5 0 .4-.8.4-1.3 0-.3.4-.4.4-.8.7 0 1.6-.2 1.7.4.3-.3 1-.2 1.2-.8.5 0 .7.7 1.2.8.6 0 .6.4 1.2.4 1.4-.2 2.3.2 3.2.4 1.3.3 1.2-.7 2.5-.4 1.5 0 2.4.8 4 .8.3 1 1 1 2 1.3A3.7 3.7 0 0 0 26.8 5a3.7 3.7 0 0 0 1.6 1.6c0 .6.4.7.4 1.2.5 0 .3.8 1 .8.3.6.2 1.5 1 1.6.3 1 1 1.4 1.3 2 .6.5 1.3.7 1.2 1.7 1.3 0 1.6.8 2.5 1.2l1.2 2.4c1 .3.8 1.6 1.2 2.5 1 .2.7 1.8 1.6 2 .4.5.2 1.3.8 1.4.2.3.5.6.4 1.2.2 1 1.5.8 1.3 2 .8.2.8 1 1.6 1.3-.2.3 0 .6.3.7.3 1 .4 2 .8 3 0 .8 1.3.3 1.4 1 .4 0 .3.6.4 1 .3-.2.4 0 .4.3 1 .3 1 1.7 2.4 1.7H51c1 0 1.5-.6 1.5-1.7 1 0 1-1 .8-2 1 0 .4-1.6 1.7-1.3.4-.5.4-1.5 1.2-1.6-.2-1 .8-.8.4-2 .6-.2 1-.6 1.2-1.2.2-.5.8-.6 1-1.2 0-.2 0-.6.3-.8.2-.2.8-.3 1-.4 0-.2-.2-.8 0-1 0 0 .3.2.3 0v-.7c.6-.2 1-.6 1.2-1.2.5-.2 1-.5.8-1.2 1-.5 1.5-1.3 1.7-2.5.6-.2 1-.6 1.2-1.2.4-.4.3-1 .8-1.3.5-1 1-2 2-2.4-.2-1.2 1-1 1-1.8 0-.5.6-.6.7-1.2.4-.3.3-1 .8-1.2.2-.6.8-.7 1-1.2h2c.3 0 .2-.5.3-1 .5.2.8 0 .8-.3.5 0 .8 0 1-.4-.2-.4 0-.5.3-.5.2-1 1.7-1 2-2 2 .3 2.5-1 3.6-1.7 1 .2 1.7.5 2.5.8h5c0 .4 0 .4.4.4 1-.2.8 1 1.2 1.3.6.2 1 .6 1.3 1.2.4 0 1 0 1-.4.4.3.8.5 1.3.5 0 1 1.5.7 2 1.2 0 2.4-.3 5 2.5 4.5.4 1.7-1.2 1.3-.8 3h1.2z" class="caret" fill="#fff" fill-rule="evenodd"/></svg>');
+}
+
+
+.archive__filter select {
+	flex-grow: 1;
+	margin-right: 2em;
+	text-transform: uppercase;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.gform_wrapper input[type=radio] {
+	vertical-align: none;
+    background-color: $pink-cl !important;
+	color: $black !important;
+	border-color: $yellow-4 !important;
+}
+
+.gform_wrapper input[type=submit],
+.gform_wrapper input[type=button] {
+	@include button;
+	color: $white;
+	text-transform: uppercase;
+	font-weight: $global-weight-semibold;
+	background-color: $pink-cl;
+	&:hover {
+		background-color: $yellow-4;
+		color: $white;
+	}
+}
+
+.gform_wrapper li.storyteller-select-step-1 {
+	display: none;
+}
+
+.section--coloured {
+	select {
+		text-transform: none;
+		outline: inherit;
+	}
+}
+
+.section--yellow-1-web {
+	select, input[type='text'], input[type='password'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='month'], input[type='week'], input[type='email'], input[type='number'], input[type='search'], input[type='tel'], input[type='time'], input[type='url'], input[type='color'], textarea {
+		border-color: $pink-cl;
+	}
+	&:focus {
+		box-shadow: inset 0 0 3px $pink-cl;
+	}
+}
+
+.section--blue-1-web {
+	select, input[type='text'], input[type='password'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='month'], input[type='week'], input[type='email'], input[type='number'], input[type='search'], input[type='tel'], input[type='time'], input[type='url'], input[type='color'], textarea {
+		border-color: $blue-4;
+		&:focus {
+			box-shadow: inset 0 0 3px $blue-4;
+		}
+	}
+	select {
+		background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.23728 67.289766"><path d="M99.2 13v1.3c-.4 0-.2 1-.8 1v1c-.8.2-.4 1.6-1.2 1.7v2.5c-1.6.3-1 2.8-2.5 3.3.3 1.2-1 .8-.8 2-.6.3-1 1-1 1.7-.5.2-1 .6-1 1.2-.2.4-.6.3-1 .4 0 .5 0 .5-.4.5.2 1-.7 1-.4 2-.5.2-.8.6-.8 1.3-.4 0-.3.5-.4.8-.4 0-.4.2-.4.4-.2.6-.7.7-.8 1.2-.3.3-.3.6-.5 1v.3s-1.2.4-.8 1.6c-1 .6-1.5 1.4-1.6 2.6-.5 0-.4.5-.5.8-.4 0-.4.2-.4.4-.3 0-.2.5-.3.8-.4 0-.4.2-.4.4-.6.8-.7 2.2-1.7 2.5-.6.8-.6 2-1.6 2.5-.4 1-1 1.6-1.3 2.8-1.2.6-1.7 2-2.4 3-.8 0-.3 1.2-1.2 1-.2.7-.6 1-1.2 1.4 0 1.2-1 1.2-.8 2.4-.8 0-.8 1-1.6 1.2-.2.4-.4.8-1 1 .2.3 0 .6-.3.7.3.5 1.2.3 1.8.4 0-.6.8-.4.8-1 .7.4 0 .8 0 1.3-.4.2-.7.4-.8.8-.6.3-.7.8-1.3 1-1.2.2-.7-1.2-2-1-.2.2-.7 0-.8 0v.5l-.8.4c-.4.2-.3.5-.6.8 0 0-.5 0-.4.4-1 0-1.7.4-2.4.8v.4h-.4v.4h-.4l-1 .4c-1 .3-1.4-.4-2.3-.4 0-.4-.5-.3-.8-.4-.4 0-.4-.4-1-.4-1.7 0-3 .6-5.2.4 0-.4-.5-.3-.8-.4 0-.4-.2-.4-.4-.4-.3-.4-.5-1-.4-1.7-2.3 0-3.8-.7-6.3-.5-1.6 0-2-1.4-3.7-1.2-.2-.6-.6-1-1.2-1.2 0-.7-1.3-.2-1.2-1.2-.2 0-.7.2-.8 0v-.4l-1-.4c0-.2 0-.6-.3-.8 0 0-.5 0-.4-.4h-.7v-.4h-.8c-.2 0-.3-.8-.4-.8h-.7c0-.4-.6-.4-1-.4.2-.4 0-.4-.3-.5-.3-.3-1-.4-1.6-.4-.7-1-1.6-2-3-2.4-.4-1.4-1.2-2.3-2.3-3-.5-1-1-2.3-2.4-2.5 0-1-.6-1.2-.8-2-.8 0-.3-1.4-1.3-1.2 0-.8-1-.6-.8-1.7-.6-.2-1-.6-1.2-1.2-.4-.5-.4-1.5-1.2-1.6 0-1-1.2-.6-1-1.7-1-.2-1-2-2.3-2.3 0-1.2-1-1.3-.8-2.5-.3-1-1.4-1-1.7-2 0-.6-.7-.7-.8-1.3-.2-.4-.4-.8-.8-1 0-.6-.4-1-1-1 0-.7 0-1.3-.3-1.4.2-1.2-1.3-1-1-2.4-.2-.7-1-1.2-1-2-.5-.8-1-1.3-1.7-1.7.2-1.3-1-1-1.3-2C3 18.2 3 17.2 2 17c.3-2-1.3-2.4-2-3.7-.2-1 1-.8 1-1.6 0-1-1-1-.5-2.2 1 0 .5-1.6 1.6-1.6.4-1.3-.6-1.2-.3-2.5.5 0 .7 0 .8-.4 0-.3.2-.4.4-.4.6-.2.6.3 1 .3.3-.8 0-1-.3-1.6-.7-.3 0-.8 0-1.2.8 0 1-.5 1.7-.5 0 .6 1 .4 1.6.5.5 0 .4-.8.4-1.3 0-.3.4-.4.4-.8.7 0 1.6-.2 1.7.4.3-.3 1-.2 1.2-.8.5 0 .7.7 1.2.8.6 0 .6.4 1.2.4 1.4-.2 2.3.2 3.2.4 1.3.3 1.2-.7 2.5-.4 1.5 0 2.4.8 4 .8.3 1 1 1 2 1.3A3.7 3.7 0 0 0 26.8 5a3.7 3.7 0 0 0 1.6 1.6c0 .6.4.7.4 1.2.5 0 .3.8 1 .8.3.6.2 1.5 1 1.6.3 1 1 1.4 1.3 2 .6.5 1.3.7 1.2 1.7 1.3 0 1.6.8 2.5 1.2l1.2 2.4c1 .3.8 1.6 1.2 2.5 1 .2.7 1.8 1.6 2 .4.5.2 1.3.8 1.4.2.3.5.6.4 1.2.2 1 1.5.8 1.3 2 .8.2.8 1 1.6 1.3-.2.3 0 .6.3.7.3 1 .4 2 .8 3 0 .8 1.3.3 1.4 1 .4 0 .3.6.4 1 .3-.2.4 0 .4.3 1 .3 1 1.7 2.4 1.7H51c1 0 1.5-.6 1.5-1.7 1 0 1-1 .8-2 1 0 .4-1.6 1.7-1.3.4-.5.4-1.5 1.2-1.6-.2-1 .8-.8.4-2 .6-.2 1-.6 1.2-1.2.2-.5.8-.6 1-1.2 0-.2 0-.6.3-.8.2-.2.8-.3 1-.4 0-.2-.2-.8 0-1 0 0 .3.2.3 0v-.7c.6-.2 1-.6 1.2-1.2.5-.2 1-.5.8-1.2 1-.5 1.5-1.3 1.7-2.5.6-.2 1-.6 1.2-1.2.4-.4.3-1 .8-1.3.5-1 1-2 2-2.4-.2-1.2 1-1 1-1.8 0-.5.6-.6.7-1.2.4-.3.3-1 .8-1.2.2-.6.8-.7 1-1.2h2c.3 0 .2-.5.3-1 .5.2.8 0 .8-.3.5 0 .8 0 1-.4-.2-.4 0-.5.3-.5.2-1 1.7-1 2-2 2 .3 2.5-1 3.6-1.7 1 .2 1.7.5 2.5.8h5c0 .4 0 .4.4.4 1-.2.8 1 1.2 1.3.6.2 1 .6 1.3 1.2.4 0 1 0 1-.4.4.3.8.5 1.3.5 0 1 1.5.7 2 1.2 0 2.4-.3 5 2.5 4.5.4 1.7-1.2 1.3-.8 3h1.2z" class="caret" fill="#1f588e" fill-rule="evenodd"/></svg>');
+	}
+
+	.gform_wrapper input[type=submit],
+	.gform_wrapper input[type=button] {
+		background-color: $blue-4;
+		&:hover {
+			background-color: darken($blue-4,5);
+		}
+	}
+}
+
+.section--sandbox {
+	select, input[type='text'], input[type='password'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='month'], input[type='week'], input[type='email'], input[type='number'], input[type='search'], input[type='tel'], input[type='time'], input[type='url'], input[type='color'], textarea {
+		border-color: $salmon-4;
+		&:focus {
+			box-shadow: inset 0 0 3px $salmon-4;
+		}
+	}
+	select {
+		background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.23728 67.289766"><path d="M99.2 13v1.3c-.4 0-.2 1-.8 1v1c-.8.2-.4 1.6-1.2 1.7v2.5c-1.6.3-1 2.8-2.5 3.3.3 1.2-1 .8-.8 2-.6.3-1 1-1 1.7-.5.2-1 .6-1 1.2-.2.4-.6.3-1 .4 0 .5 0 .5-.4.5.2 1-.7 1-.4 2-.5.2-.8.6-.8 1.3-.4 0-.3.5-.4.8-.4 0-.4.2-.4.4-.2.6-.7.7-.8 1.2-.3.3-.3.6-.5 1v.3s-1.2.4-.8 1.6c-1 .6-1.5 1.4-1.6 2.6-.5 0-.4.5-.5.8-.4 0-.4.2-.4.4-.3 0-.2.5-.3.8-.4 0-.4.2-.4.4-.6.8-.7 2.2-1.7 2.5-.6.8-.6 2-1.6 2.5-.4 1-1 1.6-1.3 2.8-1.2.6-1.7 2-2.4 3-.8 0-.3 1.2-1.2 1-.2.7-.6 1-1.2 1.4 0 1.2-1 1.2-.8 2.4-.8 0-.8 1-1.6 1.2-.2.4-.4.8-1 1 .2.3 0 .6-.3.7.3.5 1.2.3 1.8.4 0-.6.8-.4.8-1 .7.4 0 .8 0 1.3-.4.2-.7.4-.8.8-.6.3-.7.8-1.3 1-1.2.2-.7-1.2-2-1-.2.2-.7 0-.8 0v.5l-.8.4c-.4.2-.3.5-.6.8 0 0-.5 0-.4.4-1 0-1.7.4-2.4.8v.4h-.4v.4h-.4l-1 .4c-1 .3-1.4-.4-2.3-.4 0-.4-.5-.3-.8-.4-.4 0-.4-.4-1-.4-1.7 0-3 .6-5.2.4 0-.4-.5-.3-.8-.4 0-.4-.2-.4-.4-.4-.3-.4-.5-1-.4-1.7-2.3 0-3.8-.7-6.3-.5-1.6 0-2-1.4-3.7-1.2-.2-.6-.6-1-1.2-1.2 0-.7-1.3-.2-1.2-1.2-.2 0-.7.2-.8 0v-.4l-1-.4c0-.2 0-.6-.3-.8 0 0-.5 0-.4-.4h-.7v-.4h-.8c-.2 0-.3-.8-.4-.8h-.7c0-.4-.6-.4-1-.4.2-.4 0-.4-.3-.5-.3-.3-1-.4-1.6-.4-.7-1-1.6-2-3-2.4-.4-1.4-1.2-2.3-2.3-3-.5-1-1-2.3-2.4-2.5 0-1-.6-1.2-.8-2-.8 0-.3-1.4-1.3-1.2 0-.8-1-.6-.8-1.7-.6-.2-1-.6-1.2-1.2-.4-.5-.4-1.5-1.2-1.6 0-1-1.2-.6-1-1.7-1-.2-1-2-2.3-2.3 0-1.2-1-1.3-.8-2.5-.3-1-1.4-1-1.7-2 0-.6-.7-.7-.8-1.3-.2-.4-.4-.8-.8-1 0-.6-.4-1-1-1 0-.7 0-1.3-.3-1.4.2-1.2-1.3-1-1-2.4-.2-.7-1-1.2-1-2-.5-.8-1-1.3-1.7-1.7.2-1.3-1-1-1.3-2C3 18.2 3 17.2 2 17c.3-2-1.3-2.4-2-3.7-.2-1 1-.8 1-1.6 0-1-1-1-.5-2.2 1 0 .5-1.6 1.6-1.6.4-1.3-.6-1.2-.3-2.5.5 0 .7 0 .8-.4 0-.3.2-.4.4-.4.6-.2.6.3 1 .3.3-.8 0-1-.3-1.6-.7-.3 0-.8 0-1.2.8 0 1-.5 1.7-.5 0 .6 1 .4 1.6.5.5 0 .4-.8.4-1.3 0-.3.4-.4.4-.8.7 0 1.6-.2 1.7.4.3-.3 1-.2 1.2-.8.5 0 .7.7 1.2.8.6 0 .6.4 1.2.4 1.4-.2 2.3.2 3.2.4 1.3.3 1.2-.7 2.5-.4 1.5 0 2.4.8 4 .8.3 1 1 1 2 1.3A3.7 3.7 0 0 0 26.8 5a3.7 3.7 0 0 0 1.6 1.6c0 .6.4.7.4 1.2.5 0 .3.8 1 .8.3.6.2 1.5 1 1.6.3 1 1 1.4 1.3 2 .6.5 1.3.7 1.2 1.7 1.3 0 1.6.8 2.5 1.2l1.2 2.4c1 .3.8 1.6 1.2 2.5 1 .2.7 1.8 1.6 2 .4.5.2 1.3.8 1.4.2.3.5.6.4 1.2.2 1 1.5.8 1.3 2 .8.2.8 1 1.6 1.3-.2.3 0 .6.3.7.3 1 .4 2 .8 3 0 .8 1.3.3 1.4 1 .4 0 .3.6.4 1 .3-.2.4 0 .4.3 1 .3 1 1.7 2.4 1.7H51c1 0 1.5-.6 1.5-1.7 1 0 1-1 .8-2 1 0 .4-1.6 1.7-1.3.4-.5.4-1.5 1.2-1.6-.2-1 .8-.8.4-2 .6-.2 1-.6 1.2-1.2.2-.5.8-.6 1-1.2 0-.2 0-.6.3-.8.2-.2.8-.3 1-.4 0-.2-.2-.8 0-1 0 0 .3.2.3 0v-.7c.6-.2 1-.6 1.2-1.2.5-.2 1-.5.8-1.2 1-.5 1.5-1.3 1.7-2.5.6-.2 1-.6 1.2-1.2.4-.4.3-1 .8-1.3.5-1 1-2 2-2.4-.2-1.2 1-1 1-1.8 0-.5.6-.6.7-1.2.4-.3.3-1 .8-1.2.2-.6.8-.7 1-1.2h2c.3 0 .2-.5.3-1 .5.2.8 0 .8-.3.5 0 .8 0 1-.4-.2-.4 0-.5.3-.5.2-1 1.7-1 2-2 2 .3 2.5-1 3.6-1.7 1 .2 1.7.5 2.5.8h5c0 .4 0 .4.4.4 1-.2.8 1 1.2 1.3.6.2 1 .6 1.3 1.2.4 0 1 0 1-.4.4.3.8.5 1.3.5 0 1 1.5.7 2 1.2 0 2.4-.3 5 2.5 4.5.4 1.7-1.2 1.3-.8 3h1.2z" class="caret" fill="#e07856" fill-rule="evenodd"/></svg>');
+	}
+	.gform_wrapper input[type=submit],
+	.gform_wrapper input[type=button] {
+		background-color: $salmon-4;
+		&:hover {
+			background-color: darken($salmon-4,5);
+		}
+	}
+}
+
+select.token-form__collab-select {
+	margin-bottom: 0.2em;
+	height: 3em;
+	width: 85%;
+}
+
+a.token-form__submit {
+	margin: 0 0 0 0.5 * $global-margin;
+	position: relative;
+}
+
+.section--form-options {
+	.section-inner {
+		position: relative;
+	}
+	.section__slice {
+		overflow: hidden;
+		min-height: 30em;
+		margin: 0;
+		padding: 2 * $global-padding $global-padding;
+	}
+	.griditem--cta .emphasisblock--cta {
+		.emphasisblock-inner {
+			min-height: 22em;
+			padding-bottom: $global-padding;
+		}
+	}
+}
+
+.section__helper {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+	color: $yellow-2;
+	&.loader-pointer {
+		text-align: center;
+	}
+	&.loader-wrapper {
+		display: none;
+		margin: auto 40%;
+		border: 1px solid $yellow-2;
+		width: 20%;
+		height: 1rem;
+		padding: 0.25 * $global-padding 0;
+	}
+}
+
+.loader--exchange {
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.274742 99.65184"><path d="M13.3 0h1.3c0 .3.8 0 .8.7h1.2c0 .8 1.6.4 1.7 1.2h2.5c.2 1.4 2.8 1 3.2 2.3 1.3-.3.8 1 2 .8.3.6 1 .8 1.7 1 0 .5.5 1 1 1s.4.6.5 1c.4 0 .4 0 .4.4 1-.2.8.7 2 .4.2.4.5.7 1.2.7 0 .4.5.3.8.4 0 .3.2.4.4.4.6.2.7.7 1.3.8.2.3.5.3.8.4h.5s.3 1.3 1.5 1c.5.8 1.3 1.3 2.5 1.5 0 .5.5.4.8.5 0 .4.2.4.4.4 0 .3.5.2 1 .3-.2.4 0 .4.3.4.7.6 2 .6 2.4 1.7.7.6 2 .6 2.4 1.6 1 .5 1.6 1.2 3 1.3.4 1.3 1.7 1.7 2.7 2.5.2.8 1.5.3 1.4 1.2.4.3 1 .7 1 1.3 1.3 0 1.3 1 2.5.8.2 1 1.2 1 1.3 1.8.3.2.7.4.8.8.6 0 .8 0 1 .5.5 0 .3-1 .3-1.6-.5 0-.4-.8-1-.8.4-.7.8 0 1.3 0 .2.4.4.7 1 .8 0 .6.6.7.7 1.2.3 1.3-1.2.8-.8 2 0 .2-.2.8 0 1 0 0 .3-.2.4 0l.4.7c.2.3.5.2.8.4 0 0 0 .6.4.4 0 1.3.4 2 .8 2.6h.4v.4s.4-.2.4 0v.3c.2.3.4.5.4.8.3 1.5-.4 1.7-.4 2.7-.4 0-.3.5-.4.8 0 .4-.4.4-.4.8 0 2 .7 3.2.4 5.4-.4 0-.3.5-.4.8-.3 0-.4.2-.4.4-.4.2-1 .3-1.6.3 0 2.2-.7 3.7-.4 6.2 0 1.5-1.4 2-1.3 3.7-.6.3-1 .7-1.2 1.3-.7 0-.2 1.3-1 1.2v.8h-.5c-.3.2-.4.7-.5.8-.3.4-.6.4-1 .6 0 0 0 .4-.3.3 0 0 .2.7 0 .8h-.4v1l-.8.3v.8c-.4 0-.3.6-.4 1-.3 0-.3 0-.3.4-.3.4-.5 1-.4 1.7-1 .8-2 1.7-2.5 3-1.3.5-2.2 1.3-3 2.4-1 .6-2.2 1-2.3 2.5-1 0-1.3.5-2 .7 0 .8-1.4.3-1.3 1.2-.8 0-.5 1-1.6 1-.2.4-.6 1-1.2 1-.5.4-1.5.4-1.6 1.2-.8 0-.5 1-1.7.8-.2 1.3-2 1.2-2.3 2.5-1 0-1.2 1-2.4 1-1 .2-1 1.3-2 1.6-.6 0-.7.8-1.2 1-.3 0-.7.2-1 .7-.5 0-1 .3-1 .8-.6 0-1.2 0-1.2.4-1.2-.3-1 1.2-2.4.7-.7.4-1.2 1-2 1.3-.8.3-1.3 1-1.7 1.6-1.4 0-1.2 1.2-2 1.3-.2 1-1.2 1-1.4 1.6-2-.2-2.3 1.4-3.6 2-1.2.3-1-.8-1.7-.8-1-.2-1 .8-2 .4 0-1-1.6-.6-1.7-1.6-1.2-.3-1.2.7-2.4.4 0-.5 0-.7-.5-.8-.4 0-.4-.2-.4-.4 0-.7.4-.7.5-1.3-1-.2-1 .2-1.7.3-.2.8-.6 0-1 0 0-.7-.6-.8-.5-1.6.5 0 .3-1 .4-1.6-.2-.4-1-.3-1.3-.3-.4 0-.4-.5-1-.5.2-.6 0-1.5.6-1.6-.4-.3-.3-1-1-1.2.3-.6 1-.7 1-1.2-.2-.7.3-.8.4-1.3-.2-1.5 0-2.4.4-3.4s-.6-1-.3-2.3c0-1.7.8-2.5.8-4 .8-.4 1-1.2 1.2-2.2A3.7 3.7 0 0 0 5 73 3.7 3.7 0 0 0 7 71.2c.6 0 .7-.4 1.2-.5 0-.4.8-.2.8-.8.6-.4 1.6-.4 1.7-1.2.8-.2 1.3-1 2-1.2.4-.5.6-1.2 1.7-1.2 0-1.2.8-1.6 1.2-2.4.8-.4 1.6-1 2.5-1.2.2-1 1.5-1 2.4-1.3 0-1.2 1.7-.8 2-1.7.4-.4 1.2-.3 1.3-.8.3-.3.7-.5 1.2-.4 1 0 .7-1.4 2-1.2 0-.8 1-.8 1.2-1.6.5 0 .7 0 .8-.4 1-.3 2.2-.4 3-.8 1 0 .4-1.2 1.2-1.3 0-.4.5-.3.8-.4 0-.4.2-.5.4-.5.3-1.2 1.8-1 1.7-2.6v-1.3c0-1-.4-1.6-1.5-1.6 0-1-1-1-2-.7 0-1-1.6-.4-1.2-1.7-.6-.3-1.6-.3-1.7-1-1 0-1-1-2-.5-.2-.5-.7-1-1.2-1.2-.6 0-.7-.7-1.3-.8 0-.2-.5-.2-.7-.4l-.4-.8h-1.2v-.4H22c-.3-.6-.7-1-1.3-1.2-.3-.5-.6-1-1.3-1-.4-.8-1.2-1.3-2.5-1.5-.3-.5-.7-1-1.3-1-.3-.5-1-.4-1.2-1-1-.4-2-1-2.5-2-1 .3-.8-.8-1.6-.8-.6-.3-.7-.8-1.3-1-.2-.3-1-.2-1-1-.6 0-.7-.5-1.3-.6v-2c0-.4-.5-.3-.8-.4 0-.5 0-.8-.5-1 0-.3 0-.6-.5-.7-.3 0-.3 0-.4-.4-1-.4-1-2-2-2 .2-2-1-2.7-1.8-3.8.2-1 .5-1.7 1-2.5v-5c.2.2.3 0 .3-.3-.2-1 1-.8 1.3-1.2.2-.6.6-1 1.2-1.3 0-.7 0-1-.5-1.3.2-.3.5-.7.4-1.2 1 0 .6-1.6 1.2-2 2.3 0 5 .3 4.5-2.5 1.7-.4 1.3 1.2 3 .8v-1z" fill="#F0C063" fill-rule="evenodd"/></svg>');
+	position: relative;
+	top: -90%;
+	background-repeat: repeat-x;
+	// position: relative;
+	// top: -0.3 * $global-font-size;
+	height: 1rem;
+	background-size: 0.6rem auto;
+	width: 0;
+}
+
+.loader-wrapper.go {
+	display: block;
+	.loader--exchange {
+		display:inline-block;
+		animation: exchange--loader 2s infinite;
+	}
+}
+
+@keyframes exchange--loader {
+  0%   { width: 0; }
+  100% { width: 100%; }
+}
+
+/******************
+Pattern 19. Gallery
+*******************/
+
+.story__modal--gallery {
+	z-index: 9999;
+	padding: 3.6 * $global-padding 1 * $global-padding;
+	background: $white;
+}
+
+.story__modal--gallery .orbit,
+.collaboration__gallery .orbit {
+	height: 100% !important;
+	width: 100%;
+}
+
+.gallery--gallery.orbit-container {
+	position: absolute !important;
+	height: 100% !important;
+	width: 100%;
+	overflow: visible;
+	&:focus,
+	&:active {
+		outline: none;
+		outline-color: transparent;
+	}
+	.gallery__item.orbit-slide {
+		position: static !important;
+		height: 100% !important;
+		max-height: 100% !important;
+		display: table;
+		&:focus,
+		&:active {
+			outline: none;
+			outline-color: transparent;
+		}
+		.image__placeholder__thumb {
+			display: none;
+		}
+	}
+	figure {
+		display: table-cell;
+		vertical-align: middle;
+		max-height: 100%;
+		.image__placeholder {
+			max-width: 100%;
+			height: auto !important;
+			padding: 0 !important;
+			overflow: hidden;
+		}
+		.image--main {
+			position: static;
+			max-height: 80vh;
+			width: auto;
+			//width: auto;
+			margin: auto;
+		}
+	}
+	.gallery__video-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	@include breakpoint( medium ) {
+		.gallery__item.gallery__video {
+			max-width: 80%;
+			margin: auto 10%;
+		}
+	}
+}
+
+.gallery__navigation {
+	height: 2em;
+	padding: 0 0.5 * $global-padding;
+	&:hover {
+		background-color: transparent;
+		svg path {
+		   fill: $yellow-3;
+	   }
+	}
+	&:focus {
+		background-color: transparent;
+	}
+	svg {
+		height: 100%;
+	}
+}
+
+.gallery__navigation--prev svg {
+	transform: rotate( 180deg );
+}
+
+.modal__button--close {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	height: 2em;
+	width: 2em;
+}
+
+.gallery__item.orbit-slide {
+	text-align: center;
+}
+
+.lightbox__image {
+	margin: auto;
+}
+
+/**************************
+Pattern 20. Emphasis blocks
+***************************/
+
+.section__emphasisblock {
+	font-weight: $global-weight-semibold;
+	padding-top: $global-padding;
+	padding-bottom: $global-padding;
+	&:not(.emphasisblock--full) {
+		@include breakpoint( small) {
+			@include grid-column( 100% );
+			@include grid-column-position( center );
+		}
+		@include breakpoint( medium ) {
+			@include grid-column( 60% );
+			@include grid-column-position( center );
+		}
+		@include breakpoint( large ) {
+			@include grid-column( 40% );
+			@include grid-column-position( center );
+		}
+
+	}
+}
+
+.emphasisblock-inner {
+	//padding: $global-padding;
+	overflow: hidden;
+}
+
+.emphasisblock {
+	.emphasisblock-inner {
+		padding-bottom: 5 * $global-padding;
+	}
+	&.emphasisblock--full .emphasisblock-inner, 
+	&.emphasisblock--post-it .emphasisblock-inner {
+		padding: $global-padding;
+		div:not(.post-it-bg) {
+			position: relative;
+			z-index: 2;
+		}
+	}
+}
+
+.documentblock--post-it .emphasisblock-inner,
+.emphasisblock--post-it .emphasisblock-inner {
+	position: relative;
+}
+
+.emphasisblock--cta p a,
+.emphasisblock--cta p a:hover {
+	background-color: transparent;
+	border-bottom: none;
+}
+
+.emphasisblock--cta:not(.emphasisblock--white) .emphasisblock__subheader,
+.emphasisblock--cta:not(.emphasisblock--white) .emphasisblock__paragraph,
+.emphasisblock--cta:not(.emphasisblock--white) .emphasisblock__paragraph a,
+.emphasisblock--cta:not(.emphasisblock--white) .emphasisblock__paragraph a:hover {
+	color: $white;
+}
+
+.emphasisblock--default .emphasisblock-inner,
+.emphasisblock--green-bg-cl .post-it-bg {
+	background-color: $green-bg-cl;
+	border-color: transparentize( darken( $green-bg-cl, 20 ), 0.7 );
+}
+
+.section__documentblock .post-it-bg,
+.emphasisblock--orange-bg-cl .post-it-bg {
+	background-color: $orange-bg-cl;
+	border-color: transparentize( darken( $orange-bg-cl, 20 ), 0.7 );
+}
+
+.section__documentblock .post-it-bg,
+.emphasisblock--pink-bg-cl .post-it-bg {
+	background-color: $pink-bg-cl;
+	border-color: transparentize( darken( $pink-bg-cl, 20 ), 0.7 );
+}
+
+.section__documentblock .post-it-bg,
+.emphasisblock--blue-bg-cl .post-it-bg {
+	background-color: $blue-bg-cl;
+	border-color: transparentize( darken( $blue-bg-cl, 20 ), 0.7 );
+}
+
+.section__documentblock .post-it-bg,
+.emphasisblock--yellow-bg-cl .post-it-bg {
+	background-color: $yellow-bg-cl;
+	border-color: transparentize( darken( $yellow-bg-cl, 20 ), 0.7 );
+}
+
+.section__documentblock .post-it-bg,
+.emphasisblock--purple-bg-cl .post-it-bg {
+	background-color: $purple-bg-cl;
+	border-color: transparentize( darken( $purple-bg-cl, 20 ), 0.7 );
+}
+
+
+
+.griditem__emphasisblock.emphasisblock--yellow-1-web {
+	background-color: $yellow-1-web;
+	a.button--large,
+	a.button--small {
+		border-color: $pink-cl;
+		&:hover {
+			color: $white;
+			background-color: $pink-cl;
+		}
+	}
+	svg g.logo path,
+	path.logo {
+		fill: $pink-cl;
+	}
+}
+
+.emphasisblock--white .emphasisblock-inner {
+	background-color: $white;
+	color: $pink-cl;
+}
+.emphasisblock--white .emphasisblock-inner p a,
+.emphasisblock--white .emphasisblock-inner p a {
+	color: $pink-cl;
+}
+
+.emphasisblock--pink-cl .emphasisblock-inner {
+	background-color: $pink-cl;
+	color: $white;
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.section--yellow-1-web .griditem__emphasisblock.emphasisblock--yellow-1-web,
+.emphasisblock--yellow-3 .emphasisblock-inner {
+	background-color: $yellow-3;
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $yellow-3;
+		}
+	}
+}
+
+.griditem__emphasisblock.emphasisblock--blue-1-web {
+	background-color: $blue-1-web;
+	border-color: transparentize( darken( $blue-1-web, 20 ), 0.7 );
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.section--blue-1-web .griditem__emphasisblock.emphasisblock--blue-1-web,
+.emphasisblock--blue-2-web .emphasisblock-inner,
+.documentblock--blue-2-web .post-it-bg {
+	background-color: $blue-2-web;
+	border-color: transparentize( darken( $blue-2-web, 20 ), 0.7 );
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.griditem__emphasisblock.emphasisblock--salmon-1-web {
+	background-color: $salmon-1-web;
+	border-color: transparentize( darken( $salmon-1-web, 20 ), 0.7 );
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.emphasisblock--salmon-1-web .post-it-bg {
+	background-color: $salmon-1-web;
+	border-color: transparentize( darken( $salmon-1-web, 20 ), 0.7 );
+}
+
+.section--sandbox .griditem__emphasisblock.emphasisblock--salmon-1-web,
+.emphasisblock--rose-1-web .emphasisblock-inner,
+.emphasisblock--default.emphasisblock--cta .emphasisblock-inner {
+	background-color: $rose-1-web;
+	border-color: transparentize( darken( $rose-1-web, 20 ), 0.7 );
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.griditem__emphasisblock.emphasisblock--salmon-1-web {
+	background-color: $salmon-1-web;
+	border-color: transparentize( darken( $salmon-1-web, 20 ), 0.7 );
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.emphasisblock--salmon-4 .emphasisblock-inner {
+	background-color: $salmon-4;
+	a.button--big,
+	a.button--small {
+		&:hover {
+			color: $salmon-4;
+		}
+	}
+}
+
+.emphasisblock--black-tandem .emphasisblock-inner {
+	background-color: $black-tandem;
+	a.button--large,
+	a.button--small {
+		&:hover {
+			color: $black-tandem;
+		}
+	}
+}
+
+.documentblock__sectionheader,
+.emphasisblock__subheader {
+	margin-top: $global-margin;
+	text-align: center;
+}
+
+.emphasisblock--cta {
+	position: relative;
+}
+
+.emphasisblock--cta .emphasisblock__subheader {
+	text-transform: uppercase;
+}
+
+.documentblock__paragraph,
+.emphasisblock__paragraph {
+	padding: $global-padding / 2 $global-padding;
+	margin-bottom: $global-margin;
+	p:last-child,
+	ul:last-child {
+		margin-bottom: 0.25 * $global-margin;
+	}
+}
+
+.emphasisblock--cta {
+	.emphasisblock__paragraph {
+		text-align: center;
+	}
+}
+
+.section__documentblock li,
+.section__emphasisblock li {
+	list-style: none;
+	padding-left: 1.5 * $global-padding;
+	margin-top: 0.75 * $global-margin;
+	background-size: 0.75 * $global-padding auto;
+	background-position: top 0.25 * $global-padding left;
+	background-repeat: no-repeat;
+}
+
+.emphasisblock--salmon-1-web li {
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530.54406 694.99447"><path d="M134.922 694c0-.55-.63-1-1.397-1-3.87 0-11.448-12.875-19.5-33.126-2.323-5.844-5.114-11.582-6.203-12.75-3.195-3.43-10.44-2.895-20.148 1.488-10.964 4.95-14.75 5.35-19.508 2.067-2.06-1.423-5.925-3.548-8.59-4.722-2.665-1.175-6.49-3.595-8.5-5.377-2.01-1.78-6.58-4.604-10.154-6.272-3.575-1.668-8.923-4.98-11.883-7.36C21.025 620.503 10.193 605.26 6.335 595c-1.758-4.675-3.918-9.85-4.8-11.5-2.133-3.994-2.036-7.756.238-9.176 1.164-.727 2.087-2.866 2.483-5.758.704-5.136 2.756-9.64 6.353-13.95 1.324-1.585 3.278-4.59 4.343-6.677 1.064-2.087 2.746-4.052 3.738-4.367 2.524-.8 9.2-10.022 11.22-15.498 1.52-4.116 3.855-8.176 8.523-14.822 2.872-4.09 7.164-5.39 22.375-6.78 8.037-.732 17.764-2.03 21.614-2.885 3.85-.854 8.894-1.56 11.21-1.57 4.867-.02 7.007-1.885 13.218-11.518 3.38-5.243 3.954-7.01 4.543-14 .372-4.4 1.317-10.84 2.102-14.312 1.793-7.933 1.767-16.9-.086-29.688-2.935-20.253-1.487-42.124 3.938-59.5 2.08-6.658 2.416-10.25 3.008-32 .366-13.475 1.372-29.882 2.234-36.46 1.684-12.848 1.377-21.758-1.12-32.54-2.162-9.33-1.946-22.802.547-34.047 2.826-12.745 2.24-26.717-2.09-49.75-3.133-16.673-3.194-17.483-1.702-22.5.85-2.86 1.844-7.003 2.206-9.203.362-2.2 2.25-7.375 4.194-11.5 2.782-5.903 5.28-9.203 11.738-15.5 7.305-7.124 10.002-8.928 24.63-16.477l16.43-8.477 10.56-.377 10.56-.378 10.2 5.117c8.45 4.24 11.61 6.532 18.44 13.373 8.807 8.824 15.94 13.138 21.74 13.15 2.038.004 6.635-1.547 11.008-3.713 4.13-2.046 8.5-3.72 9.713-3.72 1.213 0 4.488-.9 7.28-2 3.377-1.332 7.65-2.036 12.786-2.11 4.24-.058 10.412-.396 13.712-.75 5.743-.613 6.053-.79 7.252-4.14.777-2.173 1.045-5.928.706-9.907-.662-7.765-6.08-32.45-7.908-36.023-.722-1.414-1.642-4.595-2.044-7.07-.402-2.475-1.398-6.075-2.215-8-3.087-7.28-6.267-20.726-6.28-26.554-.014-7.282 3.2-14.52 8.8-19.82 2.028-1.92 5.654-5.323 8.056-7.56L314.156 0h13.823c7.603 0 14.077.41 14.388.913.31.502 2.382 1.22 4.603 1.595 4.74.8 8.822 4.61 13.828 12.91 2.696 4.47 3.534 7.16 4.16 13.366.43 4.273 1.435 9.332 2.232 11.243 3.522 8.443 5.027 14.16 6.31 23.973.754 5.775 2.32 14.96 3.478 20.412 1.158 5.452 2.913 14.677 3.9 20.5 1.303 7.7 3.017 13.317 6.277 20.588 5.804 12.942 8.355 20.903 10.255 32 1.454 8.49 4.64 18.283 6.966 21.402.575.772 1.315 5.722 1.643 11 .328 5.28 1.326 11.848 2.217 14.598 3.54 10.92 4.9 18.714 6.11 35 1.165 15.68 1.5 17.466 4.316 23 2.045 4.02 4.49 7.028 7.406 9.116 2.393 1.714 6.377 4.72 8.852 6.684 2.475 1.962 8.615 5.6 13.644 8.082 5.833 2.88 9.932 5.62 11.318 7.566 1.196 1.678 3.005 3.052 4.02 3.052 1.016 0 5.245 1.8 9.397 4 4.154 2.2 8.158 4 8.9 4 .74 0 2.67 1.402 4.284 3.115 1.616 1.713 4.738 3.91 6.938 4.88 4.486 1.978 22.906 19.977 27.578 26.947 1.638 2.443 3.67 6.827 4.518 9.74.847 2.916 2.452 5.94 3.567 6.72 2.02 1.414 2.017 1.433-.474 5.758-1.374 2.387-3.314 6.974-4.31 10.194-1.063 3.44-3.31 7.563-5.45 10-2.004 2.28-4.56 5.946-5.68 8.146-2.35 4.618-3.975 6.15-10.425 9.83-2.572 1.467-5.947 4.18-7.5 6.027-1.553 1.847-4.09 3.663-5.637 4.036-2.81.676-7.07 4.105-13.03 10.485-1.736 1.86-8.408 8.633-14.827 15.055-8.136 8.14-11.932 12.687-12.535 15.016-1.09 4.208-.06 14.962 3.398 35.47 2.462 14.602 2.716 18.516 2.76 42.58.052 28.635.45 25.812-6.006 42.5-3.238 8.368-9.855 16.205-14.945 17.702-5.738 1.688-34.5 1.63-42.223-.083-6.098-1.354-6.337-1.326-11.87 1.382-3.47 1.697-8.864 5.913-13.982 10.928-6.21 6.086-10.7 9.422-17.63 13.096l-9.296 4.93-11.176.378c-11.1.375-11.225.353-18.61-3.2-9.504-4.57-14.96-8.715-28.162-21.392-11.442-10.987-10.914-10.14-23.373-37.492-2.767-6.078-3.363-6.75-5.977-6.75-1.597 0-5.108 1.193-7.802 2.65-2.694 1.458-6.784 3.386-9.09 4.283-2.58 1.005-7.673 5.002-13.25 10.4-10.408 10.076-10.714 11.096-6.968 23.224 1.16 3.755 1.87 8.143 1.595 9.856-.955 5.96-4.676 14.812-7.647 18.196-4.36 4.964-5.503 7.56-12.182 27.66-7.403 22.274-8.762 24.987-16.528 32.977-5.307 5.46-7.37 6.805-14.72 9.596-4.7 1.786-8.812 3.677-9.136 4.202-.8 1.295-21.472 1.25-21.472-.045z" fill="#e07856"/></svg>');
+}
+
+.emphasisblock--default li,
+.emphasisblock--yellow-1-web li {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAACWCAMAAADaFEflAAAAVFBMVEUAAAD9yy79yy79yi38zC78yy39yi79yy7/yyz/zzD9yy78yy38yi3/zC39yy7/zyj9yi79yy7/yiv8yy39yi39yi7/yi39yy38yy39yi79yy79yi2HN+3vAAAAHHRSTlMAf/+fX6+QgEAQ77BgUHAgz+AwwKDfP4+/b/DQ1m5rOwAAAv1JREFUeAHV2wm2qygUheHtTiOISoKmqWT+46yWqlfcNh59m/W+CfwrIMdL1g020PBvuz1kdmR20CfJIyRa/p+DgO+KZoBAz0KnX1pS1JRv6MDSKGhGlk4QOLOUBM1jhcVNLIUKiztBYGapwiRiFDR9hamAiYW2wvgLEHAsXFBhQ32FE+qwjX3zp/1rD9G4TfGSt2r/ykM0b1XMTun75gVruQsLPd4J277O/I6lMpqu12tzI7dcXH/iew3+Fve7jh/q/NZJ8h6BtOPnetjd+YnLhV85waylVYRVR6sRRj3NAowCzTr90po3NHGFHiYjV5j1TesocsyEp8VzjQkm5wrNiWtIx21W4cGl+2UeXFfjweUqNZqpQnOQv1iM91BXodlylQCDmfrDMv16TdZoxgrNVt80TaIjV+qS9P2Z9dI5lB28ct5mXbOsyk10g75J7qT7mV0ar23mbY2Ge7ZmW1tu6+b1TZ6SoLl8GE7URycKooImO69v8l6hSVehGfCFC3+OZH6t2IUKzYhPpQofc+TP0Vu/vrU74wud/nhGWtkvFE6wspJH6JzEb2zy6KFu9oC4OTmomyOgbvYQNA1J9PoknD6JpJl3JW5lhrwZoG+mCk1f4Wbv8LKxQrPVDdrtbw5theaEV3lu5aTfThL6actk+CcewWG5/tbcO9FfJf7a3O536Z/uqWMma/oL5c0j5c1IffOobybKm/4kb+aktHmgvDlYrnXtqtnnOy4TEgD/WDPjW9vIbvmiB947cZF+6RQ52iZQmcxm+1eKwfoMRvsNaeYSbum8fPjV033AD/5p/hJqMt8l/fnDTA/v3Nj+ybktvji4AN980uA3/99BfBOd8TXD7Hui5KcFSeOOtl++7R89XuUfpP2Au4nZHPE6t+6V78L0pxCxSG+/1tkND/PNw87Pyx/a9WKwX3bsxuUP7Xpx5l/OrXNBsLRZCs/ZlWdW+GvSo2ZpC9F+OO0CS73+p4dn6H8GOEBhkK5sNumTSI9cnBNk3JPko/XY1h/mzVjQ64EVEQAAAABJRU5ErkJggg==');
+}
+
+.documentblock--blue-1-web li,
+.documentblock--blue-2-web li,
+.emphasisblock--blue-2-web li,
+.emphasisblock--blue-1-web li {
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530.54406 694.99447"><path d="M134.922 694c0-.55-.63-1-1.397-1-3.87 0-11.448-12.875-19.5-33.126-2.323-5.844-5.114-11.582-6.203-12.75-3.195-3.43-10.44-2.895-20.148 1.488-10.964 4.95-14.75 5.35-19.508 2.067-2.06-1.423-5.925-3.548-8.59-4.722-2.665-1.175-6.49-3.595-8.5-5.377-2.01-1.78-6.58-4.604-10.154-6.272-3.575-1.668-8.923-4.98-11.883-7.36C21.025 620.503 10.193 605.26 6.335 595c-1.758-4.675-3.918-9.85-4.8-11.5-2.133-3.994-2.036-7.756.238-9.176 1.164-.727 2.087-2.866 2.483-5.758.704-5.136 2.756-9.64 6.353-13.95 1.324-1.585 3.278-4.59 4.343-6.677 1.064-2.087 2.746-4.052 3.738-4.367 2.524-.8 9.2-10.022 11.22-15.498 1.52-4.116 3.855-8.176 8.523-14.822 2.872-4.09 7.164-5.39 22.375-6.78 8.037-.732 17.764-2.03 21.614-2.885 3.85-.854 8.894-1.56 11.21-1.57 4.867-.02 7.007-1.885 13.218-11.518 3.38-5.243 3.954-7.01 4.543-14 .372-4.4 1.317-10.84 2.102-14.312 1.793-7.933 1.767-16.9-.086-29.688-2.935-20.253-1.487-42.124 3.938-59.5 2.08-6.658 2.416-10.25 3.008-32 .366-13.475 1.372-29.882 2.234-36.46 1.684-12.848 1.377-21.758-1.12-32.54-2.162-9.33-1.946-22.802.547-34.047 2.826-12.745 2.24-26.717-2.09-49.75-3.133-16.673-3.194-17.483-1.702-22.5.85-2.86 1.844-7.003 2.206-9.203.362-2.2 2.25-7.375 4.194-11.5 2.782-5.903 5.28-9.203 11.738-15.5 7.305-7.124 10.002-8.928 24.63-16.477l16.43-8.477 10.56-.377 10.56-.378 10.2 5.117c8.45 4.24 11.61 6.532 18.44 13.373 8.807 8.824 15.94 13.138 21.74 13.15 2.038.004 6.635-1.547 11.008-3.713 4.13-2.046 8.5-3.72 9.713-3.72 1.213 0 4.488-.9 7.28-2 3.377-1.332 7.65-2.036 12.786-2.11 4.24-.058 10.412-.396 13.712-.75 5.743-.613 6.053-.79 7.252-4.14.777-2.173 1.045-5.928.706-9.907-.662-7.765-6.08-32.45-7.908-36.023-.722-1.414-1.642-4.595-2.044-7.07-.402-2.475-1.398-6.075-2.215-8-3.087-7.28-6.267-20.726-6.28-26.554-.014-7.282 3.2-14.52 8.8-19.82 2.028-1.92 5.654-5.323 8.056-7.56L314.156 0h13.823c7.603 0 14.077.41 14.388.913.31.502 2.382 1.22 4.603 1.595 4.74.8 8.822 4.61 13.828 12.91 2.696 4.47 3.534 7.16 4.16 13.366.43 4.273 1.435 9.332 2.232 11.243 3.522 8.443 5.027 14.16 6.31 23.973.754 5.775 2.32 14.96 3.478 20.412 1.158 5.452 2.913 14.677 3.9 20.5 1.303 7.7 3.017 13.317 6.277 20.588 5.804 12.942 8.355 20.903 10.255 32 1.454 8.49 4.64 18.283 6.966 21.402.575.772 1.315 5.722 1.643 11 .328 5.28 1.326 11.848 2.217 14.598 3.54 10.92 4.9 18.714 6.11 35 1.165 15.68 1.5 17.466 4.316 23 2.045 4.02 4.49 7.028 7.406 9.116 2.393 1.714 6.377 4.72 8.852 6.684 2.475 1.962 8.615 5.6 13.644 8.082 5.833 2.88 9.932 5.62 11.318 7.566 1.196 1.678 3.005 3.052 4.02 3.052 1.016 0 5.245 1.8 9.397 4 4.154 2.2 8.158 4 8.9 4 .74 0 2.67 1.402 4.284 3.115 1.616 1.713 4.738 3.91 6.938 4.88 4.486 1.978 22.906 19.977 27.578 26.947 1.638 2.443 3.67 6.827 4.518 9.74.847 2.916 2.452 5.94 3.567 6.72 2.02 1.414 2.017 1.433-.474 5.758-1.374 2.387-3.314 6.974-4.31 10.194-1.063 3.44-3.31 7.563-5.45 10-2.004 2.28-4.56 5.946-5.68 8.146-2.35 4.618-3.975 6.15-10.425 9.83-2.572 1.467-5.947 4.18-7.5 6.027-1.553 1.847-4.09 3.663-5.637 4.036-2.81.676-7.07 4.105-13.03 10.485-1.736 1.86-8.408 8.633-14.827 15.055-8.136 8.14-11.932 12.687-12.535 15.016-1.09 4.208-.06 14.962 3.398 35.47 2.462 14.602 2.716 18.516 2.76 42.58.052 28.635.45 25.812-6.006 42.5-3.238 8.368-9.855 16.205-14.945 17.702-5.738 1.688-34.5 1.63-42.223-.083-6.098-1.354-6.337-1.326-11.87 1.382-3.47 1.697-8.864 5.913-13.982 10.928-6.21 6.086-10.7 9.422-17.63 13.096l-9.296 4.93-11.176.378c-11.1.375-11.225.353-18.61-3.2-9.504-4.57-14.96-8.715-28.162-21.392-11.442-10.987-10.914-10.14-23.373-37.492-2.767-6.078-3.363-6.75-5.977-6.75-1.597 0-5.108 1.193-7.802 2.65-2.694 1.458-6.784 3.386-9.09 4.283-2.58 1.005-7.673 5.002-13.25 10.4-10.408 10.076-10.714 11.096-6.968 23.224 1.16 3.755 1.87 8.143 1.595 9.856-.955 5.96-4.676 14.812-7.647 18.196-4.36 4.964-5.503 7.56-12.182 27.66-7.403 22.274-8.762 24.987-16.528 32.977-5.307 5.46-7.37 6.805-14.72 9.596-4.7 1.786-8.812 3.677-9.136 4.202-.8 1.295-21.472 1.25-21.472-.045z" fill="#0f9fd6"/></svg>');
+}
+
+.emphasisblock__imagesvg {
+	width: 60%;
+	margin: 2 * $global-margin auto;
+	svg {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@include breakpoint( medium ) {
+	.emphasisblock--full .emphasisblock-inner {
+		@include flex;
+		@include flex-align( justify, middle );
+		flex-wrap: wrap;
+		.emphasisblock__paragraph,
+		.emphasisblock__imagesvg,
+		.emphasisblock__subheader,
+		.emphasisblock__button-wrapper {
+			min-width: 10em;
+			align-self: center middle;
+			flex: 1;
+		}
+		.emphasisblock__imagesvg {
+			margin: $global-margin auto;
+		}
+		.emphasisblock__subheader {
+			margin-top: 0;
+		}
+	}
+}
+
+.emphasisblock__button-wrapper {
+	text-align: center;
+}
+
+.section__emphasisblock.emphasisblock--left,
+.section__emphasisblock.emphasisblock--right,
+.section__emphasisblock.emphasisblock--left + .section__slice,
+.section__emphasisblock.emphasisblock--left + .section__slice.emphasisblock--right,
+.section__emphasisblock.emphasisblock--right + .section__slice.emphasisblock--left,
+.section__emphasisblock.emphasisblock--right + .section__slice {
+	clear: none;
+	@include grid-layout(2, '.section__slice');
+	@include breakpoint( small ) {
+		@include grid-column( 95% );
+		@include grid-column-position( center );
+	}
+	@include breakpoint( medium ) {
+		@include grid-column( 85% );
+		@include grid-column-position( center );
+	}
+	@include breakpoint( large ) {
+		@include grid-column( 5 );
+	}
+}
+
+.emphasisblock--left {
+	@include breakpoint( small ) {
+		& + .section__slice {
+			float: none !important;
+		}
+	}
+	@include breakpoint( large ) {
+		@include grid-column-offset( 1 );
+		& + .section__slice,
+		& + .section__slice.emphasisblock--right {
+			float: left !important;
+			@include grid-column-end;
+		}
+	}
+
+}
+
+.emphasisblock--right {
+	@include breakpoint( small ) {
+		& + .section__slice {
+			float: none !important;
+		}
+	}
+	@include breakpoint( large ) {
+		@include grid-column-position( 6 );
+		@include grid-column-end;
+		& + .section__slice,
+		& + .section__slice.emphasisblock--left {
+			float: left !important;
+			@include grid-column-position( - 4 );
+		}
+	}
+}
+
+/*****************************
+Pattern 20.5 Documentblock
+*****************************/
+
+.documentblock-inner {
+	padding: $global-padding;
+}
+
+.documentblock__file-list {
+	li {
+		background-repeat: no-repeat;
+		padding-left: 1.5em;
+		background-size: 1em;
+		background-position: left center;
+		color: $black;
+	}
+}
+
+.griditem--documentblock {
+	.griditem__content {
+		padding: 0;
+		background: transparent;
+	}
+	.post-it-bg {
+		z-index: 0;
+		transform: none;
+	}
+	.documentblock__sectionheader,
+	.documentblock__paragraph,
+	.documentblock__paragraph a {
+		position: relative;
+		z-index: 1;
+	}
+	.documentblock__paragraph a:hover {
+		color: $black;
+		border-bottom: 2px solid $blue-3;
+	}
+	.documentblock__paragraph {
+		text-align: left;
+	}
+	.documentblock__sectionheader {
+		text-transform: uppercase;
+		font-size: $small-font-size;
+	}
+
+}
+
+/********************************************
+Pattern 21 & 22 Grids
+*********************************************/
+
+
+.archive__grid {
+	.masonry__grid-sizer,
+	.archive__grid__griditem {
+		width: 100%;
+	}
+	.masonry__gutter-sizer {
+		width: 0;
+	}
+	@include breakpoint( medium ) {
+		.masonry__grid-sizer,
+		.archive__grid__griditem {
+			width: 48.5%;
+			padding: 0;
+		}
+		.masonry__gutter-sizer {
+			width: 3%;
+		}
+	}
+	@include breakpoint( large ) {
+		.masonry__grid-sizer,
+		.archive__grid__griditem {
+			width: 32%
+		}
+		.masonry__gutter-sizer {
+			width: 2%;
+		}
+	}
+}
+
+.archive__grid__masonry {
+	padding-bottom: 4 * $global-padding;
+}
+
+.archive__grid__load-more {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	.button {
+		border: 2px solid $blue-2-web;
+	}
+}
+
+.facets-active .archive__grid {
+	@include breakpoint( medium ) {
+		.masonry__grid-sizer,
+		.archive__grid__griditem {
+			width: 48.5%;
+			padding: 0;
+		}
+		.masonry__gutter-sizer {
+			width: 3%;
+		}
+	}
+	@include breakpoint( xlarge ) {
+		.masonry__grid-sizer,
+		.archive__grid__griditem {
+			width: 32%
+		}
+		.masonry__gutter-sizer {
+			width: 2%;
+		}
+	}
+}
+
+.collaboration__media__grid {
+	.masonry__grid-sizer,
+	.collaboration__griditem {
+		width: 100%;
+	}
+	.masonry__gutter-sizer {
+		width: 0;
+	}
+	@include breakpoint( medium ) {
+		.masonry__grid-sizer,
+		.collaboration__griditem {
+			width: 48.5%;
+			padding: 0;
+		}
+		.masonry__gutter-sizer {
+			width: 3%;
+		}
+	}
+	@include breakpoint( large ) {
+		.masonry__grid-sizer,
+		.collaboration__griditem {
+			width: 32%
+		}
+		.masonry__gutter-sizer {
+			width: 2%;
+		}
+	}
+}
+
+section.section--has_grid {
+	.section-inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&.section--featured-grid {
+		.section-inner {
+			padding-top: 0;
+		}
+	}
+	&.section--archive-grid {
+		.section-inner {
+			padding-left: 0.625em;
+			padding-right: 0.625em;
+		}
+	}
+	&.section--collaboration-grid {
+		.section-inner {
+			padding-left: 0.625em;
+			padding-right: 0.625em;
+		}
+	}
+
+}
+
+.archive__grid__griditem,
+.collaboration__griditem {
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: $global-margin;
+}
+
+.featuredgrid__griditem,
+.simplegrid__griditem,
+.relatedgrid__griditem {
+	@include grid_column();
+	@include breakpoint( medium ) {
+		&.griditem--grid_sixth {
+			@include grid_column( 4 );
+			padding: $global-padding;
+			background-color: $white;
+		}
+		&.griditem--grid_half,
+		&.griditem--grid_third,
+		&.griditem--grid_fourth,
+		&.griditem--grid_two_third {
+			@include grid_column( 6 );
+		}
+
+	}
+	@include breakpoint( medium only ) {
+		&.griditem--grid_third {
+			@include grid-layout( 2 );
+			@include grid-layout-center-last( 2 );
+		}
+	}
+	@include breakpoint( large ) {
+		&.griditem--grid_sixth {
+			@include grid_column( 4 );
+			padding: $global-padding;
+			background-color: $white;
+		}
+		&.griditem--grid_fourth {
+			@include grid_column( 3 );
+		}
+		&.griditem--grid_third {
+			@include grid_column( 4 );
+		}
+		&.griditem--grid_two_third {
+			@include grid-column( 8 );
+		}
+	}
+	margin-bottom: $global-margin;
+	&.griditem--cta {
+		margin-top: 0;
+	}
+}
+
+.section__sectionheader + .section__simplegrid {
+	margin-top: 2 * $global-margin;
+}
+
+.simplegrid__griditem:first-child:last-child {
+	@include grid-column-position(center);
+}
+
+.griditem__content {
+	position: relative;
+	padding: 0;
+}
+
+.griditem__content-border {
+	border: 3px solid transparent;
+}
+
+.griditem:hover .griditem__content-border {
+	border-color: $pink-cl;
+}
+
+.griditem__content-inner {
+	position: relative;
+	padding: 2.75 * $global-padding $global-padding $global-padding $global-padding;
+	background-color: $white;
+}
+.griditem--cta .griditem__content {
+	padding: 0;
+}
+
+.griditem--pattern .griditem__content {
+	background: transparent;
+}
+
+.griditem--paragraph .griditem__content,
+.griditem--pull_quote .griditem__content {
+	text-align: inherit;
+}
+
+.griditem--collaboration .griditem__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.griditem--cta .griditem__emphasisblock p,
+.griditem__content p {
+	hyphens: none;
+}
+
+.griditem--programme_round .griditem__content,
+.griditem--pattern .griditem__content {
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+.griditem--pattern .griditem__pattern {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+	padding: 0 1em;
+}
+
+.griditem--image .griditem__pattern {
+	padding: 0;
+}
+
+.griditem__meta,
+.griditem__title,
+.griditem__tags {
+	margin-bottom: $global-margin;
+}
+
+.griditem__title {
+	color: $pink-cl;
+}
+
+.griditem__meta,
+.griditem__intro-wrapper,
+.griditem__collaboration-info {
+	font-size: $small-font-size;
+}
+
+.griditem__read-full-story a {
+	color: $pink-cl;
+	font-size: $small-font-size;
+	font-weight: $global-weight-bold;
+}
+
+.griditem__read-full-story a,
+a.read-full-story,
+.emphasisblock--white a.read-full-story {
+	font-family: Roboto, sans-serif;
+	font-weight: $global-weight-bold;
+	display: inline-block;
+	padding-right: 1.5em;
+	background-image: svg-url('<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" fill="#E51145"/></svg>');
+	background-size: auto 1em;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.emphasisblock--cta:not(.emphasisblock--white) a.read-full-story {
+	padding-right: 1.25em;
+	background-image: svg-url('<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" fill="#EFEFEF"/></svg>');
+}
+
+a.read-full-story:hover,
+.emphasisblock--cta:not(.emphasisblock--white) a.read-full-story:hover {
+	padding-right: 2rem;
+}
+
+.griditem__image {
+	width: 100%;
+	overflow: hidden;
+}
+
+.griditem__collaboration-info {
+	justify-content: center;
+	position: relative;
+	text-align: center;
+	.ampersand-wrapper {
+		position: absolute;
+		align-self: center;
+		height: 4em;
+		width: 4em;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	svg {
+		position: relative;
+		width: 100%;
+		height: 100%;	
+		z-index: 1;
+	}
+	ul.participants {
+		height: 100%;
+	}
+	.participant {
+		position: relative;
+		vertical-align: middle;
+		display: inline-block;
+		z-index: 2;
+		width: 48%;
+		padding: 1%;
+		margin: 0;
+		min-height: 4em;
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5) {
+			margin-top: 4em;
+		}
+	}
+	.participant__organisation-details {
+		display: block;
+		font-weight: $global-weight-light;
+	}
+
+}
+
+.collaboration__griditem:not(.griditem--documentblock) .griditem__content {
+	padding-bottom: 0.5 * $global-padding;
+	text-align: left;
+}
+
+.griditem__button-wrapper,
+.griditem__emphasisblock div:last-child.emphasisblock__button-wrapper,
+.griditem--programme_round div:nth-last-child(2).emphasisblock__button-wrapper {
+	position: absolute;
+	bottom: 1.5 * $global-padding;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.griditem--programme_round div:nth-last-child(2).emphasisblock__button-wrapper {
+	bottom: 3.25 * $global-padding;
+}
+
+.griditem--programme_round div:nth-last-child(3).emphasisblock__button-wrapper {
+	bottom: 5 * $global-padding;
+}
+
+/************************
+Pattern 23. Map interface
+*************************/
+.map__marker__image {
+	height:14px;
+	width:14px;
+	position: relative;
+	top: -3px;
+}
+
+.map__marker__label {
+	@include label;
+	border: 2px solid $pink-cl;
+	background-color: #fff;
+	position: relative;
+	left: 14px;
+	top: -2px;
+}
+
+.category-programme-review .map__marker__label {
+	display: none;
+}
+
+/*********************
+ARTICLE META STYLES
+*********************/
+
+.story__meta-wrapper {
+	pointer-events: none;
+	@include breakpoint( xlarge ) {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		margin-top: 0;
+	}
+}
+
+.story__meta {
+	@include breakpoint( xlarge ) {
+		@include grid-row;
+	}
+}
+
+.story__meta-inner {
+	border-left: 2px solid $sandbox-cl;
+	pointer-events: visible;
+	padding: $global-padding;
+	position: relative;
+	z-index: 2;
+	@include breakpoint( xlarge ) {
+		@include grid-column( 2 );
+		@include grid-col-off( 10 );
+		padding: $global-padding;
+		min-width: 13em;
+		min-height: 13em;
+		.story__meta__tag span {
+			max-width: 14em;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+}
+.story__meta__item--category,
+.story__meta__item--storyteller,
+.story__meta__item--date {
+	font-size: $small-font-size;
+}
+
+.story__meta__item--date,
+.story__meta__item--tags {
+	margin-bottom: 1.5 * $global-margin;
+}
+
+.story__meta__item--category .tag,
+.griditem__tag.category {
+	background-color: $pink-cl;
+	color: $white;
+}
+
+.story__meta__item__header {
+	display: block;
+	margin-bottom: 0.5 * $global-margin;
+}
+
+.social-icons-list {
+	margin-bottom: 0;
+	line-height: 0;
+}
+
+.social-icons-list__item {
+	display: inline-block;
+	margin-left: 0.5 * $global-margin;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.social-icons-list__link__icon {
+	display: block;
+	width: 2em;
+	height: 2em;
+	outline: none;
+	svg, image {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.social-icons-list__link__icon:hover {
+	cursor: pointer;
+}
+
+.page__footer {
+	.social-icons-list {
+		margin-top: 0.5 * $global-margin;
+	}
+	.social-icons-list__item {
+		display: inline-block;
+		line-height: 0;
+	}
+	.social-icons-list__link__icon {
+		width: 2em;
+		height: 1.5em;
+		g.logo path,
+		path.logo {
+			fill: $pink-cl;
+		}
+		g.box,
+		path.box {
+			fill: $white;
+		}
+	}
+	span {
+		display: none;
+		vertical-align: middle;
+		color: $white;
+		font-weight: $global-weight-semibold;
+	}
+}
+
+.story__footer,
+.section--has_social_icons {
+	.social-icons-list {
+		text-align: center;
+	}
+	.social-icons-list__link__icon path.circle {
+		transition: fill 1s;
+	}
+	.social-icons-list__link__icon:hover {
+		path.circle {
+			fill: $yellow-3;
+			transition: fill 1s;
+
+		}
+	}
+	.social-icons-list__item:last-child .social-icons-list__link__icon {
+		margin-right: 0;
+	}
+}
+
+.section--has_social_icons {
+	.social-icons-list__link__icon {
+		width: 6em;
+		height: 6.5em;
+		margin-right: 2em;
+	}
+	&.section--blue-1-web .social-icons-list__link__icon {
+		path.circle {
+			fill: $blue-3;
+		}
+		&:hover path.circle {
+			fill: $blue-4;
+		}
+	}
+	&.section--sandbox .social-icons-list__link__icon {
+		path.circle {
+			fill: $salmon-3;
+		}
+		&:hover path.circle {
+			fill: $salmon-4;
+		}
+	}
+}
+
+.story__footer {
+	.social-icons-list__link__icon {
+		width: 3em;
+		height: 3.25em;
+		margin-right: 1em;
+	}
+}
+
+
+/*********************
+ARTICLE EXTRAS STYLES
+*********************/
+
+.section--featured-stories {
+	position: relative;
+}
+
+#programmes {
+	background-image: url('../images/png/T_Build_together_WEB-SCALED-ALPHA.png');
+	background-size: 66.667%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	a {
+		display: block;
+		&:hover svg g path {
+			fill: $yellow-3;
+		}
+	}
+	& + figcaption p {
+		text-align: center;
+	}
+	@include breakpoint( small ) {
+		@include on-circle( $item-count: 5, $circle-size: 13em, $item-size: 10%);
+		margin: 0 auto 4em;
+		a {
+			width: 5em;
+			margin-left: -2.5em;
+			margin-top: -1em;
+		}
+		svg {
+			width: 5em;
+		}
+	}
+	@include breakpoint( medium ) {
+		@include on-circle( $item-count: 5, $circle-size: 30em, $item-size: 10%);
+		margin: 0 auto 5em;
+		a {
+			width: 10em;
+			max-height: 4em;
+			margin-left: -5em;
+			margin-top: -2em;
+		}
+		svg {
+			width: 10em;
+			max-height: 4em;
+
+		}
+	}
+}
+
+.button-wrapper {
+	text-align: center;
+}
+
+/*********************
+TANDEM ACCORDION STYLE
+*********************/
+
+a.accordion-title {
+$blue-3 : #0f9fd6; /* Accents on blue */
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.23728 67.289766"><path d="M99.2 13v1.3c-.4 0-.2 1-.8 1v1c-.8.2-.4 1.6-1.2 1.7v2.5c-1.6.3-1 2.8-2.5 3.3.3 1.2-1 .8-.8 2-.6.3-1 1-1 1.7-.5.2-1 .6-1 1.2-.2.4-.6.3-1 .4 0 .5 0 .5-.4.5.2 1-.7 1-.4 2-.5.2-.8.6-.8 1.3-.4 0-.3.5-.4.8-.4 0-.4.2-.4.4-.2.6-.7.7-.8 1.2-.3.3-.3.6-.5 1v.3s-1.2.4-.8 1.6c-1 .6-1.5 1.4-1.6 2.6-.5 0-.4.5-.5.8-.4 0-.4.2-.4.4-.3 0-.2.5-.3.8-.4 0-.4.2-.4.4-.6.8-.7 2.2-1.7 2.5-.6.8-.6 2-1.6 2.5-.4 1-1 1.6-1.3 2.8-1.2.6-1.7 2-2.4 3-.8 0-.3 1.2-1.2 1-.2.7-.6 1-1.2 1.4 0 1.2-1 1.2-.8 2.4-.8 0-.8 1-1.6 1.2-.2.4-.4.8-1 1 .2.3 0 .6-.3.7.3.5 1.2.3 1.8.4 0-.6.8-.4.8-1 .7.4 0 .8 0 1.3-.4.2-.7.4-.8.8-.6.3-.7.8-1.3 1-1.2.2-.7-1.2-2-1-.2.2-.7 0-.8 0v.5l-.8.4c-.4.2-.3.5-.6.8 0 0-.5 0-.4.4-1 0-1.7.4-2.4.8v.4h-.4v.4h-.4l-1 .4c-1 .3-1.4-.4-2.3-.4 0-.4-.5-.3-.8-.4-.4 0-.4-.4-1-.4-1.7 0-3 .6-5.2.4 0-.4-.5-.3-.8-.4 0-.4-.2-.4-.4-.4-.3-.4-.5-1-.4-1.7-2.3 0-3.8-.7-6.3-.5-1.6 0-2-1.4-3.7-1.2-.2-.6-.6-1-1.2-1.2 0-.7-1.3-.2-1.2-1.2-.2 0-.7.2-.8 0v-.4l-1-.4c0-.2 0-.6-.3-.8 0 0-.5 0-.4-.4h-.7v-.4h-.8c-.2 0-.3-.8-.4-.8h-.7c0-.4-.6-.4-1-.4.2-.4 0-.4-.3-.5-.3-.3-1-.4-1.6-.4-.7-1-1.6-2-3-2.4-.4-1.4-1.2-2.3-2.3-3-.5-1-1-2.3-2.4-2.5 0-1-.6-1.2-.8-2-.8 0-.3-1.4-1.3-1.2 0-.8-1-.6-.8-1.7-.6-.2-1-.6-1.2-1.2-.4-.5-.4-1.5-1.2-1.6 0-1-1.2-.6-1-1.7-1-.2-1-2-2.3-2.3 0-1.2-1-1.3-.8-2.5-.3-1-1.4-1-1.7-2 0-.6-.7-.7-.8-1.3-.2-.4-.4-.8-.8-1 0-.6-.4-1-1-1 0-.7 0-1.3-.3-1.4.2-1.2-1.3-1-1-2.4-.2-.7-1-1.2-1-2-.5-.8-1-1.3-1.7-1.7.2-1.3-1-1-1.3-2C3 18.2 3 17.2 2 17c.3-2-1.3-2.4-2-3.7-.2-1 1-.8 1-1.6 0-1-1-1-.5-2.2 1 0 .5-1.6 1.6-1.6.4-1.3-.6-1.2-.3-2.5.5 0 .7 0 .8-.4 0-.3.2-.4.4-.4.6-.2.6.3 1 .3.3-.8 0-1-.3-1.6-.7-.3 0-.8 0-1.2.8 0 1-.5 1.7-.5 0 .6 1 .4 1.6.5.5 0 .4-.8.4-1.3 0-.3.4-.4.4-.8.7 0 1.6-.2 1.7.4.3-.3 1-.2 1.2-.8.5 0 .7.7 1.2.8.6 0 .6.4 1.2.4 1.4-.2 2.3.2 3.2.4 1.3.3 1.2-.7 2.5-.4 1.5 0 2.4.8 4 .8.3 1 1 1 2 1.3A3.7 3.7 0 0 0 26.8 5a3.7 3.7 0 0 0 1.6 1.6c0 .6.4.7.4 1.2.5 0 .3.8 1 .8.3.6.2 1.5 1 1.6.3 1 1 1.4 1.3 2 .6.5 1.3.7 1.2 1.7 1.3 0 1.6.8 2.5 1.2l1.2 2.4c1 .3.8 1.6 1.2 2.5 1 .2.7 1.8 1.6 2 .4.5.2 1.3.8 1.4.2.3.5.6.4 1.2.2 1 1.5.8 1.3 2 .8.2.8 1 1.6 1.3-.2.3 0 .6.3.7.3 1 .4 2 .8 3 0 .8 1.3.3 1.4 1 .4 0 .3.6.4 1 .3-.2.4 0 .4.3 1 .3 1 1.7 2.4 1.7H51c1 0 1.5-.6 1.5-1.7 1 0 1-1 .8-2 1 0 .4-1.6 1.7-1.3.4-.5.4-1.5 1.2-1.6-.2-1 .8-.8.4-2 .6-.2 1-.6 1.2-1.2.2-.5.8-.6 1-1.2 0-.2 0-.6.3-.8.2-.2.8-.3 1-.4 0-.2-.2-.8 0-1 0 0 .3.2.3 0v-.7c.6-.2 1-.6 1.2-1.2.5-.2 1-.5.8-1.2 1-.5 1.5-1.3 1.7-2.5.6-.2 1-.6 1.2-1.2.4-.4.3-1 .8-1.3.5-1 1-2 2-2.4-.2-1.2 1-1 1-1.8 0-.5.6-.6.7-1.2.4-.3.3-1 .8-1.2.2-.6.8-.7 1-1.2h2c.3 0 .2-.5.3-1 .5.2.8 0 .8-.3.5 0 .8 0 1-.4-.2-.4 0-.5.3-.5.2-1 1.7-1 2-2 2 .3 2.5-1 3.6-1.7 1 .2 1.7.5 2.5.8h5c0 .4 0 .4.4.4 1-.2.8 1 1.2 1.3.6.2 1 .6 1.3 1.2.4 0 1 0 1-.4.4.3.8.5 1.3.5 0 1 1.5.7 2 1.2 0 2.4-.3 5 2.5 4.5.4 1.7-1.2 1.3-.8 3h1.2z" class="caret" fill="#0f9fd6" fill-rule="evenodd"/></svg>');
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: auto 20%;
+	color: $blue-3;
+	font-weight: $global-weight-semibold;
+	&:visited {
+		color: $blue-3;
+	}
+}
+
+.accordion-item.is-active .accordion-title {
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><path fill="#0F9FD6" fill-rule="evenodd" d="M.172 11.052c.088-.02.055-.168.163-.17v-.254c.167-.024.076-.316.243-.34v-.51c.32-.06.194-.588.487-.678-.06-.26.223-.163.163-.424.11-.056.15-.18.162-.34.117-.047.198-.132.244-.254.002-.083.1-.066.162-.085-.015-.072.032-.08.08-.085-.032-.204.15-.184.082-.424.1-.037.167-.11.163-.255.08-.002.064-.103.082-.17.07.016.077-.032.08-.084.03-.113.144-.135.164-.256.045-.05.044-.11.08-.17.01-.017-.013-.07 0-.084.018-.018.246-.09.163-.34.183-.09.294-.257.324-.51.08-.002.063-.103.08-.17.07.017.078-.032.082-.084.08-.002.063-.104.082-.17.07.016.076-.033.08-.084.118-.16.12-.44.325-.51.118-.16.12-.44.325-.51.068-.21.223-.332.244-.593.242-.116.337-.384.487-.595.152-.01.055-.28.243-.254.045-.122.126-.206.243-.254-.02-.25.184-.26.163-.51.164-.024.158-.23.323-.254.036-.075.072-.152.163-.17-.013-.098.018-.15.08-.17-.024-.114-.202-.07-.324-.084-.02.092-.16.057-.162.17-.145-.063-.012-.155 0-.255.072-.037.145-.074.162-.17.107-.03.128-.15.244-.17.25-.063.156.233.406.17.03-.02.14.028.162 0 .01-.012-.012-.076 0-.085.04-.027.126-.048.163-.085.045-.044.04-.12.08-.17.022-.026.114 0 .082-.084.227.007.35-.08.486-.17.013-.01-.01-.074 0-.086.014-.014.068.014.08 0 .015-.014-.012-.07 0-.085.014-.014.066.01.082 0 .055-.036.09-.07.163-.085.25-.062.297.086.488.084.002.082.1.065.162.084.066.016.08.085.163.085C8.73.336 9 .223 9.428.273c.003.083.1.066.163.085-.014.07.032.08.082.084.063.076.087.192.08.34.427.007.732.14 1.22.084.312.012.374.287.73.255.045.122.126.207.243.255.01.16.27.06.244.254.028.022.14-.028.16 0 .01.012-.01.077 0 .085.042.028.127.048.164.085.045.044.04.12.08.17.022.026.114 0 .082.084.03.022.14-.027.162 0 .007.01-.008.083 0 .085.045.018.122-.022.163 0 .035.02.053.158.082.17.045.022.115-.015.162 0 .003.084.1.067.163.086-.015.072.03.08.08.085.073.067.184.092.326.086.132.23.317.403.568.51.102.26.27.454.488.593.116.218.19.48.488.508-.013.21.127.263.162.425.153.01.056.28.243.254.002.17.223.108.164.34.117.047.198.132.243.254.082.114.077.317.244.34.002.17.222.108.163.34.257.072.23.438.488.51-.02.248.184.26.163.508.055.198.27.228.325.425.028.11.143.133.162.254.036.076.07.152.162.17-.003.145.06.22.163.255-.007.12-.013.24.08.254-.038.268.25.192.163.51.073.15.197.247.244.424.073.15.18.262.325.34-.04.266.218.223.243.424.166.025.16.23.325.254-.033.43.284.496.406.764.06.232-.16.17-.16.34-.035.204.147.184.08.424-.21.008-.116.33-.325.34-.06.26.14.25.08.508-.093-.014-.143.02-.16.085.014.07-.033.08-.082.084-.13.024-.14-.08-.244-.085-.035.177.055.224.08.34.145.06.012.153 0 .253-.145-.01-.17.104-.324.085-.026-.115-.204-.07-.325-.085-.094.014-.068.155-.08.255-.016.07-.082.085-.082.17-.128-.008-.31.04-.324-.085-.066.073-.223.05-.244.17-.106-.03-.128-.15-.244-.17-.13.024-.14-.08-.243-.085-.28.037-.455-.034-.65-.085-.248-.062-.238.146-.487.085-.324 0-.487-.17-.812-.17-.056-.168-.216-.226-.406-.254-.073-.15-.18-.263-.324-.34-.074-.15-.182-.263-.325-.34.02-.136-.078-.146-.082-.254-.09-.02-.056-.17-.163-.17-.08-.112-.077-.315-.243-.34-.048-.176-.17-.273-.244-.423-.12-.074-.257-.128-.244-.34-.247.004-.315-.18-.487-.255-.078-.173-.166-.335-.243-.51-.197-.048-.18-.32-.244-.508-.22-.025-.146-.357-.325-.424-.07-.07-.048-.233-.162-.255-.043-.068-.085-.138-.08-.254-.026-.2-.283-.157-.245-.424-.165-.025-.16-.23-.325-.254.013-.1-.018-.15-.08-.17-.06-.193-.073-.434-.163-.594.025-.196-.235-.094-.244-.255-.08-.002-.063-.103-.08-.17-.07.016-.078-.032-.082-.084-.22-.054-.202-.356-.487-.34h-.244c-.207.01-.315.123-.325.34-.177.01-.174.213-.162.423-.214-.025-.064.33-.325.255-.08.112-.076.315-.242.34.033.204-.15.183-.082.423-.117.05-.198.134-.243.256-.03.11-.143.133-.163.255-.048.035-.04.128-.08.17-.028.03-.145.054-.163.085-.02.03.026.148 0 .17-.008.007-.08-.01-.08 0-.018.05.01.118 0 .17-.118.047-.2.132-.245.254-.1.036-.167.108-.162.254-.184.09-.295.257-.325.51-.117.047-.198.13-.244.254-.07.068-.047.232-.16.254-.09.22-.206.408-.407.51.06.23-.16.17-.162.34-.028.11-.142.132-.162.253-.07.07-.048.233-.162.255-.03.112-.143.133-.163.255h-.406c-.08.002-.063.104-.08.17-.095-.015-.145.018-.163.084-.095-.015-.145.018-.163.084.016.072-.03.08-.08.085-.056.223-.37.178-.406.423-.41-.062-.502.21-.73.34-.19-.028-.336-.102-.488-.17h-.974c.015-.072-.032-.08-.08-.085-.22.06-.158-.175-.245-.254-.117-.048-.198-.133-.243-.255-.116-.008-.23-.015-.244.084-.065-.045-.132-.09-.243-.085-.01-.22-.303-.137-.406-.256.004-.484.07-1.033-.487-.933-.08-.338.243-.255.163-.593H.172v-.255z"/></svg>');
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: auto 20%;
+}
+
+.accordion-item {
+	padding: 0 $global-padding;
+	border-top: 1px solid $blue-3;
+}
+
+/*********************
+ARCHIVE STYLES
+*********************/
+
+.archive__filter nav {
+	width: 100%;
+	padding: 0;
+}
+
+.archive__filter__toggle {
+	width: 100%;
+	text-align: right;
+}
+
+.archive__facets-wrapper-outer {
+	font-size: $small-font-size;
+	@include breakpoint( small ) {
+		position: relative;
+		@include grid-column(12);
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	@include breakpoint( medium ) {
+		position: absolute;
+		z-index: 1001;
+		@include grid-column(3);
+		@include grid-col-end;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	@include breakpoint( large ) {
+		@include grid-column(2);
+		@include grid-col-end;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.facetwp-facet {
+		margin-bottom: $global-margin;
+	}
+}
+div.facetwp-checkbox {
+	background-image: url('../images/png/T_checkbox_Unchecked_WEB.png');
+	background-size: auto 1.5em;
+	padding-left: 2em;
+}
+div.facetwp-checkbox.checked {
+	background-image: url('../images/png/T_checkbox_Checked_WEB.png');
+	background-size: auto 1.5em;
+}
+.archive__facets-wrapper-inner {
+	padding: 0;
+	overflow-y: auto;
+}
+
+.show-filters {
+	display: block;
+}
+.hide-filters {
+	display: none;
+}
+
+.tabs-panel {
+	padding: 0;
+}
+
+.archive__facets--top {
+	.archive__facets__search {
+		padding: $global-padding;
+		.facetwp-search,
+		.facetwp-facet {
+			margin-bottom: 0;
+			padding: 0 0 0 $global-padding;
+		}
+	}
+}
+
+i.facetwp-btn {
+	top: 1.5rem;
+}
+
+.archive__view__toggle {
+	margin: 0;
+	min-height: 4.25em;
+	@include grid-row();
+	a svg,
+	a svg img {
+		height: 2em;
+		width: 2em;
+	}
+	label {
+		display: block;
+		float: right;
+		height: 2em;
+		margin: 0 0 0 0.5em;
+	}
+
+	.is-active a,
+	.is-active a:focus,
+	.is-active a:link {
+		background: transparent;
+		-webkit-tap-highlight-color: transparent;
+		.globe,
+		.grid rect {
+			fill: $black !important;
+		}
+	}
+	a:active {
+		.globe,
+		.grid rect {
+			fill: $pink-cl !important;
+		}
+		span {
+			color: $pink-cl;
+		}
+	}
+
+	@include breakpoint( small ) {
+		.controls {
+			float: none;
+			text-align: center;
+			margin: 0 auto;
+			width: 10em;
+		}
+	}
+	@include breakpoint( medium ) {
+		.controls {
+			width: auto;
+			text-align: left;
+			float: right;
+			margin: 1.25 * $global-margin 0;
+		}
+		label {
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.archive__facets--extra {
+	display: none;
+	background: $blue-2-web;
+	padding-top: 0.25 * $global-padding;
+}
+
+.facets-active {
+	.show-filters {
+		display: none;
+	}
+	.hide-filters {
+		display: block;
+	}
+	.archive__grid {
+		min-height: 728px;
+	}
+	.archive__facets-wrapper-outer {
+		background: $blue-2-web;
+	}
+	.archive__facets-wrapper-inner {
+		min-height: 781px;
+		max-height: 781px;
+	}
+	.archive__facets--extra {
+		display: block;
+	}
+	@include breakpoint( medium ) {
+		.archive__grid, .archive__map {
+			@include grid-column( 9 );
+			@include grid-col-off( 3 );
+		}
+		.archive__map {
+			padding: 0;
+		}
+	}
+	@include breakpoint( large ) {
+		.archive__grid, .archive__map {
+			@include grid-column( 10 );
+			@include grid-col-off( 2 );
+		}
+		.archive__map {
+			padding: 0;
+		}
+	}
+}
+
+.fwp-load-more {
+
+}
+
+.archive__facets__search__toggler p {
+	float: left;
+	margin-right: $global-margin;
+}
+
+#facets-map svg.section__edge--bottom,
+#facets-map svg.section__edge--top {
+	z-index: 800;
+	display: block;
+}
+
+#facets-map svg.section__edge--bottom {
+	top: 19px;
+}
+
+#facets-grid  {
+	margin-top: 2 * $global-margin;
+	margin-bottom: $global-margin;
+	.section-inner {
+		padding: 0;
+	}
+}
+
+/*********************
+COLLABORATION STYLES
+*********************/
+
+.collaboration__header--no--image,
+.collaboration__header--has-image,
+.collaboration__participants,
+.collaboration__map {
+	@include grid-row()
+}
+
+.collaboration__header__image-wrapper:not(.tridem_or_more) {
+	@include grid-column( 12, '0 px');
+	@include breakpoint( large ) {
+		@include grid-column( 6, '0 px' );
+	}
+}
+
+/* Switch around min-height and width for tridem collab-headers */
+.collaboration__header__image.image--tridem_or_more {
+	.image__placeholder__thumb,
+	.image--main.lazyloaded {		
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+.collaboration__header__desc {
+	@include grid-column( 12 );
+	text-align: center;
+	background: $rose-1-web;
+	color: $black;
+	@include breakpoint( large ) {
+		@include grid-column( 6, '0 px' );
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		.collaboration__header__desc-outer {
+			width: 100%;
+			padding-bottom: 100%;
+			position: relative;
+		}
+		.collaboration__header__desc-scroller {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;			
+		}
+		.collaboration__header__desc-inner {
+			width: 100%;
+			min-height: 100%;
+		}
+	}
+	.button--small,
+	.button--large {
+		color: $black;
+		border-color: $white;
+		font-weight: $global-weight-semibold;
+		&:hover {
+			background-color: $white;
+		}
+	}
+	hr {
+		border-color: white;
+		border-style: dashed;
+		width: 100%;
+	}
+}
+
+.supports-flex {
+	@include breakpoint( large ) {
+		.collaboration__header__desc-inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.collaboration__header__desc-inner h1,
+		.collaboration__header__desc-inner div,
+		.collaboration__header__desc-inner section {
+			width: 100%;
+		}
+	}
+}
+
+.collaboration__header__image-wrapper.tridem_or_more + .collaboration__header__desc .collaboration__header__desc-outer,
+.collaboration__header--no-image .collaboration__header__desc-outer {
+	padding-bottom: 0;
+}
+
+.collaboration__header__image-wrapper.tridem_or_more + .collaboration__header__desc .collaboration__header__desc-scroller,
+.collaboration__header--no-image .collaboration__header__desc-scroller {
+	position: relative;
+}
+
+.collaboration__header__desc-inner {
+	padding: 2 * $global-padding;
+}
+
+.collaboration__header--no-image .collaboration__header__desc,
+.collaboration__header__image-wrapper.tridem_or_more + .collaboration__header__desc {
+	@include breakpoint( large ) {
+		@include grid-column();
+		@include grid-column-position( center );
+		max-height: inherit !important;
+		height: inherit !important;
+		position: inherit;
+		.collaboration__header__desc-inner {
+			position: inherit;
+			top: 0;
+			transform: none;
+			max-width: 0.6 * $global-width;
+			margin: auto;
+		}
+	}
+}
+
+.collaboration__title {
+	color: $white;
+}
+
+.collaboration__paragraph {
+	margin: 0 auto $global-margin;
+}
+
+.collaboration__tags {
+	@include breakpoint( xlarge ) {
+		margin: $global-margin auto;
+	}
+	ol {
+		margin-left: 0;
+	}
+}
+
+.collaboration__content {
+	clear: both;
+}
+
+.collaboration__participants__item {
+	@include grid-column( 6 );
+}
+
+.collaboration__participant__details {
+	padding: 2 * $global-padding;
+}
+
+.participant__organisation__city {
+	font-weight: $global-weight-semibold;
+}
+
+.participant__organisation__city {
+	font-weight: $global-weight-light;
+}
+
+.participant__contactme {
+	margin-top: $global-margin;
+}
+
+.collaboration__header__image-wrapper .image__caption,
+.collaboration__map .simplemap__caption {
+	text-align: right;
+	padding-right: $global-padding;
+}
+
+.collaboration__extras .sectionheader {
+	text-align: center;
+	margin-bottom: 2 * $global-margin;
+}
+
+.collaboration__extras .sectionheader__text {
+	text-transform: uppercase;
+}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.story__footer,
+.collaboration__footer {
+	clear: both;
+	margin: 0 auto;
+}
+
+.story__footer__section {
+	margin-top: 0;
+}
+
+.share-cta-header {
+	margin: 0 auto 2 * $global-margin;
+	text-align: center;
+}
+
+.share-cta-paragraph {
+	font-size: $cta-font-size;
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+.collaboration__footer {
+	.social-icons-list {
+		margin-bottom: 0;
+	}
+}
+
+.page__footer__widgets {
+	background-color: $pink-cl;
+}
+
+.page__footer__copyright {
+	padding: 1 * $global-padding;
+	@include grid-row();
+	p {
+		margin-bottom: 0;
+		text-align: center;
+	}
+}
+
+.page__footer__widgets-inner {
+	@include grid-row();
+	padding: $global-padding 0;
+	p {
+		font-weight: $global-weight-semibold;
+	}
+}
+
+.footer__widget-wrapper {
+	color: $white;
+	@include grid-column();
+	@include breakpoint( small ) {
+		margin-bottom: 2 * $global-margin;
+
+	}
+	@include breakpoint( medium ) {
+		margin-bottom: 0;
+		@include grid-column( 6 );
+		min-height: 8em;
+		&:last-child {
+			margin-bottom: 2 * $global-margin;
+		}
+	}
+	@include breakpoint( large ) {
+		@include grid-column( 3 );
+		min-height: 4em;
+		margin-bottom: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.footer__widget__title {
+	font-size: $lead-font-size;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+}
+
+input.search-submit {
+	@include button;
+	border: 0;
+	box-shadow: inset 1px 1px 0 0 $pink-cl, inset -1px -1px 0 0 $pink-cl;
+	display: inline;
+	position: relative;
+	top: 0.45em;
+	font-weight: $global-weight-semibold;
+	&:hover {
+		background-color: $pink-cl;
+		color: $white;
+	}
+}
+
+.widget_search {
+	line-height: 1.5em;
+	label {
+		height: auto;
+		display: block;
+	}
+	.screen-reader-text {
+		display: none;
+	}
+	input.search-field {
+		border-color: $yellow-3;
+		outline-color: $yellow-3;
+		width: 10em;
+		height: 2.6em;
+		display: inline;
+		padding: 0.675em;
+	}
+	input.search-submit {
+		display: inline-block;
+		box-shadow: inset 1px 1px 0 0 $white, inset -1px -1px 0 0 $white;
+		color: $white;
+		&:hover {
+			background-color: $white;
+			color: $black;
+		}
+	}
+}
+
+
+
+/*********************
+ADMIN FORM STYLES
+*********************/
+
+#wpbody-content textarea,
+#exchange_tokenlist_widget {
+	table td {
+		vertical-align: top;
+	}
+}
