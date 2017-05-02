@@ -750,75 +750,6 @@
                                             "max": ""
                                         },
                                         {
-                                            "key": "56bc92e46a851",
-                                            "name": "interview_conversation",
-                                            "label": "Interview Conversation",
-                                            "display": "table",
-                                            "sub_fields": [
-                                                {
-                                                    "key": "field_57ad96b4672a2",
-                                                    "label": "Conversation",
-                                                    "name": "interview",
-                                                    "type": "repeater",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": 0,
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "min": 1,
-                                                    "max": 0,
-                                                    "layout": "row",
-                                                    "button_label": "Add voice \/ statement",
-                                                    "collapsed": "",
-                                                    "sub_fields": [
-                                                        {
-                                                            "key": "field_57ad96b4672a3",
-                                                            "label": "Voice",
-                                                            "name": "voice",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 1,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_57ad96b4672a4",
-                                                            "label": "Statement",
-                                                            "name": "statement",
-                                                            "type": "textarea",
-                                                            "instructions": "",
-                                                            "required": 1,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "new_lines": "wpautop",
-                                                            "maxlength": "",
-                                                            "placeholder": "",
-                                                            "rows": 6
-                                                        }
-                                                    ]
-                                                }
-                                            ],
-                                            "min": "",
-                                            "max": ""
-                                        },
-                                        {
                                             "key": "570a052beb642",
                                             "name": "button",
                                             "label": "Button",
@@ -1026,183 +957,15 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
-                                                    "layout": "vertical",
                                                     "choices": {
-                                                        "cta": "Call To Action (Tandem-style)",
                                                         "post-it": "Post-It"
                                                     },
-                                                    "default_value": "",
+                                                    "allow_null": 0,
                                                     "other_choice": 0,
                                                     "save_other_choice": 0,
-                                                    "allow_null": 0,
+                                                    "default_value": "",
+                                                    "layout": "vertical",
                                                     "return_format": "value"
-                                                },
-                                                {
-                                                    "key": "field_57ad96b4672ab",
-                                                    "label": "Call To Action elements",
-                                                    "name": "cta_block_elements",
-                                                    "type": "flexible_content",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": [
-                                                        [
-                                                            {
-                                                                "field": "field_57ad96b4672aa",
-                                                                "operator": "==",
-                                                                "value": "cta"
-                                                            }
-                                                        ]
-                                                    ],
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "min": "",
-                                                    "max": "",
-                                                    "button_label": "Add Row",
-                                                    "layouts": [
-                                                        {
-                                                            "key": "5709ff9541203",
-                                                            "name": "block_header",
-                                                            "label": "Header",
-                                                            "display": "row",
-                                                            "sub_fields": [
-                                                                {
-                                                                    "key": "field_57ad96b4672ac",
-                                                                    "label": "Block Header",
-                                                                    "name": "block_header_text",
-                                                                    "type": "text",
-                                                                    "instructions": "",
-                                                                    "required": 0,
-                                                                    "conditional_logic": 0,
-                                                                    "wrapper": {
-                                                                        "width": "",
-                                                                        "class": "",
-                                                                        "id": ""
-                                                                    },
-                                                                    "default_value": "",
-                                                                    "maxlength": "",
-                                                                    "placeholder": "",
-                                                                    "prepend": "",
-                                                                    "append": ""
-                                                                }
-                                                            ],
-                                                            "min": "",
-                                                            "max": ""
-                                                        },
-                                                        {
-                                                            "key": "570a00138b93e",
-                                                            "name": "block_paragraph",
-                                                            "label": "Paragraph (Keep it short!)",
-                                                            "display": "row",
-                                                            "sub_fields": [
-                                                                {
-                                                                    "key": "field_57ad96b4672ad",
-                                                                    "label": "Paragraph Text",
-                                                                    "name": "block_paragraph_text",
-                                                                    "type": "textarea",
-                                                                    "instructions": "",
-                                                                    "required": 0,
-                                                                    "conditional_logic": 0,
-                                                                    "wrapper": {
-                                                                        "width": "",
-                                                                        "class": "",
-                                                                        "id": ""
-                                                                    },
-                                                                    "default_value": "",
-                                                                    "new_lines": "wpautop",
-                                                                    "maxlength": "",
-                                                                    "placeholder": "",
-                                                                    "rows": ""
-                                                                }
-                                                            ],
-                                                            "min": "",
-                                                            "max": ""
-                                                        },
-                                                        {
-                                                            "key": "570a00108b93d",
-                                                            "name": "block_graphic",
-                                                            "label": "Block Graphic",
-                                                            "display": "row",
-                                                            "sub_fields": [
-                                                                {
-                                                                    "key": "field_57ad96b4672ae",
-                                                                    "label": "Select Block Graphic",
-                                                                    "name": "block_graphic_select",
-                                                                    "type": "image",
-                                                                    "instructions": "Select an SVG image from the library",
-                                                                    "required": 0,
-                                                                    "conditional_logic": [
-                                                                        [
-                                                                            {
-                                                                                "field": "field_57ad96b4672aa",
-                                                                                "operator": "==",
-                                                                                "value": "cta"
-                                                                            }
-                                                                        ]
-                                                                    ],
-                                                                    "wrapper": {
-                                                                        "width": "",
-                                                                        "class": "",
-                                                                        "id": ""
-                                                                    },
-                                                                    "return_format": "array",
-                                                                    "preview_size": "thumbnail",
-                                                                    "library": "all",
-                                                                    "min_width": "",
-                                                                    "min_height": "",
-                                                                    "min_size": "",
-                                                                    "max_width": "",
-                                                                    "max_height": "",
-                                                                    "max_size": "",
-                                                                    "mime_types": ""
-                                                                }
-                                                            ],
-                                                            "min": "",
-                                                            "max": ""
-                                                        },
-                                                        {
-                                                            "key": "5749f9124903e",
-                                                            "name": "block_logo",
-                                                            "label": "Programme Logo",
-                                                            "display": "row",
-                                                            "sub_fields": [
-                                                                {
-                                                                    "key": "field_57ad96b4672af",
-                                                                    "label": "Select a (programme) logo",
-                                                                    "name": "block_programme",
-                                                                    "type": "select",
-                                                                    "instructions": "",
-                                                                    "required": 0,
-                                                                    "conditional_logic": 0,
-                                                                    "wrapper": {
-                                                                        "width": "",
-                                                                        "class": "",
-                                                                        "id": ""
-                                                                    },
-                                                                    "multiple": 0,
-                                                                    "allow_null": 0,
-                                                                    "choices": {
-                                                                        "C_P": "Tandem Community & Participation",
-                                                                        "Europe": "Tandem Europe",
-                                                                        "Shaml": "Tandem Shaml",
-                                                                        "Turkey": "Tandem Turkey",
-                                                                        "Ukraine": "Tandem Ukraine",
-                                                                        "Solo": "Tandem (Solo)",
-                                                                        "Strapline": "Tandem (with strapline)"
-                                                                    },
-                                                                    "default_value": [],
-                                                                    "ui": 0,
-                                                                    "ajax": 0,
-                                                                    "placeholder": "",
-                                                                    "return_format": "value"
-                                                                }
-                                                            ],
-                                                            "min": "",
-                                                            "max": ""
-                                                        }
-                                                    ]
                                                 },
                                                 {
                                                     "key": "field_574c14b188c77",
@@ -1326,29 +1089,6 @@
                                                     ]
                                                 },
                                                 {
-                                                    "key": "field_574c14b188c6b",
-                                                    "label": "CTA Colour",
-                                                    "name": "cta_colour",
-                                                    "type": "color_picker",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": [
-                                                        [
-                                                            {
-                                                                "field": "field_57ad96b4672aa",
-                                                                "operator": "==",
-                                                                "value": "cta"
-                                                            }
-                                                        ]
-                                                    ],
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "default_value": ""
-                                                },
-                                                {
                                                     "key": "field_574c14b188c6c",
                                                     "label": "Post-it Colour",
                                                     "name": "post-it_colour",
@@ -1370,32 +1110,6 @@
                                                         "id": ""
                                                     },
                                                     "default_value": ""
-                                                },
-                                                {
-                                                    "key": "field_575ecd2c50001",
-                                                    "label": "Block Alignment",
-                                                    "name": "block_alignment",
-                                                    "type": "radio",
-                                                    "instructions": "",
-                                                    "required": 1,
-                                                    "conditional_logic": 0,
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "layout": "vertical",
-                                                    "choices": {
-                                                        "center": "Center (default)",
-                                                        "left": "Left",
-                                                        "right": "Right",
-                                                        "full": "Full width"
-                                                    },
-                                                    "default_value": "center",
-                                                    "other_choice": 0,
-                                                    "save_other_choice": 0,
-                                                    "allow_null": 0,
-                                                    "return_format": "value"
                                                 }
                                             ],
                                             "min": "",
@@ -1988,37 +1702,6 @@
                                     ]
                                 },
                                 {
-                                    "key": "field_576d304c965a3",
-                                    "label": "Select collaborations",
-                                    "name": "map_collaborations",
-                                    "type": "post_object",
-                                    "instructions": "Select the collaboration(s) you would like to display on the map. Note: you can also select programme rounds, for which the relevant collaborations will be chosen. The maximum number of collaborations is 20.",
-                                    "required": 1,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_576d304c9659d",
-                                                "operator": "==",
-                                                "value": "network"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "programme_round",
-                                        "collaboration"
-                                    ],
-                                    "taxonomy": [],
-                                    "allow_null": 1,
-                                    "multiple": 1,
-                                    "return_format": "object",
-                                    "ui": 1
-                                },
-                                {
                                     "key": "field_576d304c965a4",
                                     "label": "Map center",
                                     "name": "map_center",
@@ -2246,5 +1929,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1493672941
+    "modified": 1493714260
 }
