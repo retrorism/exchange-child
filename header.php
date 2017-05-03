@@ -124,6 +124,7 @@
 			.fonts-loaded h5,
 			.fonts-loaded .top-bar a {
 				font-family: appo_paintregular, sans-serif;
+				font-weight: normal;
 			}
 		</style>
 

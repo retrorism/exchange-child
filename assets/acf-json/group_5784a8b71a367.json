@@ -1,6 +1,6 @@
 {
     "key": "group_5784a8b71a367",
-    "title": "Featured Stories",
+    "title": "Home Page Options",
     "fields": [
         {
             "key": "field_5784a8d4f78f8",
@@ -24,6 +24,98 @@
             "multiple": 1,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_5908b525758e5",
+            "label": "Homepage Video",
+            "name": "cl_homepage_video",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_5908b551758e6",
+            "label": "Homepage Video Header",
+            "name": "cl_homepage_video_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5908b57e758e7",
+            "label": "Homepage video description",
+            "name": "cl_homepage_video_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5908b5a7758e8",
+            "label": "Homepage Map Header",
+            "name": "cl_homepage_map_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5908b5bb758e9",
+            "label": "Homepage Map Description",
+            "name": "cl_homepage_map_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -45,5 +137,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1493373538
+    "modified": 1493743066
 }
