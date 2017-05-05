@@ -26,7 +26,7 @@ function exchange_child_create_member() {
 
 	// Set up labels.
 	$labels = array(
-		'name'               => 'Members',
+		'name'               => 'People',
 		'singular_name'      => 'Member',
 		'add_new'            => 'Add new member',
 		'add_new_item'       => 'Add new member',
