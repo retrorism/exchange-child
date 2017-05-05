@@ -8,13 +8,14 @@
 
 	if ( ! empty( $featured_stories ) ) : ?>
 
-		<div class="featured-stories featured-stories<?php echo esc_attr( $three_plus ); ?>">
+		<section class="section--has_grid">
 
-			<section class="section--has-grid section--featured-grid">
+			<div class="section-inner">
 
-				<div class="section-inner">
-
-					<div class="row">
+				<div class="featuredgrid__masonry">
+					
+					<div class="masonry__grid-sizer"></div>
+					<div class="masonry__gutter-sizer"></div>
 
 					<?php foreach( $featured_stories as $featured_story ) : ?>
 					
@@ -32,10 +33,10 @@
 					
 					<?php endforeach; ?>
 
-				</div><!-- section-inner-->
+				</div>
 
-			</section><!-- section--has-grid-->
+			</div><!-- section-inner-->
 
-		</div>
+		</section><!-- section--has-grid-->
 
 	<?php endif; ?>

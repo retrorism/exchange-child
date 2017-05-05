@@ -4,6 +4,30 @@ Stylesheet: Main Stylesheet
 
 *************************************************/
 
+#main {
+	background-color: $sandbox-cl;
+}
+
+.archive #main {
+	background-color: $white;
+}
+
+#main {
+	padding-top: 5.6rem;
+	padding-bottom: 2rem;
+}
+
+.main-inner {
+	min-height: calc(100vh - 410px);
+}
+
+.page .main-inner,
+.single-story .main-inner{
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+}
+
 /*********************
 LINK / BUTTON STYLES
 *********************/
@@ -27,7 +51,6 @@ a, a:visited {
 .story__footer p,
 .page__footer__copyright p,
 .archive__header p,
-.collaboration__participant__details p,
 .section__contactblock {
 	a {
 		border-bottom: 2px solid $pink-cl;
@@ -128,26 +151,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
-h1, .h1 {
-
-}
-
-h2, .h2 {
-
-}
-
-h3, .h3 {
-
-}
-
-h4, .h4 {
-
-}
-
-h5, .h5 {
-
-}
-
 h6, .h6 {
 	text-transform: uppercase;
 }
@@ -230,41 +233,6 @@ pre {
 }
 
 /*********************
-IMAGE GALLERY STYLES
-*********************/
-.gallery {
-
-	dl {
-
-		a {}
-
-		img {}
-
-	}
-
-	dt {}
-
-	dd {}
-
-}
-
-// Gallery caption styles
-.gallery-caption {}
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
-
-/*********************
-NAVIGATION STYLES
-*********************/
-.top-bar {
-	.title-area {
-		z-index: 1;
-	}
-}
-
-/*********************
 PAGE NAVI STYLES
 *********************/
 .page-navigation {
@@ -326,28 +294,11 @@ BANNER STYLES
 
 .inner-header {
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 3.6rem;
 	z-index: 9997;
-}
-
-#main {
-	background-color: $sandbox-cl;
-	padding-top: 5.6rem;
-	padding-bottom: 2rem;
-}
-
-.main-inner {
-	min-height: calc(100vh - 410px);
-}
-
-.page:not(.home) .main-inner,
-.single-story .main-inner,
-.single-participant .main-inner {
-	max-width: 1170px;
-	background: $white;
-	margin: 0 auto;
-	position: relative;
 }
 
 @include breakpoint( medium ) {
@@ -631,18 +582,25 @@ ARTICLE STYLES
 // Rows (max 1200px);
 .story__header__introduction,
 .archive__header__introduction,
-.collaboration__header,
 .section-inner,
-.archive__interface-inner {
+.archive__interface {
 	@include grid-row;
+}
+
+.story__header,
+.story__section.section--has_story_elements,
+.home .story__section .section-inner,
+.story__footer {
+	background-color: $white;
 }
 
 // Sections need
 .section-inner,
-.search .archive__interface-inner {
+.archive__interface-inner {
 	padding-bottom: 2 * $global-padding;
 	padding-top: 2 * $global-padding;
 }
+
 
 // Readable-width columns
 .story__editorialintro,
@@ -679,7 +637,8 @@ ARTICLE STYLES
 .story__footer__byline,
 .section--has_gravity_forms .section-inner > div,
 .story__meta-wrapper,
-.archive__title-wrapper {
+.archive__title-wrapper,
+.home .story__section {
 	margin-bottom: 2 * $global-margin;
 	margin-top: 2 * $global-margin;
 	clear: both;
@@ -687,7 +646,8 @@ ARTICLE STYLES
 
 .page__footer__widgets-inner,
 .section__slice.section__imageduo,
-.section__simplemap.simplemap--wide {
+.section__simplemap.simplemap--wide,
+.archive__interface-inner {
 	@include grid-column(12);
 	@include breakpoint( small ) {
 		@include grid-column-collapse();
@@ -699,24 +659,21 @@ ARTICLE STYLES
 	}
 }
 
+.section__slice.section__slice--home {
+	@include grid-column(12);
+	@include breakpoint( small ) {
+		@include grid-column( 95% );
+		@include grid-column-position(center);
+	}
+	@include breakpoint( medium ) {
+		@include grid-column-position(center);
+	}
+}
+
 @include breakpoint( large ) {
 	.section--has_grid .section__slice.section__simplegrid {
 		width: 100%;
 	}
-}
-
-.section__featuredgrid {
-	@include grid-column();
-	@include grid-column( 12 );
-	@include breakpoint( small ) {
-		@include grid-column-collapse();
-		@include grid-column-position(center);
-	}
-	@include breakpoint( medium ) {
-		@include grid-column( 95% );
-		@include grid-column-position(center);
-	}
-	overflow: hidden;
 }
 
 .story__section.section--has_contact_details {
@@ -912,12 +869,12 @@ Pattern styles
 Pattern 1. Title
 ****************/
 
-.story__title-wrapper,
-.archive__title-wrapper {
+.story__title-wrapper {
 	margin-top: 4 * $global-margin;
 }
 
-.search .archive__title-wrapper {
+.archive__title-wrapper {
+	margin-top: 4 * $global-margin;
 	margin-bottom: 4 * $global-margin;
 }
 
@@ -929,13 +886,13 @@ Pattern 1. Title
 	text-align: center;
 }
 
-.page .story__title-wrapper,
-.single-story .story__title-wrapper,
-.single-participant .story__title-wrapper {
-	@include breakpoint( large ) {
-		text-align: left;
-	}
-}
+// .page .story__title-wrapper,
+// .single-story .story__title-wrapper,
+// .single-participant .story__title-wrapper {
+// 	@include breakpoint( large ) {
+// 		text-align: left;
+// 	}
+// }
 
 
 /*****************
@@ -983,7 +940,6 @@ Pattern 4. Tag list
 }
 
 .griditem__tags ol li,
-.collaboration__tags ol li,
 .story__meta__item--tags ol li {
 	display: inline-block;
 	margin: 0.5 * $global-margin 0.5 * $global-margin 0 0;
@@ -993,7 +949,6 @@ Pattern 4. Tag list
 }
 
 .tag,
-.collaboration__tag,
 .griditem__tag,
 .story__meta__tag {
 	@include label;
@@ -1043,15 +998,6 @@ Pattern 4. Tag list
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-
-.collaboration__header .collaboration__tag {
-	color: $black;
-	border-color: $white;
-	&[href]:hover {
-		background-color: $white;
-		color: $black;
-	}
 }
 
 /****************************
@@ -1299,7 +1245,6 @@ Pattern 8. Embedded Video
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
-	height: auto;
 	iframe,
 	object,
 	embed {
@@ -1326,8 +1271,7 @@ Pattern 9. Image
 }
 
 .section__imageduo,
-.section__simplemap.simplemap--wide,
-.collaboration__simplemap {
+.section__simplemap.simplemap--wide {
 	background-color: $white;
 	z-index: 10;
 	position: relative;
@@ -2513,33 +2457,32 @@ Pattern 20.5 Documentblock
 Pattern 21 & 22 Grids
 *********************************************/
 
-
-.archive__grid {
+.masonry__grid-sizer,
+.archive__grid__griditem {
+	width: 100%;
+}
+.masonry__gutter-sizer {
+	width: 0;
+}
+@include breakpoint( medium ) {
 	.masonry__grid-sizer,
-	.archive__grid__griditem {
-		width: 100%;
+	.archive__grid__griditem,
+	.featuredgrid__griditem {
+		width: 48.5%;
+		padding-bottom: $global-padding;
 	}
 	.masonry__gutter-sizer {
-		width: 0;
+		width: 3%;
 	}
-	@include breakpoint( medium ) {
-		.masonry__grid-sizer,
-		.archive__grid__griditem {
-			width: 48.5%;
-			padding: 0;
-		}
-		.masonry__gutter-sizer {
-			width: 3%;
-		}
+}
+@include breakpoint( large ) {
+	.masonry__grid-sizer,
+	.archive__grid__griditem,
+	.featuredgrid__griditem {
+		width: 32%
 	}
-	@include breakpoint( large ) {
-		.masonry__grid-sizer,
-		.archive__grid__griditem {
-			width: 32%
-		}
-		.masonry__gutter-sizer {
-			width: 2%;
-		}
+	.masonry__gutter-sizer {
+		width: 2%;
 	}
 }
 
@@ -2610,27 +2553,8 @@ Pattern 21 & 22 Grids
 
 section.section--has_grid {
 	.section-inner {
-		padding-left: 0;
-		padding-right: 0;
+		padding: 0 $global-padding;
 	}
-	&.section--featured-grid {
-		.section-inner {
-			padding-top: 0;
-		}
-	}
-	&.section--archive-grid {
-		.section-inner {
-			padding-left: 0.625em;
-			padding-right: 0.625em;
-		}
-	}
-	&.section--collaboration-grid {
-		.section-inner {
-			padding-left: 0.625em;
-			padding-right: 0.625em;
-		}
-	}
-
 }
 
 .archive__grid__griditem,
@@ -2640,7 +2564,6 @@ section.section--has_grid {
 	margin-bottom: $global-margin;
 }
 
-.featuredgrid__griditem,
 .simplegrid__griditem,
 .relatedgrid__griditem {
 	@include grid_column();
@@ -2799,55 +2722,6 @@ a.read-full-story,
 .griditem__image {
 	width: 100%;
 	overflow: hidden;
-}
-
-.griditem__collaboration-info {
-	justify-content: center;
-	position: relative;
-	text-align: center;
-	.ampersand-wrapper {
-		position: absolute;
-		align-self: center;
-		height: 4em;
-		width: 4em;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
-	}
-	svg {
-		position: relative;
-		width: 100%;
-		height: 100%;	
-		z-index: 1;
-	}
-	ul.participants {
-		height: 100%;
-	}
-	.participant {
-		position: relative;
-		vertical-align: middle;
-		display: inline-block;
-		z-index: 2;
-		width: 48%;
-		padding: 1%;
-		margin: 0;
-		min-height: 4em;
-		&:nth-child(3),
-		&:nth-child(4),
-		&:nth-child(5) {
-			margin-top: 4em;
-		}
-	}
-	.participant__organisation-details {
-		display: block;
-		font-weight: $global-weight-light;
-	}
-
-}
-
-.collaboration__griditem:not(.griditem--documentblock) .griditem__content {
-	padding-bottom: 0.5 * $global-padding;
-	text-align: left;
 }
 
 .griditem__button-wrapper,
@@ -3068,52 +2942,85 @@ ARTICLE EXTRAS STYLES
 .section--featured-stories {
 	position: relative;
 }
+.labs-wrapper {
+	position: relative;
+	overflow: hidden;
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		color: $gray;
+	}
+}
 
-#programmes {
-	background-image: url('../images/png/T_Build_together_WEB-SCALED-ALPHA.png');
-	background-size: 66.667%;
-	background-position: center center;
-	background-repeat: no-repeat;
+#labs {
 	a {
 		display: block;
-		&:hover svg g path {
-			fill: $yellow-3;
-		}
 	}
 	& + figcaption p {
 		text-align: center;
 	}
 	@include breakpoint( small ) {
-		@include on-circle( $item-count: 5, $circle-size: 13em, $item-size: 10%);
-		margin: 0 auto 4em;
+		@include on-circle( $item-count: 5, $circle-size: 14em, $item-size: 10%);
+		margin: 20% auto;
+		padding: 0;
 		a {
-			width: 5em;
-			margin-left: -2.5em;
-			margin-top: -1em;
+			width: 8em;
+			margin-top: -4em;
+			margin-left: -4em;
 		}
-		svg {
-			width: 5em;
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 	@include breakpoint( medium ) {
-		@include on-circle( $item-count: 5, $circle-size: 30em, $item-size: 10%);
-		margin: 0 auto 5em;
+		@include on-circle( $item-count: 5, $circle-size: 28em, $item-size: 10%);
 		a {
-			width: 10em;
-			max-height: 4em;
-			margin-left: -5em;
-			margin-top: -2em;
-		}
-		svg {
-			width: 10em;
-			max-height: 4em;
-
+			width: 15em;
+			margin-top: -7.5em;
+			margin-left: -7.5em;
 		}
 	}
 }
 
 .button-wrapper {
 	text-align: center;
+}
+
+/****************************
+CITIZENSLAB LABS PAGE STYLES
+****************************/
+
+.page-id-118 { 
+	#main {
+		background-color: $white;
+	}
+	.main-inner {
+		max-width: inherit;
+	}
+}
+
+/****************************
+CITIZENSLAB HOME PAGE STYLES
+****************************/
+
+.home  {
+	.story__section {
+		@include breakpoint( medium ) {
+			padding: 0 $global-padding;
+		}
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	.section-inner {
+		padding-top: 0;
+	}
+	.section__slice {
+		margin-top: 2 * $global-margin;
+	}
 }
 
 /*********************
@@ -3355,185 +3262,6 @@ i.facetwp-btn {
 		padding: 0;
 	}
 }
-
-/*********************
-COLLABORATION STYLES
-*********************/
-
-.collaboration__header--no--image,
-.collaboration__header--has-image,
-.collaboration__participants,
-.collaboration__map {
-	@include grid-row()
-}
-
-.collaboration__header__image-wrapper:not(.tridem_or_more) {
-	@include grid-column( 12, '0 px');
-	@include breakpoint( large ) {
-		@include grid-column( 6, '0 px' );
-	}
-}
-
-/* Switch around min-height and width for tridem collab-headers */
-.collaboration__header__image.image--tridem_or_more {
-	.image__placeholder__thumb,
-	.image--main.lazyloaded {		
-		width: 100%;
-		height: auto;
-	}
-}
-
-
-.collaboration__header__desc {
-	@include grid-column( 12 );
-	text-align: center;
-	background: $rose-1-web;
-	color: $black;
-	@include breakpoint( large ) {
-		@include grid-column( 6, '0 px' );
-		padding-left: 0;
-		padding-right: 0;
-		position: relative;
-		.collaboration__header__desc-outer {
-			width: 100%;
-			padding-bottom: 100%;
-			position: relative;
-		}
-		.collaboration__header__desc-scroller {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			overflow-y: auto;
-			overflow-x: hidden;			
-		}
-		.collaboration__header__desc-inner {
-			width: 100%;
-			min-height: 100%;
-		}
-	}
-	.button--small,
-	.button--large {
-		color: $black;
-		border-color: $white;
-		font-weight: $global-weight-semibold;
-		&:hover {
-			background-color: $white;
-		}
-	}
-	hr {
-		border-color: white;
-		border-style: dashed;
-		width: 100%;
-	}
-}
-
-.supports-flex {
-	@include breakpoint( large ) {
-		.collaboration__header__desc-inner {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-		.collaboration__header__desc-inner h1,
-		.collaboration__header__desc-inner div,
-		.collaboration__header__desc-inner section {
-			width: 100%;
-		}
-	}
-}
-
-.collaboration__header__image-wrapper.tridem_or_more + .collaboration__header__desc .collaboration__header__desc-outer,
-.collaboration__header--no-image .collaboration__header__desc-outer {
-	padding-bottom: 0;
-}
-
-.collaboration__header__image-wrapper.tridem_or_more + .collaboration__header__desc .collaboration__header__desc-scroller,
-.collaboration__header--no-image .collaboration__header__desc-scroller {
-	position: relative;
-}
-
-.collaboration__header__desc-inner {
-	padding: 2 * $global-padding;
-}
-
-.collaboration__header--no-image .collaboration__header__desc,
-.collaboration__header__image-wrapper.tridem_or_more + .collaboration__header__desc {
-	@include breakpoint( large ) {
-		@include grid-column();
-		@include grid-column-position( center );
-		max-height: inherit !important;
-		height: inherit !important;
-		position: inherit;
-		.collaboration__header__desc-inner {
-			position: inherit;
-			top: 0;
-			transform: none;
-			max-width: 0.6 * $global-width;
-			margin: auto;
-		}
-	}
-}
-
-.collaboration__title {
-	color: $white;
-}
-
-.collaboration__paragraph {
-	margin: 0 auto $global-margin;
-}
-
-.collaboration__tags {
-	@include breakpoint( xlarge ) {
-		margin: $global-margin auto;
-	}
-	ol {
-		margin-left: 0;
-	}
-}
-
-.collaboration__content {
-	clear: both;
-}
-
-.collaboration__participants__item {
-	@include grid-column( 6 );
-}
-
-.collaboration__participant__details {
-	padding: 2 * $global-padding;
-}
-
-.participant__organisation__city {
-	font-weight: $global-weight-semibold;
-}
-
-.participant__organisation__city {
-	font-weight: $global-weight-light;
-}
-
-.participant__contactme {
-	margin-top: $global-margin;
-}
-
-.collaboration__header__image-wrapper .image__caption,
-.collaboration__map .simplemap__caption {
-	text-align: right;
-	padding-right: $global-padding;
-}
-
-.collaboration__extras .sectionheader {
-	text-align: center;
-	margin-bottom: 2 * $global-margin;
-}
-
-.collaboration__extras .sectionheader__text {
-	text-transform: uppercase;
-}
-
 
 /*********************
 FOOTER STYLES

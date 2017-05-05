@@ -135,6 +135,7 @@ via: http://codepen.io/jakob-e/pen/doMoML
 /// @param {Integer} $item-count - Number of items on the circle
 /// @param {Length} $circle-size - Large circle size
 /// @param {Length} $item-size - Single item size
+
 @mixin on-circle($item-count, $circle-size, $item-size) {
   position: relative;
   width:  $circle-size;
@@ -153,7 +154,7 @@ via: http://codepen.io/jakob-e/pen/doMoML
     margin: -($item-size / 2);
 
     $angle: (360 / $item-count);
-    $rot: 15;
+    $rot: -90;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {

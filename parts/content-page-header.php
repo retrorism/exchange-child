@@ -25,17 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="story__header__introduction">
 
 		<div class="story__title-wrapper">
-			<?php
-				$hide_title_class = '';
-				if ( 'Labs' !== $exchange->title ) {
-					$programmes = get_page_by_title( 'Labs' );
-					global $post;
-					if ( isset( $post ) && $post->post_parent === $programmes->ID ) {
-						get_template_part( 'parts/content', 'page-programme' );
-						$hide_title_class = ' show-for-sr';
-					};
-				}; ?>
-			<h1 class="entry-title story__title<?php echo $hide_title_class; ?>" itemprop="headline"><?php echo $exchange->title; ?></h1>
+
+			<h1 class="entry-title story__title" itemprop="headline"><?php echo $exchange->title; ?></h1>
 
 		</div>
 
@@ -43,11 +34,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$exchange->publish_intro();
 		} ?>
 
-		<?php
-			if ( $exchange->title === 'Labs' ) {
-				get_template_part( 'parts/content', 'page-labs' );
-			} ?>
-
 	</div>
 
 </header> <!-- end .story__header -->
+
+<?php if ( $exchange->title === 'Labs' ) : ?>
+
+<?php get_template_part( 'parts/content', 'page-labs' ); ?>
+
+<?php endif; ?>

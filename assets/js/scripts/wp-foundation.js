@@ -16,10 +16,10 @@ function handleScroll() {
 }
 
 function getArchiveMap() {
-	if ( undefined == Exchange 
-		|| undefined == Exchange.PluginExtensions 
-		|| undefined == Exchange.PluginExtensions.LMP
-		|| undefined == Exchange.PluginExtensions.LMP.maps ) {
+	if ( undefined === Exchange 
+		|| undefined === Exchange.PluginExtensions 
+		|| undefined === Exchange.PluginExtensions.LMP
+		|| undefined === Exchange.PluginExtensions.LMP.maps ) {
 		return;
 	}
     for ( var hashedMap in Exchange.PluginExtensions.LMP.maps ) {
@@ -94,9 +94,14 @@ var masonryIsActive = false;
 
 	$(document).ready(function() {
 
-		// if ( $grid == undefined ) {
-		// 	var $grid = $('.archive__grid__masonry');
-		// }
+		if ( $grid == undefined ) {
+			var $grid = $('.archive__grid__masonry');
+		}
+
+		if ( $('.featuredgrid__masonry').length === 1 ) {
+			var $grid = $('.featuredgrid__masonry');
+			masonryOptions.itemSelector = ".featuredgrid__griditem";
+		}
 
 		// if ('object' == typeof FWP) { 
 		//     wp.hooks.addFilter('facetwp/template_html', function(resp, params) {
@@ -187,9 +192,11 @@ var masonryIsActive = false;
 			$('#main').on('scrollme.zf.trigger', handleScroll);
 		}
 
-		if ( $('body').hasClass( 'archive' ) || $('body').hasClass( 'page-template-archive') ) {
+		if ( $('body').hasClass( 'archive' ) 
+			|| $('body').hasClass( 'page-template-archive') 
+			|| $('.featuredgrid__masonry').length === 1 ) {
 			if ( ! $('body').hasClass( 'post-type-archive-story') ) {
-				if ( archiveMap == undefined ) {
+				if ( archiveMap === undefined ) {
 					var archiveMap = getArchiveMap();
 				}
 				if ( archiveMap ) {				
@@ -203,10 +210,10 @@ var masonryIsActive = false;
 		}
 
     	$('#facet-tabs').on('change.zf.tabs', function() {
-			if ( archiveMap == undefined ) {
+			if ( archiveMap === undefined ) {
 				var archiveMap = getArchiveMap();
 			}
-			if ( archiveMap.map != undefined ) {
+			if ( archiveMap.map !== undefined ) {
 				archiveMap.map.invalidateSize().fitBounds( archiveMap.clusterLayer.getBounds() );
 			}
 			if ( $grid !== undefined ) {
@@ -256,12 +263,12 @@ var masonryIsActive = false;
 		masonryIsActive = true;
 		
 		var archiveMap = getArchiveMap();
-		if ( archiveMap == undefined ) {
+		if ( archiveMap === undefined ) {
 			return;
 		}
 		
 		var allObjects = window['leaflet_objects_' + archiveMap.hash];
-		if ( allObjects == undefined
+		if ( allObjects === undefined
 			|| allObjects.map_polylines.length == 0
 			|| FWP.settings.matches.length == 0 ) {
 			return;

@@ -46,10 +46,13 @@ function exchange_child_create_member() {
 		'has_archive'         => true,
 		'menu_icon'           => 'dashicons-groups',
 		'menu_position'       => 13,
-		'public'              => false,
-		'show_ui'             => false,
+		'public'              => true,
+		'show_ui'             => true,
 		// Other items that are available for this array: 'title','editor','author','thumbnail','excerpt','trackbacks', 'custom-fields','comments','revisions','page-attributes','post-formats'.
 		'supports'            => array( 'title' ),
+		'rewrite'			  => array(
+			'slug' => 'members',
+		),
 		'capability_type'     => 'post',
 		)
 	);

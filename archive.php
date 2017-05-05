@@ -9,29 +9,32 @@ get_header(); ?>
 
 	<div class="main-inner">
 
-		<div class="archive__interface">
+		<?php get_template_part( 'parts/content', 'archive-header'); ?>
 
-			<?php get_template_part( 'parts/content', 'archive-header'); ?>
+		<section class="section--has_grid section--sandbox section--coloured">
+		<?php echo BasePattern::build_edge_svg( 'top', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
 
-			<?php /*if ( function_exists( 'facetwp_display' ) ) : ?>
+			<div class="archive__interface">
 
-				<?php get_template_part( 'parts/nav', 'facets' ); ?>
+				<div class="archive__interface-inner">
 
-			<?php endif; ?>
-		
-			<?php get_template_part( 'parts/nav', 'archive-view-toggle') ; */ ?>
+				<?php if ( have_posts() ) : ?>
 
-		    <?php if (have_posts()) : ?>
+					<?php get_template_part( 'parts/content', 'archive-grid' ); ?>
+					<?php exchange_page_navi(); ?>
 
-				<?php get_template_part( 'parts/content', 'archive-interface' ); ?>
+				<?php else : ?>
 
-			<?php else : ?>
+					<?php get_template_part( 'parts/content', 'missing' ); ?>
 
-				<?php get_template_part( 'parts/content', 'missing' ); ?>
+				<?php endif; ?>
 
-			<?php endif; ?>
+				</div><!-- end .archive__interface-inner -->
 
-		</div><!-- end archive__interface -->
+			</div><!-- end .archive__interface-->
+
+		<?php echo BasePattern::build_edge_svg( 'bottom', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
+		</section>
 
 		<footer class="archive__footer">
 

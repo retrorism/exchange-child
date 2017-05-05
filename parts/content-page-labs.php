@@ -14,33 +14,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 	header( 'HTTP/1.1 403 Forbidden' );
 	exit;
 };
-
 ?>
 
-<section class="story__section">
-	<div class="section-inner">
-		<figure class="section__slice section__image">
-			<div id="programmes">
-			<?php
-				$img_root = get_template_directory() . '/assets/images/';
-				global $post;
-				$all_pages = BaseController::get_all_from_type( 'page' );
-				$programmes = get_page_children( $post->ID, $all_pages );
-				foreach ( $programmes as $page_obj ) {
-					$anchor = '<a href="#">';
-					if ( ! $page_obj instanceof WP_Post || 'publish' !== $page_obj->post_status ) {
-						continue;
-					} else {
-						$anchor = exchange_create_link( BaseController::exchange_factory( $page_obj ), false );
-						$slug = array_search( $page_obj->post_title, $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['IMAGES']['lab-illustrations'] );
-						if ( ! empty( $slug ) ) {
-							
-						}
+<?php $lab_circle = exchange_cl_create_lab_circle(); ?>
 
-					}
-				}
-			?>
-			</div>
-		</figure>
+<section class="story__section">
+	
+	<div class="section-inner">
+
+		<?php if ( $lab_circle ) : ?>
+
+			<?php include_once( get_stylesheet_directory() . '/parts/content-page-labs-illustration.php' ); ?>
+	
+		<?php endif; ?>
+
 	</div>
+
+</section>
+
+<section class="section--has_grid section--coloured section--sandbox section--labs_grid">
+	
+	<?php echo BasePattern::build_edge_svg('top', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
+
+		<div class="section-inner">
+
+			<?php if ( $lab_circle ) : ?>
+			
+				<?php include_once( get_stylesheet_directory() . '/parts/content-page-labs-grid.php' ); ?>
+
+			<?php endif; ?>
+
+		</div>
+	
+	<?php echo BasePattern::build_edge_svg('bottom', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
+
 </section>

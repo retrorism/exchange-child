@@ -30,7 +30,7 @@ gulp.task('styles', function() {
         }))
         .pipe(gulp.dest('./assets/css/'))
         .pipe(rename({suffix: '.min'}))
-        .pipe(cssnano())
+        .pipe(cssnano({ zindex: false }))
         .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
         .pipe(gulp.dest('./assets/css/'))
 });

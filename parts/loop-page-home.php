@@ -19,7 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php $exchange = new Story( $post ); 
 
-			get_template_part( 'parts/content', 'home-video-and-map' );
+			include_once( get_stylesheet_directory() . '/parts/content-home-video.php' );
+
+			include_once( get_stylesheet_directory() . '/parts/content-home-map.php' );
 
 			include_once( get_stylesheet_directory() . '/parts/loop-featured-stories.php' );
 

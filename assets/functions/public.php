@@ -61,8 +61,6 @@ function exchange_cl_build_social_icons( $context = '', $platforms = array(), $e
 	$site_name = get_bloginfo( 'name' );
 	$encoded_url = urlencode( $site_url );
 	$encoded_name = urlencode( $site_name );
-	$png_base = get_stylesheet_directory_uri() . '/assets/images/png/T_icon' . $circle_fallback;
-
 	$share_buttons = ! empty( $exchange ) && $exchange instanceof Exchange;
 
 	if ( $share_buttons ) {
@@ -133,6 +131,51 @@ function exchange_cl_build_social_icons( $context = '', $platforms = array(), $e
 	}
 	$output .= '</ul>';
 	return $output;
+}
+
+function exchange_cl_create_griditem_from_post( $obj, $context ) {
+	$item = BaseController::exchange_factory( $obj, 'griditem' );
+	if ( ! $item instanceof Exchange ) {
+		return;
+	}
+    $griditem = new Griditem( $item, $context );
+    if ( $griditem instanceof Griditem ) {
+		return $griditem;
+	}
+}
+
+function exchange_cl_create_lab_circle() {
+	global $post;
+	$img_root = get_stylesheet_directory_uri() . '/assets/images/png/';
+	$all_pages = BaseController::get_all_from_type( 'page' );
+	$labs = get_page_children( $post->ID, $all_pages );
+	$lab_config = $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['TAXONOMIES']['labs'];
+	$lab_circle = array();
+	foreach ( $labs as $page_obj ) {
+		$anchor = '<a href="#">';
+		if ( ! $page_obj instanceof WP_Post || 'publish' !== $page_obj->post_status ) {
+			continue;
+		}
+		$anchor = exchange_create_link( BaseController::exchange_factory( $page_obj ), false );
+		if ( ! array_key_exists( $page_obj->post_name, $lab_config) ) {
+			continue;
+		}
+			
+		$illustration = $lab_config[ $page_obj->post_name ]['illustration'];
+		$sort_order = $lab_config[ $page_obj->post_name ]['sort_order'];
+		$alttext = $lab_config[ $page_obj->post_name ]['name'];
+
+		$lab_circle[ $sort_order ]['logo'] = $anchor . '<img src="' . $img_root . $illustration . '_alpha_small.png" alt="' . $alttext . '"></a>';
+
+		$item = exchange_cl_create_griditem_from_post( $page_obj, 'featuredgrid' );
+		if ( ! $item ) {
+			continue;
+		}
+		$lab_circle[ $sort_order ]['griditem'] = $item;
+	}
+	if ( count( $lab_circle ) === count( $lab_config ) ) {
+		return $lab_circle;
+	}
 }
 
 

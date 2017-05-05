@@ -67,12 +67,9 @@ function exchange_cl_create_taxonomies() {
 			'show_in_menu' => true,
 			'show_in_quick_edit' => false,
 			'meta_box_cb'  => false,
-			'public'       => true,
+			'public'       => false,
 			'query_var'    => true,
-			'rewrite'      => array(
-				'slug'       => 'labs', // This controls the base slug that will display before each term.
-				'with_front' => false, // Don't display the category base before.
-			),
+			'rewrite'      => false,
 			'labels'       => array(
 				'add_new_item' => 'Add a new Lab',
 			),
