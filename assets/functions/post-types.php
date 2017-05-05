@@ -51,7 +51,7 @@ function exchange_child_create_member() {
 		// Other items that are available for this array: 'title','editor','author','thumbnail','excerpt','trackbacks', 'custom-fields','comments','revisions','page-attributes','post-formats'.
 		'supports'            => array( 'title' ),
 		'rewrite'			  => array(
-			'slug' => 'members',
+			'slug' => 'people',
 		),
 		'capability_type'     => 'post',
 		)
