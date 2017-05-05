@@ -43,7 +43,7 @@ function exchange_child_create_member() {
 	// Register post type.
 	register_post_type( 'participant', array(
 		'labels'              => $labels,
-		'has_archive'         => true,
+		'has_archive'         => 'people',
 		'menu_icon'           => 'dashicons-groups',
 		'menu_position'       => 13,
 		'public'              => true,
