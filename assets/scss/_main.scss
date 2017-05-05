@@ -13,7 +13,7 @@ Stylesheet: Main Stylesheet
 }
 
 #main {
-	padding-top: 5.6rem;
+	padding-top: 3.6rem;
 	padding-bottom: 2rem;
 }
 
@@ -26,6 +26,7 @@ Stylesheet: Main Stylesheet
 	max-width: 1170px;
 	margin: 0 auto;
 	position: relative;
+	padding-top: 2rem;
 }
 
 /*********************
@@ -385,7 +386,7 @@ nav.top-bar {
 				padding: 0;
 				text-align: center;
 				width: auto;
-				border-bottom: 2px solid $white;
+				//border-bottom: 2px solid $white;
 				a {
 					direction: ltr;
 					text-align: center;
@@ -396,12 +397,12 @@ nav.top-bar {
 				&:hover {
 					background-color: $white;
 					a {
-						color: $black;
+						color: $pink-cl;
 					}
 				}
-				&.current-menu-item,
-				&.current-page-ancestor {
-					border-bottom-color: $pink-cl;
+				&.current-menu-item a,
+				&.current-page-ancestor a {
+					color: $pink-cl;
 				}
 			}
 
@@ -2998,6 +2999,7 @@ CITIZENSLAB LABS PAGE STYLES
 		background-color: $white;
 	}
 	.main-inner {
+		padding-top: 0;
 		max-width: inherit;
 	}
 }

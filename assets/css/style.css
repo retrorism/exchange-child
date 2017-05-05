@@ -3274,7 +3274,7 @@ Stylesheet: Main Stylesheet
   background-color: #fefefe; }
 
 #main {
-  padding-top: 5.6rem;
+  padding-top: 3.6rem;
   padding-bottom: 2rem; }
 
 .main-inner {
@@ -3284,7 +3284,8 @@ Stylesheet: Main Stylesheet
 .single-story .main-inner {
   max-width: 1170px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  padding-top: 2rem; }
 
 /*********************
 LINK / BUTTON STYLES
@@ -3616,8 +3617,7 @@ nav.top-bar {
           display: inline-block;
           padding: 0;
           text-align: center;
-          width: auto;
-          border-bottom: 2px solid #fefefe; }
+          width: auto; }
           #responsive-menu ul#menu-main-menu-left li a,
           #responsive-menu ul#menu-main-menu-right li a {
             direction: ltr;
@@ -3630,11 +3630,12 @@ nav.top-bar {
             background-color: #fefefe; }
             #responsive-menu ul#menu-main-menu-left li:hover a,
             #responsive-menu ul#menu-main-menu-right li:hover a {
-              color: #343438; }
-          #responsive-menu ul#menu-main-menu-left li.current-menu-item, #responsive-menu ul#menu-main-menu-left li.current-page-ancestor,
-          #responsive-menu ul#menu-main-menu-right li.current-menu-item,
-          #responsive-menu ul#menu-main-menu-right li.current-page-ancestor {
-            border-bottom-color: #E51145; }
+              color: #E51145; }
+          #responsive-menu ul#menu-main-menu-left li.current-menu-item a,
+          #responsive-menu ul#menu-main-menu-left li.current-page-ancestor a,
+          #responsive-menu ul#menu-main-menu-right li.current-menu-item a,
+          #responsive-menu ul#menu-main-menu-right li.current-page-ancestor a {
+            color: #E51145; }
       #responsive-menu ul#menu-main-menu-right {
         padding-left: 5em; }
       #responsive-menu ul#menu-main-menu-left {
@@ -6256,6 +6257,7 @@ CITIZENSLAB LABS PAGE STYLES
   background-color: #fefefe; }
 
 .page-id-118 .main-inner {
+  padding-top: 0;
   max-width: inherit; }
 
 /****************************
