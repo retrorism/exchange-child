@@ -99,7 +99,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'bg-colour' => 'purple-bg-cl',
 				'decoration'   => 'CL_Culture_and_Arts_Bubble',
 				'illustration' => 'CL_Culture_and_Arts',
-				'sort_order' => 2,
+				'sort_order' => 4,
 				),
 			'democracy' => array(
 				'name'     => 'Democracy',
@@ -107,7 +107,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'bg-colour' => 'orange-bg-cl',
 				'decoration'   => 'CL_Democracy_Bubble',
 				'illustration' => 'CL_Democracy',
-				'sort_order' => 3,
+				'sort_order' => 0,
 				),
 			'education' => array(
 				'name'     => 'Education',
@@ -115,7 +115,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'bg-colour' => 'blue-bg-cl',
 				'decoration'   => 'CL_Education_Bubble',
 				'illustration' => 'CL_Education',
-				'sort_order' => 1,
+				'sort_order' => 2,
 				),
 			'inclusion' => array(
 				'name'     => 'Inclusion',
@@ -123,7 +123,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'bg-colour' => 'yellow-bg-cl',
 				'decoration'   => 'CL_Inclusion_Bubble',
 				'illustration' => 'CL_Inclusion',
-				'sort_order' => 0,
+				'sort_order' => 1,
 				),
 			'urban-transformation' => array(
 				'name' => 'Urban Transformation',
@@ -131,7 +131,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'bg-colour' => 'green-bg-cl',
 				'decoration'   => 'CL_Urban_Transformation_Bubble',
 				'illustration'   => 'CL_Urban_Transformation',
-				'sort_order' => 4,
+				'sort_order' => 3,
 				),
 		),
 		'display_priority_story' => array( 'tandem','topic','location','discipline','methodology','project_output' ),
