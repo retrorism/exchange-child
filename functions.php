@@ -67,3 +67,6 @@ require_once( get_stylesheet_directory().'/assets/functions/public.php' );
 
 // Customize ACF field functions
 require_once( get_stylesheet_directory().'/assets/functions/admin-acf.php' );
+
+// Customize related-post-functions
+require_once( get_stylesheet_directory().'/assets/functions/related-posts.php' );

@@ -19,10 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 remove_action( 'init', 'exchange_create_collaboration' );
 remove_action( 'init', 'exchange_create_programme_round' );
 remove_action( 'init', 'exchange_create_participant', 11 );
-add_action( 'init', 'exchange_child_create_member', 11);
+add_action( 'init', 'exchange_cl_create_member', 11);
 
 // Register participant as Post Type.
-function exchange_child_create_member() {
+function exchange_cl_create_member() {
 
 	// Set up labels.
 	$labels = array(
@@ -56,4 +56,23 @@ function exchange_child_create_member() {
 		'capability_type'     => 'post',
 		)
 	);
+}
+
+add_action( 'pre_get_posts', 'exchange_cl_modify_story_archives_query' );
+/**
+ * Customise stories archive
+ *
+ * @return void
+ * @author Willem Prins | SOMTIJDS
+ **/
+function exchange_cl_modify_story_archives_query ( $query ) {
+
+	if ( is_post_type_archive( 'story' )
+		&& $query->is_main_query()
+		&& ! is_admin() ) {
+		$excluded_cats = get_option('options_story_archive_excluded_categories');
+		if ( ! empty( $excluded_cats ) && is_array( $excluded_cats ) ) {
+			$query->set('category__not_in', $excluded_cats );
+		}
+	}
 }

@@ -43,6 +43,28 @@
             "delay": 0
         },
         {
+            "key": "field_591d4fb3449e2",
+            "label": "Stories Overview Excluded Categories",
+            "name": "story_archive_excluded_categories",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
             "key": "field_590c5ac6d28a4",
             "label": "People Overview Page Introduction",
             "name": "participant_archive_page_introduction_copy",
@@ -79,5 +101,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1493981906
+    "modified": 1495093524
 }

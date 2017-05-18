@@ -1,6 +1,5 @@
 <?php
 function exchange_cl_site_scripts() {
-    global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
     wp_dequeue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery','foundation-js', 'masonry-js' ), '', true );
 
