@@ -42,7 +42,12 @@ function exchange_cl_get_lab_stories( $lab ) {
 			),
 		),
 	);
+	$included_cats = get_option('options_lab_story_categories');
+	if ( ! empty( $included_cats ) && is_array( $included_cats ) ) {
+		$args['category__in'] = $included_cats;
+	}
 	$stories_query = new WP_Query( $args );
+
 	if ( $stories_query->have_posts() ) {
 		return $stories_query->posts;
 	}

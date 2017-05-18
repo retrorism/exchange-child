@@ -27,6 +27,9 @@ function exchange_cl_create_link( $obj, $with_text = true, $class = '' ) {
 	if ( is_numeric( $obj ) && exchange_post_exists( $obj ) ) {
 		$obj = BaseController::exchange_factory( $obj );
 	}
+	if ( $obj instanceof WP_Post ) {
+		$obj = BaseController::exchange_factory( $obj );
+	}
 	if ( $obj instanceof Exchange ) {
 		$url = $obj->link;
 		$title = $obj->title;

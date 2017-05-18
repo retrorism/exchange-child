@@ -82,6 +82,28 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_591d5e45350b8",
+            "label": "Lab Story Categories",
+            "name": "lab_story_categories",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
         }
     ],
     "location": [
@@ -101,5 +123,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495093524
+    "modified": 1495096954
 }

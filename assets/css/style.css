@@ -4011,6 +4011,9 @@ ARTICLE STYLES
 .focus img {
   transition: visibility .2s, opacity 2.4s; }
 
+.story__header__introduction .story__editorialintro:last-of-type {
+  margin-bottom: 4rem; }
+
 /*********************
 SECTION STYLES
 *********************/
@@ -4324,6 +4327,12 @@ Pattern 6. Paragraph
 
 .translatedparagraph--has_translations select {
   margin: 1rem auto; }
+
+.section--its-just-me {
+  margin-bottom: 0; }
+  .section--its-just-me .paragraph {
+    margin-bottom: 0;
+    text-align: center; }
 
 /********************
 Pattern 7a Subheader
@@ -6259,6 +6268,17 @@ CITIZENSLAB LABS PAGE STYLES
 .page-id-118 .main-inner {
   padding-top: 0;
   max-width: inherit; }
+
+/****************************
+CITIZENSLAB LAB SUBPAGE STYLES
+****************************/
+@media screen and (min-width: 40em) {
+  .parent-pageid-118 .section--has_grid.section--lab_grid .section-inner {
+    padding: 0; } }
+
+.parent-pageid-118 .lab_grid__sectionheader {
+  text-align: center;
+  margin: 2rem; }
 
 /****************************
 CITIZENSLAB HOME PAGE STYLES

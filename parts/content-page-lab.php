@@ -16,18 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 };
 ?>
 
-<section class="section--has_grid section--coloured section--sandbox section--labs_grid">
-	
-	<?php echo BasePattern::build_edge_svg('top', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
+<?php include_once( get_stylesheet_directory() . '/parts/content-page-lab-grid.php' ); ?>
 
-		<div class="section-inner">
-
-			
-			<?php include_once( get_stylesheet_directory() . '/parts/content-page-lab-grid.php' ); ?>
-
-
-		</div>
-	
-	<?php echo BasePattern::build_edge_svg('bottom', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
-
-</section>
+<?php include_once( get_stylesheet_directory() . '/parts/content-lab-prototype-pointer.php' ); ?>	

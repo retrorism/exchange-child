@@ -685,6 +685,10 @@ ARTICLE STYLES
 	transition: visibility .2s, opacity 2.4s;
 }
 
+.story__header__introduction .story__editorialintro:last-of-type {
+	margin-bottom: 4 * $global-margin;
+}
+
 
 /*********************
 SECTION STYLES
@@ -1071,6 +1075,14 @@ Pattern 6. Paragraph
 
 .translatedparagraph--has_translations select {
 	margin: $global-margin auto;
+}
+
+.section--its-just-me {
+	margin-bottom: 0;
+	.paragraph {
+		margin-bottom: 0;
+		text-align: center;
+	}
 }
 
 /********************
@@ -3003,6 +3015,23 @@ CITIZENSLAB LABS PAGE STYLES
 		max-width: inherit;
 	}
 }
+
+/****************************
+CITIZENSLAB LAB SUBPAGE STYLES
+****************************/
+
+.parent-pageid-118 {
+	.section--has_grid.section--lab_grid .section-inner {
+		@include breakpoint( medium ) {
+			padding: 0;
+		}
+	}
+	.lab_grid__sectionheader {
+		text-align: center;
+		margin: 2 * $global-margin;
+	}
+}
+
 
 /****************************
 CITIZENSLAB HOME PAGE STYLES
