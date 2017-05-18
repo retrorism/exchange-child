@@ -104,6 +104,67 @@
             "load_terms": 0,
             "return_format": "id",
             "multiple": 0
+        },
+        {
+            "key": "field_591d814f3ed3e",
+            "label": "Lab Explanation Page",
+            "name": "lab_explanation_page",
+            "type": "post_object",
+            "instructions": "This is the page to which the 'find out more about ..' Lab sub-pages refers to.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "story"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_591d81c3a8bb4",
+            "label": "Lab Explanation Text",
+            "name": "lab_explanation_Text",
+            "type": "text",
+            "instructions": "It is required to add a %s here, because it will be replaced by the word \/ link to the page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Read more about %s",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591d81f6a8bb5",
+            "label": "Lab Explanation Link Text",
+            "name": "lab_explanation_link_text",
+            "type": "text",
+            "instructions": "This is the word which will be used as the link's text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "prototypes",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -123,5 +184,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495096954
+    "modified": 1495106239
 }
