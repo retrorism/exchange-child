@@ -58,7 +58,7 @@ a, a:visited {
 		background-color: transparent;
 		transition: background-color 0.5s;
 		&:hover {
-			color: $body-font-color;
+			color: $white;
 			background-color: $pink-cl;
 		}
 	}
@@ -638,7 +638,6 @@ ARTICLE STYLES
 .story__footer__byline,
 .section--has_gravity_forms .section-inner > div,
 .story__meta-wrapper,
-.archive__title-wrapper,
 .home .story__section {
 	margin-bottom: 2 * $global-margin;
 	margin-top: 2 * $global-margin;
@@ -880,7 +879,7 @@ Pattern 1. Title
 
 .archive__title-wrapper {
 	margin-top: 4 * $global-margin;
-	margin-bottom: 4 * $global-margin;
+	margin-bottom: 2 * $global-margin;
 }
 
 .page .story__title-wrapper,
@@ -925,12 +924,16 @@ Pattern 3. Editorial introduction
 .story__editorialintro {
 	font-size: $lead-font-size;
 	line-height: $lead-lineheight;
-	float: none !important;
 }
 
 .page .story__editorialintro,
 .archive .story__editorialintro {
 	font-style: normal;
+ }
+
+ .archive .story__editorialintro {
+ 	text-align: center;
+ 	margin-bottom: 4 * $global-margin;
  }
 
 /******************
@@ -2699,7 +2702,7 @@ section.section--has_grid {
 }
 
 .griditem__title {
-	color: $pink-cl;
+	color: $black;
 }
 
 .griditem__meta,

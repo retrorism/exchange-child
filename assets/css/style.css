@@ -3314,7 +3314,7 @@ a, a:visited {
   .page__footer__copyright p a:hover,
   .archive__header p a:hover,
   .section__contactblock a:hover {
-    color: #343438;
+    color: #fefefe;
     background-color: #E51145; }
 
 .page__footer__widgets p a {
@@ -3929,7 +3929,6 @@ ARTICLE STYLES
 .story__footer__byline,
 .section--has_gravity_forms .section-inner > div,
 .story__meta-wrapper,
-.archive__title-wrapper,
 .home .story__section {
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -4154,7 +4153,7 @@ Pattern 1. Title
 
 .archive__title-wrapper {
   margin-top: 4rem;
-  margin-bottom: 4rem; }
+  margin-bottom: 2rem; }
 
 .page .story__title-wrapper,
 .single-story .story__title-wrapper,
@@ -4181,12 +4180,15 @@ Pattern 3. Editorial introduction
 *********************************/
 .story__editorialintro {
   font-size: 120%;
-  line-height: 1.4;
-  float: none !important; }
+  line-height: 1.4; }
 
 .page .story__editorialintro,
 .archive .story__editorialintro {
   font-style: normal; }
+
+.archive .story__editorialintro {
+  text-align: center;
+  margin-bottom: 4rem; }
 
 /******************
 Pattern 4. Tag list
@@ -5947,7 +5949,7 @@ section.section--has_grid .section-inner {
   margin-bottom: 1rem; }
 
 .griditem__title {
-  color: #E51145; }
+  color: #343438; }
 
 .griditem__meta,
 .griditem__intro-wrapper,
