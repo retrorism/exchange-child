@@ -77,3 +77,19 @@ function exchange_cl_change_acf_color_picker() {
 	})(jQuery);
 	</script>";
 }
+
+/**
+ * If set, add Google Maps API key filter
+ */
+add_filter( 'acf/settings/google_api_key','exchange_cl_add_acf_google_maps_api_key_filter' );
+
+function exchange_cl_add_acf_google_maps_api_key_filter() {
+	if ( ! defined('EXCHANGE_PLUGIN' ) ) {
+		return;
+	}
+	$key = get_option( EXCHANGE_PLUGIN . '_acf_google_maps_api_key' );
+
+	if ( ! empty( $key ) && is_string( $key ) ) {
+		return $key;
+	}
+}

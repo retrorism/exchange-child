@@ -34,9 +34,6 @@ require_once( get_template_directory().'/assets/functions/disable-emoji.php' );
 // Related post function - no need to rely on plugins
 require_once( get_template_directory().'/assets/functions/related-posts.php' );
 
-// Customize the WordPress admin
-require_once( get_template_directory().'/assets/functions/admin.php' );
-
 // Theme support options
 require_once( get_template_directory().'/assets/functions/theme-support.php' );
 
@@ -65,8 +62,19 @@ require_once( get_stylesheet_directory().'/assets/functions/taxonomies.php' );
 // Customize functions
 require_once( get_stylesheet_directory().'/assets/functions/public.php' );
 
-// Customize ACF field functions
-require_once( get_stylesheet_directory().'/assets/functions/admin-acf.php' );
-
 // Customize related-post-functions
 require_once( get_stylesheet_directory().'/assets/functions/related-posts.php' );
+
+
+if ( is_admin() ) {
+
+	// Customize the WordPress admin
+	require_once( get_template_directory().'/assets/functions/admin.php' );
+
+	// Customize ACF field functions
+	require_once( get_stylesheet_directory().'/assets/functions/admin-acf.php' );
+
+	// Add options 
+	require_once( get_stylesheet_directory().'/assets/functions/admin-options.php' );
+	
+}

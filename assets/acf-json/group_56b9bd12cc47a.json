@@ -3,9 +3,66 @@
     "title": "Members",
     "fields": [
         {
+            "key": "field_591ea711f2206",
+            "label": "First Name",
+            "name": "participant_first_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591ea7298a6b4",
+            "label": "Last Name",
+            "name": "participant_last_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_590c74cadb0eb",
             "label": "Headline",
             "name": "participant_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591ddfc039e90",
+            "label": "Headline (Extension)",
+            "name": "participant_headline_extension",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -231,27 +288,6 @@
             },
             "default_value": "",
             "placeholder": ""
-        },
-        {
-            "key": "field_57a0a3eff2d3c",
-            "label": "Update Form Link (with tokens)",
-            "name": "participant_update_form_link",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
         }
     ],
     "location": [
@@ -271,5 +307,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1493990129
+    "modified": 1495390383
 }
