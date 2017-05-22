@@ -36,7 +36,7 @@ $exchange = new Participant( $post );
 
 					 <?php else : ?>
 
-					 	<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/png/CL_Inclusion_Bubble_simple.png'; ?>" alt="<?php _e( 'This CitizensLab Member does not have a profile image yet','exchange' ); ?>" width="200" height="auto">
+					 	<img src="<?php echo esc_url( exchange_cl_get_random_bubble_image() ); ?>" alt="<?php _e( 'This CitizensLab Member does not have a profile image yet','exchange' ); ?>" width="200" height="auto" />
 
 				 	<?php endif; ?>
 

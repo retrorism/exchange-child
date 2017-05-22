@@ -134,8 +134,8 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'sort_order' => 3,
 				),
 		),
-		'display_priority_story' => array( 'tandem','topic','location','discipline','methodology','project_output' ),
-		'display_priority_collaboration' => array( 'topic','location','discipline','methodology','project_output' ),
+		'display_priority_story' => array( 'lab','topic','location','discipline','expertise','resource' ),
+		//'display_priority_collaboration' => array( 'topic','location','discipline','methodology','project_output' ),
 		// Maximum number of tags on grid items
 		'grid_tax_max' => 2,
 		'collaboration_tax_max' => 20,

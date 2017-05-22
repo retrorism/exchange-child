@@ -131,12 +131,30 @@ function exchange_cl_create_taxonomies() {
 			'show_in_menu' => true,
 			'show_in_quick_edit' => false,
 			'meta_box_cb'  => false,
-			'public'       => true,
+			'public'       => false,
 			'query_var'    => true,
 			'rewrite'      => array(
 				'slug'       => 'expertises', // This controls the base slug that will display before each term
 				'with_front' => false, // Don't display the category base before.
 			),
+		)
+	);
+
+	// Register methodologies as taxonomy.
+	register_taxonomy(
+		'participant_type',  // The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
+		array( 'participant' ), // Post type name.
+		array(
+			'hierarchical' => false,
+			'sort'         => true,
+			'label'        => __( 'Member Types', EXCHANGE_PLUGIN ),  // Display name.
+			'show_ui'      => true,
+			'show_in_menu' => true,
+			'show_in_quick_edit' => true,
+			'meta_box_cb'  => false,
+			'public'       => true,
+			'query_var'    => true,
+			'rewrite'      => false, // Don't display the category base before.
 		)
 	);
 

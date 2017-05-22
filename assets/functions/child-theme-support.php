@@ -16,4 +16,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	add_theme_support( 'lowercase_tags' );
 	add_theme_support( 'decorated_section_headers' );
 	add_theme_support( 'exchange_participant_profiles');
+	add_theme_support( 'exchange_participant_types');
 }

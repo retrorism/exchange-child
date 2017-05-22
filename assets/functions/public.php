@@ -38,6 +38,9 @@ function exchange_cl_create_link( $obj, $with_text = true, $class = '' ) {
 		$title = $obj->name;
 	}
 	$label = __( 'Read full story', 'exchange' );
+	if ( 'participant' === $obj->type ) {
+		$label = __( 'Go to members page', 'exchange' );
+	}
 	if ( ! empty( $url ) && ! empty( $title ) ) {
 		$output  = '<a class="' . $class . '" href="' . $url . '" title="' .sprintf( esc_html__( 'Navigate to %s', EXCHANGE_PLUGIN ), esc_attr( $title ) ).'">';
 		if ( $with_text ) {
@@ -178,6 +181,19 @@ function exchange_cl_create_lab_circle() {
 	}
 	if ( count( $lab_circle ) === count( $lab_config ) ) {
 		return $lab_circle;
+	}
+}
+
+function exchange_cl_get_random_bubble_image() {
+	if ( ! isset( $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['TAXONOMIES']['labs'] ) ) {
+		return;
+	}
+	$keys = array_keys( $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['TAXONOMIES']['labs'] );
+	$rand = rand( 0, count( $keys ) - 1 );
+	$color_me_wild = $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['TAXONOMIES']['labs'][$keys[$rand]]['decoration'];
+	$src = get_stylesheet_directory_uri() . '/assets/images/png/' . $color_me_wild . '_simple.png';
+	if ( ! empty( $color_me_wild ) ) {
+		return $src;
 	}
 }
 
