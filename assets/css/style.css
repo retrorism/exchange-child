@@ -3770,7 +3770,8 @@ ARTICLE STYLES
 .story__header__introduction,
 .archive__header__introduction,
 .section-inner,
-.archive__interface {
+.archive__interface,
+.participant__main {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto; }
@@ -3780,23 +3781,28 @@ ARTICLE STYLES
   .section-inner::before,
   .section-inner::after,
   .archive__interface::before,
-  .archive__interface::after {
+  .archive__interface::after,
+  .participant__main::before,
+  .participant__main::after {
     content: ' ';
     display: table; }
   .story__header__introduction::after,
   .archive__header__introduction::after,
   .section-inner::after,
-  .archive__interface::after {
+  .archive__interface::after,
+  .participant__main::after {
     clear: both; }
 
 .story__header,
 .story__section.section--has_story_elements,
 .home .story__section .section-inner,
-.story__footer {
+.story__footer,
+.participant__main {
   background-color: #fefefe; }
 
 .section-inner,
-.archive__interface-inner {
+.archive__interface-inner,
+.participant__main {
   padding-bottom: 2rem;
   padding-top: 2rem; }
 
@@ -5694,7 +5700,12 @@ Pattern 21 & 22 Grids
     width: 48.5%;
     padding-bottom: 1rem; }
   .masonry__gutter-sizer {
-    width: 3%; } }
+    width: 3%; }
+  .post-type-archive-participant .masonry__grid-sizer,
+  .griditem--participant {
+    width: 24%; }
+  .post-type-archive-participant .masonry__gutter-sizer {
+    width: 2%; } }
 
 @media screen and (min-width: 60em) {
   .masonry__grid-sizer,
@@ -5702,7 +5713,12 @@ Pattern 21 & 22 Grids
   .featuredgrid__griditem {
     width: 32%; }
   .masonry__gutter-sizer {
-    width: 2%; } }
+    width: 2%; }
+  .post-type-archive-participant .masonry__grid-sizer,
+  .griditem--participant {
+    width: 16%; }
+  .post-type-archive-participant .masonry__gutter-sizer {
+    width: 0.8%; } }
 
 .archive__grid__masonry {
   padding-bottom: 4rem; }
@@ -6297,6 +6313,86 @@ CITIZENSLAB HOME PAGE STYLES
 
 .home .section__slice {
   margin-top: 2rem; }
+
+/*****************************
+CITIZENSLAB MEMBER PAGE STYLES
+******************************/
+.participant__main-inner--image {
+  width: 100%;
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media screen and (min-width: 40em) {
+    .participant__main-inner--image {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 60em) {
+    .participant__main-inner--image {
+      width: 16.66667%;
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 60em) and (min-width: 40em) {
+    .participant__main-inner--image {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+
+.participant__main-inner--info {
+  width: 100%;
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media screen and (min-width: 40em) {
+    .participant__main-inner--info {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 60em) {
+    .participant__main-inner--info {
+      width: 83.33333%;
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 60em) and (min-width: 40em) {
+    .participant__main-inner--info {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+
+.participant__details__items {
+  width: 100%; }
+
+.participant__details__item-label {
+  font-size: 1.2em; }
+
+.participant__details__item-label {
+  width: 100%; }
+  @media screen and (min-width: 40em) {
+    .participant__details__item-label {
+      width: 50%; } }
+  @media screen and (min-width: 60em) {
+    .participant__details__item-label {
+      width: 20%; } }
+
+.participant__details__item-content {
+  width: 100%; }
+  @media screen and (min-width: 40em) {
+    .participant__details__item-content {
+      width: 50%; } }
+  @media screen and (min-width: 60em) {
+    .participant__details__item-content {
+      width: 80%; } }
+
+.participant__title-wrapper,
+.participant__details__headline {
+  margin-bottom: 2rem; }
+
+.participant__image img {
+  border-radius: 50%; }
+
+/*********************************
+CITIZENSLAB MEMBER ARCHIVE STYLES
+*********************************/
+.griditem--participant h4 {
+  font-size: 100%; }
 
 /*********************
 TANDEM ACCORDION STYLE

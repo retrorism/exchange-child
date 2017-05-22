@@ -58,8 +58,8 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 			'contactblock',
 			'griditem',
 			'emphasisblock',
-			'collaboration__header',
-			'griditem__pattern'
+			'griditem__pattern',
+			'participant',
 		),
 		'programme-logos' => array(
 			'C_P'       => 'Tandem C & P',
@@ -145,6 +145,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 	),
 	'POST_TYPES' => array(
 		'available-for-form-updates' => array( 'collaboration', 'participant' ),
+		'participant_archive_posts_per_page' => 100,
 	),
 	'BREADCRUMBS' => array(
 		'max-chars-story' => 85,

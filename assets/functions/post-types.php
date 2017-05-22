@@ -49,7 +49,7 @@ function exchange_cl_create_member() {
 		'public'              => true,
 		'show_ui'             => true,
 		// Other items that are available for this array: 'title','editor','author','thumbnail','excerpt','trackbacks', 'custom-fields','comments','revisions','page-attributes','post-formats'.
-		'supports'            => array( 'title' ),
+		'supports'            => array( 'title', 'thumbnail' ),
 		'rewrite'			  => array(
 			'slug' => 'people',
 		),
@@ -58,14 +58,14 @@ function exchange_cl_create_member() {
 	);
 }
 
-add_action( 'pre_get_posts', 'exchange_cl_modify_story_archives_query' );
+add_action( 'pre_get_posts', 'exchange_cl_modify_story_archive_query' );
 /**
  * Customise stories archive
  *
  * @return void
  * @author Willem Prins | SOMTIJDS
  **/
-function exchange_cl_modify_story_archives_query ( $query ) {
+function exchange_cl_modify_story_archive_query ( $query ) {
 
 	if ( is_post_type_archive( 'story' )
 		&& $query->is_main_query()
@@ -74,5 +74,23 @@ function exchange_cl_modify_story_archives_query ( $query ) {
 		if ( ! empty( $excluded_cats ) && is_array( $excluded_cats ) ) {
 			$query->set('category__not_in', $excluded_cats );
 		}
+	}
+}
+
+add_action( 'pre_get_posts', 'exchange_cl_modify_participant_archive_query' );
+/**
+ * Customise stories archive
+ *
+ * @return void
+ * @author Willem Prins | SOMTIJDS
+ **/
+function exchange_cl_modify_participant_archive_query ( $query ) {
+	if ( ! isset( $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['POST_TYPES']['participant_archive_posts_per_page'] ) ) {		
+		return;
+	}
+	if ( is_post_type_archive( 'participant' )
+		&& $query->is_main_query()
+		&& ! is_admin() ) {
+		$query->set('posts_per_page', $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['POST_TYPES']['participant_archive_posts_per_page'] );
 	}
 }

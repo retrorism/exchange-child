@@ -122,7 +122,8 @@
 			.fonts-loaded h3,
 			.fonts-loaded h4,
 			.fonts-loaded h5,
-			.fonts-loaded .top-bar a {
+			.fonts-loaded .top-bar a,
+			.fonts-loaded .participant__details__item-label {
 				font-family: appo_paintregular, sans-serif;
 				font-weight: normal;
 			}

@@ -584,20 +584,23 @@ ARTICLE STYLES
 .story__header__introduction,
 .archive__header__introduction,
 .section-inner,
-.archive__interface {
+.archive__interface,
+.participant__main {
 	@include grid-row;
 }
 
 .story__header,
 .story__section.section--has_story_elements,
 .home .story__section .section-inner,
-.story__footer {
+.story__footer,
+.participant__main {
 	background-color: $white;
 }
 
 // Sections need
 .section-inner,
-.archive__interface-inner {
+.archive__interface-inner,
+.participant__main {
 	padding-bottom: 2 * $global-padding;
 	padding-top: 2 * $global-padding;
 }
@@ -611,7 +614,7 @@ ARTICLE STYLES
 .section__slice:not(.simplegrid),
 .section--has_form .section-inner > div,
 .story__meta-wrapper,
-.archive__title-wrapper {
+.archive__title-wrapper, {
 	@include grid-column();
 	@include breakpoint( small ) {
 		@include grid-column( 95% );
@@ -2490,6 +2493,13 @@ Pattern 21 & 22 Grids
 	.masonry__gutter-sizer {
 		width: 3%;
 	}
+	.post-type-archive-participant .masonry__grid-sizer,
+	.griditem--participant {
+		width: 24%;
+	}
+	.post-type-archive-participant .masonry__gutter-sizer {
+		width: 2%;
+	}
 }
 @include breakpoint( large ) {
 	.masonry__grid-sizer,
@@ -2499,6 +2509,13 @@ Pattern 21 & 22 Grids
 	}
 	.masonry__gutter-sizer {
 		width: 2%;
+	}
+	.post-type-archive-participant .masonry__grid-sizer,
+	.griditem--participant {
+		width: 16%;
+	}
+	.post-type-archive-participant .masonry__gutter-sizer {
+		width: 0.8%;
 	}
 }
 
@@ -3056,6 +3073,68 @@ CITIZENSLAB HOME PAGE STYLES
 		margin-top: 2 * $global-margin;
 	}
 }
+
+/*****************************
+CITIZENSLAB MEMBER PAGE STYLES
+******************************/
+
+.participant__main-inner--image {
+	@include grid-column( 12 );
+	@include breakpoint( large ) {
+		@include grid-column( 2 );
+	}
+}
+
+.participant__main-inner--info {
+	@include grid-column( 12 );
+	@include breakpoint( large ) {
+		@include grid-column( 10 );
+	}
+}
+
+.participant__details__items {
+	width: 100%;
+}
+
+.participant__details__item-label {
+	font-size: 1.2em;
+}
+.participant__details__item-label {
+	width: 100%;
+	@include breakpoint( medium ) {
+		width: 50%;
+	}
+	@include breakpoint( large ) {
+		width: 20%;
+	}
+}
+.participant__details__item-content {
+	width: 100%;
+	@include breakpoint( medium ) {
+		width: 50%;
+	}
+	@include breakpoint( large ) {
+		width: 80%;
+	}
+}
+
+.participant__title-wrapper,
+.participant__details__headline {
+	margin-bottom: 2 * $global-margin;
+}
+
+.participant__image img {
+	border-radius: 50%;
+}
+
+/*********************************
+CITIZENSLAB MEMBER ARCHIVE STYLES
+*********************************/
+
+.griditem--participant h4 {
+	font-size: $global-font-size;
+}
+
 
 /*********************
 TANDEM ACCORDION STYLE
