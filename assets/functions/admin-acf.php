@@ -78,6 +78,33 @@ function exchange_cl_change_acf_color_picker() {
 	</script>";
 }
 
+remove_action( 'save_post', 'exchange_update_location_transients_on_save', 10, 2 );
+
+add_action( 'save_post', 'exchange_cl_update_location_transients_on_save', 10, 2 );
+
+function exchange_cl_update_location_transients_on_save( $post_id, $post_obj ) {
+
+	$type = $post_obj->post_type;
+	if ( $type !== 'participant' ) {
+		return;
+	}
+	$stored_locations = get_transient('participant_locations');
+	
+	if ( empty( $stored_locations ) ) {
+		$stored_locations = array();
+	}
+	if ( ! is_array( $stored_locations ) ) {
+		return;
+	}
+	$p = BaseController::exchange_factory( $post_obj );
+	if ( ! $p instanceof Participant || false === $p->has_locations ) {
+		return;
+	}
+	$stored_locations[ $p->post_id ] = $p->locations;
+	set_transient( 'participant_locations', $stored_locations, 365 * 24 * HOUR_IN_SECONDS );
+}
+
+
 /**
  * If set, add Google Maps API key filter
  */

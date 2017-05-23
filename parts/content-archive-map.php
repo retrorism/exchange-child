@@ -2,7 +2,7 @@
 
 		<?php
 			$map_input = array(
-				'map_style' => 'network',
+				'map_style' => 'dots',
 				'map_size' => 'wide',
 				'map_zoom_level' => '4',
 			);

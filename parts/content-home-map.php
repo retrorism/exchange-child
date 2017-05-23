@@ -20,10 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="section-inner">
 
 		<?php $map_input = array(
-				'map_style' => 'network',
-				'map_size' => 'full',
+				'map_style' => 'dots',
+				'map_size' => 'wide',
 				'map_zoom_level' => '4',
-				'map_collaborations' => array(),
 				'map_caption' => '',
 			);
 			$map = BasePattern::pattern_factory( $map_input, 'simple_map', 'archive__map', true );
