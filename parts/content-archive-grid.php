@@ -6,11 +6,19 @@
 			<div class="masonry__grid-sizer"></div>
 			<div class="masonry__gutter-sizer"></div>
 			
-			<?php while (have_posts()) : the_post(); ?>
+			<?php if ( ! function_exists( 'facetwp_display' ) ) : ?>
+				
+				<?php while (have_posts()) : the_post(); ?>
 
-				<?php include( get_stylesheet_directory() . '/parts/loop-archive-grid.php' ); ?>
+					<?php include( get_stylesheet_directory() . '/parts/loop-archive-grid.php' ); ?>
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
+
+			<?php else : ?>
+
+				<?php echo facetwp_display( 'template', 'participants_filtered' ); ?>
+
+			<?php endif; ?>
 			
 		</div><!-- end archive__grid__masonry -->
 

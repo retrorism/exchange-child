@@ -48,6 +48,7 @@ function exchange_cl_create_member() {
 		'menu_position'       => 13,
 		'public'              => true,
 		'show_ui'             => true,
+		'exclude_from_search' => false,
 		// Other items that are available for this array: 'title','editor','author','thumbnail','excerpt','trackbacks', 'custom-fields','comments','revisions','page-attributes','post-formats'.
 		'supports'            => array( 'title', 'thumbnail' ),
 		'rewrite'			  => array(
@@ -78,6 +79,7 @@ function exchange_cl_modify_story_archive_query ( $query ) {
 }
 
 add_action( 'pre_get_posts', 'exchange_cl_modify_participant_archive_query' );
+
 /**
  * Customise stories archive
  *

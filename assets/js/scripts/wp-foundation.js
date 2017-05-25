@@ -195,7 +195,7 @@ var masonryIsActive = false;
 		if ( $('body').hasClass( 'archive' ) 
 			|| $('body').hasClass( 'page-template-archive') 
 			|| $('.featuredgrid__masonry').length === 1 ) {
-			if ( ! $('body').hasClass( 'post-type-archive-story') ) {
+			if ( $('body').hasClass( 'post-type-archive-participant') ) {
 				if ( archiveMap === undefined ) {
 					var archiveMap = getArchiveMap();
 				}
@@ -209,21 +209,28 @@ var masonryIsActive = false;
 			}
 		}
 
-    	$('#facet-tabs').on('change.zf.tabs', function() {
-			if ( archiveMap === undefined ) {
-				var archiveMap = getArchiveMap();
-			}
-			if ( archiveMap.map !== undefined ) {
-				archiveMap.map.invalidateSize().fitBounds( archiveMap.clusterLayer.getBounds() );
-			}
-			if ( $grid !== undefined ) {
-				$grid.masonry( masonryOptions ); // re-initialize
-				masonryIsActive = true;
+  //   	$('#facet-tabs').on('change.zf.tabs', function() {
+		// 	if ( archiveMap === undefined ) {
+		// 		var archiveMap = getArchiveMap();
+		// 	}
+		// 	if ( archiveMap.map !== undefined ) {
+		// 		archiveMap.map.invalidateSize().fitBounds( archiveMap.clusterLayer.getBounds() );
+		// 	}
+		// 	if ( $grid !== undefined ) {
+		// 		$grid.masonry( masonryOptions ); // re-initialize
+		// 		masonryIsActive = true;
+		// 	}
+		// })
+
+		$('.archive__facets__type__reset').on('click', function() {
+			// Reset all facets to their default state
+			if ( undefined != FWP ) {
+				FWP.reset();
 			}
 		})
 
 		$('#facet-switch').on('click', function() {
-				('#main').foundation('toggle');
+			('#main').foundation('toggle');
 		})
 
 		// Remove empty P tags created by WP inside of Accordion and Orbit
@@ -269,20 +276,20 @@ var masonryIsActive = false;
 		
 		var allObjects = window['leaflet_objects_' + archiveMap.hash];
 		if ( allObjects === undefined
-			|| allObjects.map_polylines.length == 0
+			|| allObjects.map_markers.length == 0
 			|| FWP.settings.matches.length == 0 ) {
 			return;
 		}
 
-		if ( allObjects.map_polylines.length > 0 && FWP.settings.matches.length > 0 ) {
-			var matchedPolylines = allObjects.map_polylines.filter( function( p ) {
+		if ( allObjects.map_markers.length > 0 && FWP.settings.matches.length > 0 ) {
+			var matchedMarkers = allObjects.map_markers.filter( function( p ) {
 				if (  FWP.settings.matches.includes( p.id ) ) {
 					return true;
 				}
 			});
-			if ( matchedPolylines.length > 0 ) {
+			if ( matchedMarkers.length > 0 ) {
 				var refreshObjects = {
-					map_polylines : matchedPolylines
+					map_markers : matchedMarkers
 				};
 				archiveMap.renderObjects( refreshObjects );
 			}
@@ -315,3 +322,4 @@ var masonryIsActive = false;
     });
 
 })(jQuery);
+	
