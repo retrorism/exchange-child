@@ -3238,6 +3238,14 @@ CITIZENSLAB MEMBER ARCHIVE STYLES
 	padding: 0.5 * $global-padding;
 }
 
+.map__marker__image.adviser {
+	background-image: url('../images/png/CL_dot_blue_WEB.png') !important;
+}
+
+.map__marker__image.adviser {
+	background-image: url('../images/png/CL_dot_orange_WEB.png') !important;
+}
+
 .map__popup__content-border.adviser {
 	border-left-color: $blue-cl;
 	border-right-color: $blue-cl;
