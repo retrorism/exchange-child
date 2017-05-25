@@ -6012,9 +6012,6 @@ a.read-full-story,
 .griditem--programme_round div:nth-last-child(3).emphasisblock__button-wrapper {
   bottom: 5rem; }
 
-.fonts-loaded .griditem--participant h4, .fonts-loaded .griditem--participant h5 {
-  font-family: Roboto, sans-serif; }
-
 .griditem--participant .griditem__content-border {
   background-color: #fefefe; }
 
@@ -6038,38 +6035,37 @@ a.read-full-story,
   margin-bottom: 1rem; }
 
 .griditem--participant .participant__details__items {
+  font-weight: 600;
   margin-bottom: 0.5rem; }
 
 .griditem--participant td {
   font-size: 90%;
-  padding: 0 0 0.5rem; }
+  padding: 0 0 0.4rem;
+  line-height: 1.2; }
 
-.griditem:hover .griditem__content--member .griditem__content-border {
-  border-color: #72904d; }
-
-.griditem__content--member a, .griditem__content--member h4, .griditem__content--member h5 {
-  color: #72904d; }
+.griditem__content--member a, .griditem__content--member h5 {
+  color: #E51145; }
 
 .griditem__content--member .griditem__read-full-story a {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z' fill='%2372904d'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z' fill='%23E51145'/%3E%3C/svg%3E"); }
 
-.griditem:hover .griditem__content--strategic-advisor .griditem__content-border {
-  border-color: #ED8700; }
-
-.griditem__content--strategic-advisor a, .griditem__content--strategic-advisor h4, .griditem__content--strategic-advisor h5 {
-  color: #ED8700; }
-
-.griditem__content--strategic-advisor .griditem__read-full-story a {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z' fill='%23ED8700'/%3E%3C/svg%3E"); }
-
-.griditem:hover .griditem__content--friend .griditem__content-border {
+.griditem:hover .griditem__content--adviser .griditem__content-border {
   border-color: #007586; }
 
-.griditem__content--friend a, .griditem__content--friend h4, .griditem__content--friend h5 {
+.griditem__content--adviser a, .griditem__content--adviser h5 {
   color: #007586; }
 
-.griditem__content--friend .griditem__read-full-story a {
+.griditem__content--adviser .griditem__read-full-story a {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z' fill='%23007586'/%3E%3C/svg%3E"); }
+
+.griditem:hover .griditem__content--friend .griditem__content-border {
+  border-color: #ED8700; }
+
+.griditem__content--friend a, .griditem__content--friend h5 {
+  color: #ED8700; }
+
+.griditem__content--friend .griditem__read-full-story a {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z' fill='%23ED8700'/%3E%3C/svg%3E"); }
 
 /************************
 Pattern 23. Map interface
@@ -6377,11 +6373,25 @@ CITIZENSLAB HOME PAGE STYLES
 CITIZENSLAB MEMBER PAGE STYLES
 ******************************/
 .participant__main-inner--image {
-  width: 100%;
+  width: 50%;
   float: left;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  margin-bottom: 2rem; }
   @media screen and (min-width: 40em) {
+    .participant__main-inner--image {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  .participant__main-inner--image:last-child:last-child {
+    float: left; }
+  @media screen and (min-width: 40em) {
+    .participant__main-inner--image {
+      width: 25%;
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 0; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
     .participant__main-inner--image {
       padding-left: 1rem;
       padding-right: 1rem; } }
@@ -6400,8 +6410,26 @@ CITIZENSLAB MEMBER PAGE STYLES
   width: 100%;
   float: left;
   padding-left: 1rem;
+  padding-right: 1rem;
+  width: 66.66667%;
+  float: left;
+  padding-left: 1rem;
   padding-right: 1rem; }
   @media screen and (min-width: 40em) {
+    .participant__main-inner--info {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 40em) {
+    .participant__main-inner--info {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 40em) {
+    .participant__main-inner--info {
+      width: 75%;
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
     .participant__main-inner--info {
       padding-left: 1rem;
       padding-right: 1rem; } }
@@ -6423,22 +6451,12 @@ CITIZENSLAB MEMBER PAGE STYLES
   font-size: 1.2em; }
 
 .participant__details__item-label {
-  width: 100%; }
-  @media screen and (min-width: 40em) {
-    .participant__details__item-label {
-      width: 50%; } }
-  @media screen and (min-width: 60em) {
-    .participant__details__item-label {
-      width: 20%; } }
+  min-width: 6em;
+  width: 6em; }
 
 .participant__details__item-content {
-  width: 100%; }
-  @media screen and (min-width: 40em) {
-    .participant__details__item-content {
-      width: 50%; } }
-  @media screen and (min-width: 60em) {
-    .participant__details__item-content {
-      width: 80%; } }
+  min-width: 10em;
+  width: auto; }
 
 .participant__title-wrapper,
 .participant__details__headline {
@@ -6452,6 +6470,26 @@ CITIZENSLAB MEMBER ARCHIVE STYLES
 *********************************/
 .griditem--participant h4 {
   font-size: 100%; }
+
+.map__popup__link--image {
+  width: 5em !important; }
+  .map__popup__link--image img {
+    border-radius: 50%; }
+
+.map__popup__info {
+  max-width: 18.3em !important; }
+
+.map__popup__title {
+  margin: 0.75em 0 0.125em 0; }
+
+.map__popup__title__addition {
+  display: block; }
+
+.map__popup__title__addition::before {
+  content: '('; }
+
+.map__popup__title__addition::after {
+  content: ')'; }
 
 /*********************
 TANDEM ACCORDION STYLE
