@@ -6491,6 +6491,23 @@ CITIZENSLAB MEMBER ARCHIVE STYLES
 .map__popup__title__addition::after {
   content: ')'; }
 
+.map__popup__content-border {
+  border-left: 2px solid #E51145;
+  border-right: 2px solid #E51145;
+  overflow: hidden;
+  padding: 0.5rem; }
+
+.map__popup__content-border.adviser {
+  border-left-color: #007586;
+  border-right-color: #007586; }
+
+.map__popup__content-border.friend {
+  border-left-color: #ED8700;
+  border-right-color: #ED8700; }
+
+.simplemap .leaflet-popup-content-wrapper {
+  padding: 0 !important; }
+
 /*********************
 TANDEM ACCORDION STYLE
 *********************/

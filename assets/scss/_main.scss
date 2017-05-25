@@ -2841,8 +2841,6 @@ a.read-full-story,
 	}
 }
 
-
-
 /************************
 Pattern 23. Map interface
 *************************/
@@ -3232,6 +3230,27 @@ CITIZENSLAB MEMBER ARCHIVE STYLES
 .map__popup__title__addition::after {
 	content: ')';
 }
+
+.map__popup__content-border {
+	border-left: 2px solid $pink-cl;
+	border-right: 2px solid $pink-cl;
+	overflow: hidden;
+	padding: 0.5 * $global-padding;
+}
+
+.map__popup__content-border.adviser {
+	border-left-color: $blue-cl;
+	border-right-color: $blue-cl;
+}
+
+.map__popup__content-border.friend {
+	border-left-color: $orange-cl;
+	border-right-color: $orange-cl;
+}
+.simplemap .leaflet-popup-content-wrapper {
+	padding: 0 !important;
+}
+
 
 
 /*********************
