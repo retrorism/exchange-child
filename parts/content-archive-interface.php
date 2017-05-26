@@ -21,7 +21,7 @@
 
 		</section>
 		
-		<?php if ( ! is_post_type_archive( 'story' ) ) : ?>
+		<?php if ( is_post_type_archive( 'participant' ) ) : ?>
 
 			<section class="tabs-panel <?php echo esc_attr( $map_active ); ?> section--coloured" id="facets-map">
 				

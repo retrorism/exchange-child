@@ -6,7 +6,7 @@
 			<div class="masonry__grid-sizer"></div>
 			<div class="masonry__gutter-sizer"></div>
 			
-			<?php if ( ! function_exists( 'facetwp_display' ) ) : ?>
+			<?php if ( ! function_exists( 'facetwp_display' ) || ! is_post_type_archive('participant') ) : ?>
 				
 				<?php while (have_posts()) : the_post(); ?>
 
