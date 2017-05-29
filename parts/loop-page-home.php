@@ -26,6 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			include_once( get_stylesheet_directory() . '/parts/loop-featured-stories.php' );
 
 			$exchange->publish_sections();
+
+			exchange_cl_expertise_importer();
 		?>
 
 	</div> <!-- end article -->
