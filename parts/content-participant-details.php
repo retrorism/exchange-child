@@ -4,19 +4,26 @@
 
 		<?php if ( ! empty( $exchange->details ) ) : ?>
 
-		<?php if ( ! empty( $exchange->details['participant_headline'] ) ) : ?>
+		<?php if ( ! empty( $exchange->details['participant_headline'] )
+		|| ! empty( $exchange->details['participant_headline_extension'] ) ) : ?>
 		<section class="participant__details__headline">
-			<?php echo esc_html( $exchange->details['participant_headline'] ); ?>
-		</section>
+		
+		<?php if ( ! empty( $exchange->details['participant_headline'] ) ) : ?>
+			<?php echo wpautop( esc_html( $exchange->details['participant_headline'] ) ); ?>
+		<?php endif; ?>
+		<?php if ( ! empty( $exchange->details['participant_headline_extension'] ) ) : ?>
+			<?php echo wpautop( esc_html( $exchange->details['participant_headline_extension'] ) ); ?>
+		<?php endif; ?>
+		</section>	
 		<?php endif; ?>
 
 		<table class="participant__details__items">
 			<tbody>
 			
-			<?php if ( ! empty( $exchange->expertise ) ) : ?>
+			<?php if ( $exchange->has_tags ) : ?>
 				<tr>
 					<td class="participant__details__item-label"><?php _e( 'Expertise','exchange' ); ?></td>
-					<td class="participant__details__item-content"><?php echo esc_html( $exchange->expertise ); ?></td>
+					<td class="participant__details__item-content participant__details__tags"><?php $exchange->publish_tags( 'participant__details', 'discipline' ); ?></td>
 				</tr>
 			<?php endif; ?>
 			
@@ -47,14 +54,13 @@
 					<td class="participant__details__item-content"><?php $exchange->publish_contactme(); ?></td>
 				</tr>
 			<?php endif; ?>
-
-			<?php if ( ! empty( $exchange->details['participant_google_plus_url'] )
-				|| ! empty( $exchange->details['participant_facebook_url'] )
-				|| ! empty( $exchange->details['participant_linkedin_url'] )
-				|| ! empty( $exchange->details['participant_twitter_url'] ) ) : ?>
+			<?php if ( ! empty( $exchange->details['participant_google_plus_profile_url'] )
+				|| ! empty( $exchange->details['participant_facebook_profile_url'] )
+				|| ! empty( $exchange->details['participant_linkedin_profile_url'] )
+				|| ! empty( $exchange->details['participant_twitter_profile_url'] ) ) : ?>
 				<tr>
-					<td class="details__table__label"><?php _e( 'E-mail','exchange' ); ?></td>
-					<td class="details__table__content"><?php echo exchange_cl_build_participant_social_icons(); ?></td>
+					<td class="participant__details__item-label"><?php _e( 'Social Media','exchange' ); ?></td>
+					<td class="participant__details__item-content"><?php echo exchange_cl_build_participant_social_icons( $exchange ); ?></td>
 				</tr>
 			<?php endif; ?>
 

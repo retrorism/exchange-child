@@ -24,15 +24,6 @@
 		<!-- META -->
 		<?php /*  */ ?>
 		<div class="griditem__content-inner">
-			<!-- CATEGORY -->
-			<?php if ( ! empty( $exchange->category ) ) : ?>
-				<?php $exchange->publish_category( 'griditem'); ?>
-			<?php endif; ?>		
-
-			<!-- TAGS -->
-			<?php if ( $exchange->has_tags ) : ?>
-				<div class='griditem__tags'><?php $exchange->publish_tags('griditem'); ?></div>
-			<?php endif; ?>
 
 			<!-- TITLE -->
 			<?php echo exchange_create_link( $exchange, false ); ?>

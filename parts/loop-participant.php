@@ -47,8 +47,12 @@ $exchange = new Participant( $post );
 					<header class="article-header participant__header">
 
 						<div class="participant__title-wrapper">
-
-							<h1 class="entry-title participant__title" itemprop="headline"><?php the_title(); ?> <span class=""></span></h1>
+							<?php
+								$p_type = ''; 
+								if ( current_theme_supports( 'exchange_participant_types' ) && ! empty( $exchange->participant_type ) ) { 
+									$p_type = $exchange->participant_type->name; 
+								}; ?>
+							<h1 class="entry-title participant__title" itemprop="headline"><?php the_title(); ?> <span class="participant__title__type"><?php echo esc_html( $p_type ); ?></span></h1>
 
 						</div>
 

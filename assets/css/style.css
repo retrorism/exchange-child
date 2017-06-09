@@ -4200,20 +4200,33 @@ Pattern 3. Editorial introduction
 Pattern 4. Tag list
 ******************/
 .story__meta__item--tags ol,
-.griditem__tags ol {
+.griditem__tags ol,
+.participant__details__tags ol {
   list-style: none;
   margin-left: 0;
   margin-bottom: 0; }
 
 .griditem__tags ol li,
+.story__meta__item--tags ol li,
+.participant__details__tags ol li {
+  display: inline-block; }
+
+.griditem__tags ol li,
 .story__meta__item--tags ol li {
-  display: inline-block;
   margin: 0.5rem 0.5rem 0 0; }
   .griditem__tags ol li:first-of-type,
   .story__meta__item--tags ol li:first-of-type {
     margin-left: 0; }
 
-.tag,
+.participant__details__tag:after {
+  content: ', ';
+  margin-right: 0.5rem; }
+
+.participant__details__tags li:last-child .participant__details__tag:after {
+  content: '';
+  margin-right: 0; }
+
+.tag:not(.participant__details__tag),
 .griditem__tag,
 .story__meta__tag {
   display: inline-block;
@@ -4225,55 +4238,55 @@ Pattern 4. Tag list
   border-radius: 0;
   font-weight: 700;
   border: 1px solid #E51145; }
-  .tag[href],
+  .tag:not(.participant__details__tag)[href],
   .griditem__tag[href],
   .story__meta__tag[href] {
     cursor: pointer; }
-  .tag[href]:hover,
+  .tag:not(.participant__details__tag)[href]:hover,
   .griditem__tag[href]:hover,
   .story__meta__tag[href]:hover {
     color: #fefefe; }
-  .tag.lab,
+  .tag:not(.participant__details__tag).lab,
   .griditem__tag.lab,
   .story__meta__tag.lab {
     border-color: #ED8700; }
-    .tag.lab[href]:hover,
+    .tag:not(.participant__details__tag).lab[href]:hover,
     .griditem__tag.lab[href]:hover,
     .story__meta__tag.lab[href]:hover {
       background-color: #ED8700; }
-  .tag.topic,
+  .tag:not(.participant__details__tag).topic,
   .griditem__tag.topic,
   .story__meta__tag.topic {
     border-color: #72904d; }
-    .tag.topic[href]:hover,
+    .tag:not(.participant__details__tag).topic[href]:hover,
     .griditem__tag.topic[href]:hover,
     .story__meta__tag.topic[href]:hover {
       background-color: #72904d; }
-  .tag.discipline,
+  .tag:not(.participant__details__tag).discipline,
   .griditem__tag.discipline,
   .story__meta__tag.discipline {
     border-color: #a22cf5; }
-    .tag.discipline[href]:hover,
+    .tag:not(.participant__details__tag).discipline[href]:hover,
     .griditem__tag.discipline[href]:hover,
     .story__meta__tag.discipline[href]:hover {
       background-color: #a22cf5; }
-  .tag.language, .tag.resource,
+  .tag:not(.participant__details__tag).language, .tag:not(.participant__details__tag).resource,
   .griditem__tag.language,
   .griditem__tag.resource,
   .story__meta__tag.language,
   .story__meta__tag.resource {
     border-color: #B5A825; }
-    .tag.language[href]:hover, .tag.resource[href]:hover,
+    .tag:not(.participant__details__tag).language[href]:hover, .tag:not(.participant__details__tag).resource[href]:hover,
     .griditem__tag.language[href]:hover,
     .griditem__tag.resource[href]:hover,
     .story__meta__tag.language[href]:hover,
     .story__meta__tag.resource[href]:hover {
       background-color: #B5A825; }
-  .tag.location,
+  .tag:not(.participant__details__tag).location,
   .griditem__tag.location,
   .story__meta__tag.location {
     border-color: #007586; }
-    .tag.location[href]:hover,
+    .tag:not(.participant__details__tag).location[href]:hover,
     .griditem__tag.location[href]:hover,
     .story__meta__tag.location[href]:hover {
       background-color: #007586; }
@@ -6375,35 +6388,35 @@ CITIZENSLAB HOME PAGE STYLES
 /*****************************
 CITIZENSLAB MEMBER PAGE STYLES
 ******************************/
+.participant__title__type {
+  position: relative;
+  top: -0.0625em;
+  font-size: 95%; }
+  .participant__title__type include breakpoint(medium) {
+    margin-left: 0.75rem; }
+
 .participant__main-inner--image {
-  width: 50%;
+  width: 100%;
   float: left;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 2rem; }
+  .participant__main-inner--image figure {
+    max-width: 15em;
+    margin: 0 auto; }
   @media screen and (min-width: 40em) {
     .participant__main-inner--image {
       padding-left: 1rem;
       padding-right: 1rem; } }
   .participant__main-inner--image:last-child:last-child {
     float: left; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 60em) {
     .participant__main-inner--image {
       width: 25%;
       float: left;
       padding-left: 1rem;
       padding-right: 1rem;
       margin-bottom: 0; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    .participant__main-inner--image {
-      padding-left: 1rem;
-      padding-right: 1rem; } }
-  @media screen and (min-width: 60em) {
-    .participant__main-inner--image {
-      width: 16.66667%;
-      float: left;
-      padding-left: 1rem;
-      padding-right: 1rem; } }
   @media screen and (min-width: 60em) and (min-width: 40em) {
     .participant__main-inner--image {
       padding-left: 1rem;
@@ -6413,32 +6426,14 @@ CITIZENSLAB MEMBER PAGE STYLES
   width: 100%;
   float: left;
   padding-left: 1rem;
-  padding-right: 1rem;
-  width: 66.66667%;
-  float: left;
-  padding-left: 1rem;
   padding-right: 1rem; }
   @media screen and (min-width: 40em) {
     .participant__main-inner--info {
       padding-left: 1rem;
       padding-right: 1rem; } }
-  @media screen and (min-width: 40em) {
-    .participant__main-inner--info {
-      padding-left: 1rem;
-      padding-right: 1rem; } }
-  @media screen and (min-width: 40em) {
-    .participant__main-inner--info {
-      width: 75%;
-      float: left;
-      padding-left: 1rem;
-      padding-right: 1rem; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    .participant__main-inner--info {
-      padding-left: 1rem;
-      padding-right: 1rem; } }
   @media screen and (min-width: 60em) {
     .participant__main-inner--info {
-      width: 83.33333%;
+      width: 66.66667%;
       float: left;
       padding-left: 1rem;
       padding-right: 1rem; } }
@@ -6446,6 +6441,9 @@ CITIZENSLAB MEMBER PAGE STYLES
     .participant__main-inner--info {
       padding-left: 1rem;
       padding-right: 1rem; } }
+  @media screen and (min-width: 60em) {
+      .participant__main-inner--info:last-child:last-child {
+        float: left; } }
 
 .participant__details__items {
   width: 100%; }
@@ -6454,12 +6452,15 @@ CITIZENSLAB MEMBER PAGE STYLES
   font-size: 1.2em; }
 
 .participant__details__item-label {
-  min-width: 6em;
-  width: 6em; }
+  min-width: 8em;
+  width: 8em; }
 
 .participant__details__item-content {
   min-width: 10em;
   width: auto; }
+
+.single-participant .participant__details__items td {
+  padding-bottom: 1rem; }
 
 .participant__title-wrapper,
 .participant__details__headline {

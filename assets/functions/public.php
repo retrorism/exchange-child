@@ -139,6 +139,29 @@ function exchange_cl_build_social_icons( $context = '', $platforms = array(), $e
 	return $output;
 }
 
+function exchange_cl_build_participant_social_icons( $p ) {
+	if ( ! $p instanceof Participant ) {
+		return;
+	}
+	$social_media_arr = array( 
+		'Facebook'   => 'facebook',
+		'Twitter'    => 'twitter',
+		'Linkedin'   => 'linkedin',
+		'Googleplus' => 'google',
+	);
+	$output = '<ul class="participant__details__social-icons social-icons-list">';
+	foreach( $social_media_arr as $pretty => $slug ) {
+		if ( empty( $p->details['participant_' . $slug . '_profile_url'] ) ) {
+			continue;
+		}
+		$output .= '<li class="participant__details__social-icon social-icons-list__item"><a href="';
+		$output .= $p->details['participant_' . $slug . '_profile_url'] .'" ';
+		$output .= 'title="' . wp_sprintf( __('Navigate to the %s page of %s', 'exchange'), $pretty, $p->title ) . '"';
+		$output .= '><i class="social-icons-list__link__icon">' . exchange_build_svg( get_stylesheet_directory() . '/assets/images/svg/CL_' . $pretty . '_box.svg', true ) . '</i></a></li>';
+	}
+	return $output;
+}
+
 function exchange_cl_create_griditem_from_post( $obj, $context ) {
 	$item = BaseController::exchange_factory( $obj, 'griditem' );
 	if ( ! $item instanceof Exchange ) {

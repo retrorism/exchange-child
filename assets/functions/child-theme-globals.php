@@ -134,10 +134,12 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 				'sort_order' => 3,
 				),
 		),
-		'display_priority_story' => array( 'lab','topic','location','discipline','expertise','resource' ),
+		'display_priority_story' => array( 'lab','topic','location','discipline','resource' ),
+		'display_priority_participant' => array( 'discipline','location' ),
 		//'display_priority_collaboration' => array( 'topic','location','discipline','methodology','project_output' ),
 		// Maximum number of tags on grid items
 		'grid_tax_max' => 2,
+		'single_tax_max' => 10,
 		'collaboration_tax_max' => 20,
 	),
 	'PATTERNS' => array(

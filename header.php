@@ -105,7 +105,8 @@
 			body {
 				font-family: sans-serif;
 			}
-			.fonts-loaded body {
+			.fonts-loaded body,
+			.fonts-loaded .participant__title__type {
 				font-family: Roboto, sans-serif;
 			}
 			p {
@@ -122,7 +123,8 @@
 			.fonts-loaded h3,
 			.fonts-loaded h4,
 			.fonts-loaded h5,
-			.fonts-loaded .top-bar a {
+			.fonts-loaded .top-bar a,
+			.fonts-loaded .single-participant .participant__details__item-label {
 				font-family: appo_paintregular, sans-serif;
 				font-weight: normal;
 			}
