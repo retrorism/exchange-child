@@ -3328,6 +3328,7 @@ ARCHIVE STYLES
 }
 
 .archive__facets {
+	min-height: 3rem;
 	@include grid-row;
 	@include grid-column-collapse;
 }
