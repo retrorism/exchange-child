@@ -5,7 +5,7 @@
 			<?php echo facetwp_display( 'facet', 'member_type' ); ?>
 		</div>
 		<div class="archive__facets__country">
-			<label class="archive__facets__country__label" for="member_country"><?php _e( 'Filter by country: ', 'exchange' ); ?></label>
+			<label class="archive__facets__country__label" for="member_country"><?php _e( 'Filter by expertise: ', 'exchange' ); ?></label>
 			<?php echo facetwp_display( 'facet', 'member_country' ); ?>
 		</div>
 	</nav>
