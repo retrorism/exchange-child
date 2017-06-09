@@ -30,7 +30,16 @@
 			<?php if ( ! empty( $exchange->details['participant_initiative'] ) ) : ?>
 				<tr>
 					<td class="participant__details__item-label"><?php _e( 'Initiative','exchange' ); ?></td>
-					<td class="participant__details__item-content"><?php echo esc_html( $exchange->details['participant_initiative'] ); ?></td>
+					<td class="participant__details__item-content">
+					<?php
+						$p_website_url = $exchange->details['participant_website_url'];
+						if ( ! empty( $p_website_url ) ) : ?>
+							<a href="<?php echo esc_url( $p_website_url ); ?>" title="<?php echo wp_sprintf( __('Navigate to the website of %s', 'exchange'), $exchange->details['participant_initiative'] ); ?>">
+						<?php endif; ?>
+						<?php echo esc_html( $exchange->details['participant_initiative'] ); ?>
+						<?php if ( ! empty( $p_website_url ) ) : ?>
+							</a>
+						<?php endif; ?></td>
 				</tr>
 			<?php endif; ?>
 			
