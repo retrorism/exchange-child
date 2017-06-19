@@ -4,6 +4,39 @@
 
 		<div class="story__meta-inner">
 			
+
+			<?php if ( ! empty( $exchange->storyteller ) ) : ?>
+
+				<section class="story__meta__item story__meta__item--storytellers">
+
+				<?php foreach ( $exchange->storyteller as $s ) : ?>
+
+					<div class="story__meta__item--storyteller">
+						<?php if ( $s->has_featured_image ) : ?>
+							
+							<?php $s->publish_featured_image('story__meta'); ?>
+						
+						<?php else : ?>
+					 	
+					 	<img src="<?php echo esc_url( exchange_cl_get_random_bubble_image() ); ?>" alt="<?php _e( 'This CitizensLab Member does not have a profile image yet','exchange' ); ?>" width="40" height="auto" />
+
+				 		<?php endif; ?>
+
+				 		<div class="storyteller-info">
+
+							<h6><?php echo esc_html( $s->name ); ?></h6>
+							<span><?php echo esc_html( $s->participant_type->name ); ?></span>
+
+						</div>
+					
+					</div>
+
+				<?php endforeach; ?>					
+
+				</section>
+
+			<?php endif; ?>
+
 			<section class="story__meta__item story__meta__item--date">
 
 				<?php echo esc_html( mysql2date('F jS, Y', $exchange->date ) ); ?>
@@ -17,18 +50,6 @@
 				</section>
 
 			<?php endif; ?>
-
-			<?php if ( ! empty( $exchange->storyteller ) ) : ?>
-
-				<section class="story__meta__item story__meta__item--storyteller">
-
-					<?php echo esc_html( sprintf( __("Shared by: %s", 'exchange' ), $exchange->storyteller->title ) ); ?>
-
-				</section>
-
-			<?php endif; ?>
-
-
 
 			<?php if ( $exchange->has_tags ) : ?>
 

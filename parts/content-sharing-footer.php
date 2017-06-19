@@ -20,12 +20,6 @@
 			<?php echo exchange_cl_build_social_icons( 'footer', array('facebook','twitter','email'), $exchange ); ?>
 			<br />
 
-			<?php if ( is_singular( 'story' ) ) : ?>
-
-			<?php get_template_part( 'parts/content','story-share-cta' ); ?>
-
-			<?php endif; ?>
-
 		</div class="share-cta-wrapper">
 
 	</div><!-- end section-inner -->

@@ -34,16 +34,30 @@ $exchange = new Story( $post ); ?>
 				?>
 			</div> <!-- end story__content -->
 
-			<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
-
 		</article> <!-- end article -->
 
-		<?php if ( $exchange->has_gallery ) : ?>
+		<?php if ( $exchange->has_related_content ) : ?>
 
-			<?php include_once( get_stylesheet_directory() .'/parts/content-story-modal.php' ); ?>
+		<aside class="story__relatedcontent story__section section--relatedcontent section--has_grid section--sandbox section--coloured">
+
+			<div class="section-inner">
+
+			<?php $exchange->publish_related_content( $exchange->type . '__relatedcontent' ); ?>
+
+			</div>
+
+		</aside><!-- related-content -->
 
 		<?php endif; ?>
 
 	</div><!-- end .main-inner -->
 
 </main> <!-- end #main -->
+
+
+
+<?php if ( $exchange->has_gallery ) : ?>
+
+	<?php include_once( get_stylesheet_directory() .'/parts/content-story-modal.php' ); ?>
+
+<?php endif; ?>

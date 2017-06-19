@@ -62,12 +62,56 @@ $exchange = new Story( $post );
 
 		</article> <!-- end article -->
 
-	<?php if ( $exchange->has_gallery ) : ?>
+	<?php if ( is_singular('story') && ! empty( $exchange->storyteller ) ) : ?>
 
-		<?php include_once( get_stylesheet_directory() .'/parts/content-story-modal.php' ); ?>
+		<aside class="story__section section--storyteller">
+
+			<div class="section-inner">
+
+		<?php $exchange->publish_contact_card( $exchange->type ); ?>
+
+			</div><!-- section-inner-->
+
+		</aside>
+
+	<?php endif; ?>
+
+	<?php if ( $exchange->has_related_content ) : ?>
+
+		<div class="story__relatedcontent story__section section--relatedcontent section--has_grid section--sandbox section--coloured">
+
+			<div class="section-inner">
+
+			<?php $exchange->publish_related_content( $exchange->type . '__relatedcontent' ); ?>
+
+			</div>
+
+		</div><!-- related-content -->
 
 	<?php endif; ?>
 
 	</div><!-- end .main-inner -->
 
 </main> <!-- end #main -->
+
+<?php if ( is_singular( 'story' ) ) : ?>
+
+	<section class="article-share-cta story__section section--white section--coloured">
+
+		<?php echo BasePattern::build_edge_svg('top', exchange_slug_to_hex( 'white' ) ); ?>
+
+		<div class="section-inner">
+
+			<?php get_template_part( 'parts/content','story-share-cta' ); ?>
+
+		</div>
+
+	</section>
+
+<?php endif; ?>
+
+<?php if ( $exchange->has_gallery ) : ?>
+
+	<?php include_once( get_stylesheet_directory() .'/parts/content-story-modal.php' ); ?>
+
+<?php endif; ?>

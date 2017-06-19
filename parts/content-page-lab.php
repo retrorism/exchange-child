@@ -18,4 +18,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php include_once( get_stylesheet_directory() . '/parts/content-page-lab-grid.php' ); ?>
 
-<?php include_once( get_stylesheet_directory() . '/parts/content-lab-prototype-pointer.php' ); ?>	
+<?php include_once( get_stylesheet_directory() . '/parts/content-lab-prototype-pointer.php' ); ?>

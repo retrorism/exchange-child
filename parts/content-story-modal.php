@@ -2,7 +2,7 @@
 
 	<button class="modal__button--close" data-close aria-label="Close reveal" type="button">
 
-		<?php $close_button = get_stylesheet_directory() . '/assets/images/svg/T_cross_WEB.svg'; ?>
+		<?php $close_button = get_stylesheet_directory() . '/assets/images/svg/CL_cross_WEB.svg'; ?>
 
 		<?php echo $close_button ? exchange_build_svg( $close_button, true ) : 'X'; ?>
 

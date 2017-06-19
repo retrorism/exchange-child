@@ -165,6 +165,47 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5947eb390d40f",
+            "label": "Story Update Form Page",
+            "name": "story_update_form_page",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5948136ee8b7e",
+            "label": "Add priority category\/categories to 'read more' section for Labs pages",
+            "name": "add_taxonomies_to_lab_related_posts",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -184,5 +225,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495106239
+    "modified": 1497895948
 }

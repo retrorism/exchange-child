@@ -45,6 +45,8 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 		'salmon-4'            => 'e07856', /* Accents on orange */
 		'blue-3'              => '0f9fd6', /* Accents on blue */
 		'blue-4'              => '1f588e',
+		'related-grid-background' => 'f6f2ed',
+		'primary-color' => 'e51145',
 	),
 	'IMAGES' => array(
 		/* 'hq-norm' => 381024,  756 * 504 */
@@ -60,6 +62,8 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 			'emphasisblock',
 			'griditem__pattern',
 			'participant',
+			'story__meta',
+			'storyteller-card',
 		),
 		'programme-logos' => array(
 			'C_P'       => 'Tandem C & P',

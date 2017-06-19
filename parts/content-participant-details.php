@@ -63,7 +63,7 @@
 					<td class="participant__details__item-content"><?php $exchange->publish_contactme(); ?></td>
 				</tr>
 			<?php endif; ?>
-			<?php if ( ! empty( $exchange->details['participant_google_plus_profile_url'] )
+			<?php /* if ( ! empty( $exchange->details['participant_google_plus_profile_url'] )
 				|| ! empty( $exchange->details['participant_facebook_profile_url'] )
 				|| ! empty( $exchange->details['participant_linkedin_profile_url'] )
 				|| ! empty( $exchange->details['participant_twitter_profile_url'] ) ) : ?>
@@ -71,7 +71,7 @@
 					<td class="participant__details__item-label"><?php _e( 'Social Media','exchange' ); ?></td>
 					<td class="participant__details__item-content"><?php echo exchange_cl_build_participant_social_icons( $exchange ); ?></td>
 				</tr>
-			<?php endif; ?>
+			<?php endif; */ ?>
 
 			</tbody>
 		</table>

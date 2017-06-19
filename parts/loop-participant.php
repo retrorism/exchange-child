@@ -32,7 +32,7 @@ $exchange = new Participant( $post );
 
 					<?php if ( $exchange->has_featured_image ) : ?>
 						
-						<?php $exchange->publish_featured_image(); ?>
+						<?php $exchange->publish_featured_image('participant'); ?>
 
 					 <?php else : ?>
 
@@ -52,7 +52,7 @@ $exchange = new Participant( $post );
 								if ( current_theme_supports( 'exchange_participant_types' ) && ! empty( $exchange->participant_type ) ) { 
 									$p_type = $exchange->participant_type->name; 
 								}; ?>
-							<h1 class="entry-title participant__title" itemprop="headline"><?php the_title(); ?> <span class="participant__title__type"><?php echo esc_html( $p_type ); ?></span></h1>
+							<h1 class="entry-title participant__title" itemprop="headline"><?php the_title(); ?><?php /* <span class="participant__title__type"><?phpecho esc_html( $p_type ); ?></span> */ ?></h1>
 
 						</div>
 
@@ -66,12 +66,29 @@ $exchange = new Participant( $post );
 
 		</article> <!-- end article -->
 
-	<?php if ( $exchange->has_gallery ) : ?>
+	<!-- SHARED STORIES -->
+	<?php if ( $exchange->has_stories ) : ?>
+
+	<div class="participant__relatedcontent section--relatedcontent section--has_grid section--sandbox section--coloured">
+		
+		<div class="section-inner">
+
+			<?php $exchange->publish_related_stories(); ?>
+
+		</div><!--section-inner-->
+
+	</div>
+	
+	<?php endif; ?>
+
+	<?php /* if ( $exchange->has_gallery ) : ?>
 
 		<?php include_once( get_stylesheet_directory() .'/parts/content-story-modal.php' ); ?>
 
-	<?php endif; ?>
+	<?php endif; */ ?>
 
 	</div><!-- end .main-inner -->
 
 </main> <!-- end #main -->
+
+
