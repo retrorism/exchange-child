@@ -22,8 +22,7 @@ Stylesheet: Main Stylesheet
 }
 
 .page .main-inner,
-.single-story .main-inner,
-.story__contactblock {
+.single-story .main-inner {
 	max-width: $global-width;
 	margin: 0 auto;
 	position: relative;
@@ -697,7 +696,7 @@ ARTICLE STYLES
 	margin-bottom: 4 * $global-margin;
 }
 
-article {
+article, aside {
 	@include breakpoint( medium ) {
 		padding: 0 $global-padding;
 	}
@@ -3220,7 +3219,12 @@ CITIZENSLAB STORY PAGE STYLES
 	background: $white;
 	overflow: hidden;
 	margin-bottom: 2 * $global-margin;
-	padding-bottom: 2 * $global-padding;
+	padding: 2 * $global-padding;
+}
+
+.storyteller__main-inner--image {
+	max-width: 15em;
+	margin: $global-margin auto;
 }
 
 .storyteller__details__item:first-of-type {
@@ -3567,6 +3571,13 @@ FOOTER STYLES
 
 .story__footer__section {
 	margin-top: 0;
+}
+
+.article-share-cta {
+	padding: $global-padding;
+	.section-inner {
+		padding-top: 0;
+	}
 }
 
 .share-cta-header {

@@ -68,15 +68,13 @@ $exchange = new Story( $post );
 
 			<div class="section-inner">
 
-		<?php $exchange->publish_contact_card( $exchange->type ); ?>
+				<?php $exchange->publish_contact_card( $exchange->type ); ?>
 
 			</div><!-- section-inner-->
 
 		</aside>
 
 	<?php endif; ?>
-
-	<?php if ( $exchange->has_related_content ) : ?>
 
 		<div class="story__relatedcontent story__section section--relatedcontent section--has_grid section--sandbox section--coloured">
 
@@ -87,8 +85,6 @@ $exchange = new Story( $post );
 			</div>
 
 		</div><!-- related-content -->
-
-	<?php endif; ?>
 
 	</div><!-- end .main-inner -->
 

@@ -152,6 +152,8 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 	'POST_TYPES' => array(
 		'available-for-form-updates' => array( 'collaboration', 'participant' ),
 		'participant_archive_posts_per_page' => 100,
+		'related-content' => array( 'story','participant' ),
+		//'related-content' => array( 'story', 'collaboration', 'programme_round', 'page' ),
 	),
 	'BREADCRUMBS' => array(
 		'max-chars-story' => 85,
