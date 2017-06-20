@@ -36,6 +36,9 @@ $exchange = new Story( $post ); ?>
 
 		</article> <!-- end article -->
 
+		<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
+
+
 		<?php if ( $exchange->has_related_content ) : ?>
 
 		<aside class="story__relatedcontent story__section section--relatedcontent section--has_grid section--sandbox section--coloured">
