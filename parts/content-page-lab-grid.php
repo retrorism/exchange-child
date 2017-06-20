@@ -1,9 +1,6 @@
 <section class="section--has_grid section--coloured section--sandbox section--lab_grid">
 	
 	<?php echo BasePattern::build_edge_svg('top', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
-
-
-		<div class="section-inner">
 			
 			<div class="sectionheader lab_grid__sectionheader">
 				<div class="sectionheader-inner">
@@ -23,8 +20,6 @@
 				} ?>
 				
 			</div>
-
-		</div>
 	
 	<?php echo BasePattern::build_edge_svg('bottom', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
 

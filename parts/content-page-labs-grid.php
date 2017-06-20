@@ -4,7 +4,7 @@
 
 	<div class="section-inner">
 
-		<div class="featuredgrid__masonry">
+		<div class="featuredgrid__masonry" data-equalizer>
 				
 			<div class="masonry__grid-sizer"></div>
 			<div class="masonry__gutter-sizer"></div>
@@ -21,8 +21,8 @@
 			
 		</div>
 
-	</div>
+		<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
 
-	<?php echo BasePattern::build_edge_svg('bottom', exchange_slug_to_hex( 'sandbox-cl' ) ); ?>
+	</div>
 
 </section>

@@ -27,21 +27,28 @@ $exchange = new Story( $post ); ?>
 
 			<?php include_once( get_stylesheet_directory() . '/parts/content-page-header.php' ) ?>
 
-			<div class="entry-content story__content" itemprop="articleBody">
-				<?php
-				// Loop through sections.
-				$exchange->publish_sections();
-				?>
-			</div> <!-- end story__content -->
+			<?php if ( 'Labs' !== $exchange->title ) : ?>
+				
+				<div class="entry-content story__content" itemprop="articleBody">
+					<?php
+					// Loop through sections.
+					$exchange->publish_sections();
+					?>
+				</div> <!-- end story__content -->
+
+			<?php endif; ?>
 
 		</article> <!-- end article -->
 
-		<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
+		<?php if ( 'Labs' !== $exchange->title ) : ?>
 
+			<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
 
-		<?php if ( $exchange->has_related_content ) : ?>
+		<?php endif; ?>
 
-		<aside class="story__relatedcontent story__section section--relatedcontent section--has_grid section--sandbox section--coloured">
+		<?php if ( $exchange->has_related_content && 'Labs' !== $exchange->title ) : ?>
+
+		<div class="story__relatedcontent story__section section--relatedcontent section--has_grid section--sandbox section--coloured">
 
 			<div class="section-inner">
 
@@ -49,7 +56,7 @@ $exchange = new Story( $post ); ?>
 
 			</div>
 
-		</aside><!-- related-content -->
+		</div><!-- related-content -->
 
 		<?php endif; ?>
 

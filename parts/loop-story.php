@@ -58,9 +58,9 @@ $exchange = new Story( $post );
 
 			</div> <!-- end story__content -->
 
-			<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
-
 		</article> <!-- end article -->
+
+		<?php include_once( get_stylesheet_directory() . '/parts/content-story-footer.php' ); ?>
 
 	<?php if ( is_singular('story') && ! empty( $exchange->storyteller ) ) : ?>
 
