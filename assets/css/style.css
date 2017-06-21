@@ -6050,7 +6050,8 @@ ARTICLE META STYLES
       padding-right: 1rem; } }
   @media screen and (min-width: 75em) {
       .story__meta-inner .story__meta__tag span {
-        max-width: 14em;
+        display: block;
+        max-width: 11.5em;
         text-overflow: ellipsis;
         overflow: hidden; } }
 
