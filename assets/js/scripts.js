@@ -322,6 +322,21 @@ var masonryIsActive = false;
         if (! FWP.loaded) {
             FWP.paged = 1;
         }
+        if ( $('body').hasClass( 'page-template-archive' ) ) {
+			if ( FWP !== undefined && FWP.template === 'archive_filtered' ) {
+				var archiveHeader = 'Results for: ';
+				for ( var tax in FWP.facets ) {
+					if ( FWP.facets.hasOwnProperty( tax )  ) {
+						for ( var i = 0; i < FWP.facets[tax].length; i++ ) {
+							archiveHeader += FWP.facets[tax][i].replace(/-/g," ");
+						}
+					}
+				}
+				$('.archive__title-wrapper').html('<h1>' + archiveHeader + '</h1>' );
+			}
+			console.log( archiveHeader );
+		}
+
     });
 
 })(jQuery);

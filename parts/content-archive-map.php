@@ -4,9 +4,9 @@
 			<button class="archive__facets__type__reset"><?php _e('Show all','exchange'); ?></button>
 			<?php echo facetwp_display( 'facet', 'member_type' ); ?>
 		</div>
-		<div class="archive__facets__country">
-			<label class="archive__facets__country__label" for="member_country"><?php _e( 'Filter by expertise: ', 'exchange' ); ?></label>
-			<?php echo facetwp_display( 'facet', 'member_country' ); ?>
+		<div class="archive__facets__discipline">
+			<label class="archive__facets__discipline__label" for="discipline"><?php _e( 'Filter by expertise: ', 'exchange' ); ?></label>
+			<?php echo facetwp_display( 'facet', 'discipline' ); ?>
 		</div>
 	</nav>
 <?php endif; ?>

@@ -140,6 +140,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 		),
 		'display_priority_story' => array( 'lab','topic','location','discipline','resource' ),
 		'display_priority_participant' => array( 'discipline','location' ),
+		'post-type-archive-exlusive' => array( 'discipline' ),
 		//'display_priority_collaboration' => array( 'topic','location','discipline','methodology','project_output' ),
 		// Maximum number of tags on grid items
 		'grid_tax_max' => 2,
