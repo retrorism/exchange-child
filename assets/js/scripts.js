@@ -197,6 +197,7 @@ var masonryIsActive = false;
 
 		if ( $('body').hasClass( 'archive' ) 
 			|| $('body').hasClass( 'page-template-archive') 
+			|| $('body').hasClass( 'search') 
 			|| $('.featuredgrid__masonry').length === 1 ) {
 			if ( $('body').hasClass( 'post-type-archive-participant') ) {
 				if ( archiveMap === undefined ) {
