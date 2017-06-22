@@ -6355,6 +6355,12 @@ ARTICLE EXTRAS STYLES
 .button-wrapper {
   text-align: center; }
 
+/*****************************
+CITIZENSLAB FUNDER PAGE STYLES
+******************************/
+.page-id-226 .section--has_grid {
+  background-color: #fefefe; }
+
 /****************************
 CITIZENSLAB LABS PAGE STYLES
 ****************************/
