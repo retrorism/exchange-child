@@ -2081,11 +2081,6 @@ Pattern 20. Emphasis blocks
 	}
 }
 
-.emphasisblock-inner {
-	//padding: $global-padding;
-	//overflow: hidden;
-}
-
 .emphasisblock {
 	.emphasisblock-inner {
 		padding-bottom: 2 * $global-padding;
@@ -2103,6 +2098,11 @@ Pattern 20. Emphasis blocks
 .documentblock--post-it .emphasisblock-inner,
 .emphasisblock--post-it .emphasisblock-inner {
 	position: relative;
+}
+
+.emphasisblock--cta .emphasisblock-inner {
+	padding: $global-padding;
+	overflow: hidden;
 }
 
 .emphasisblock--cta p a,

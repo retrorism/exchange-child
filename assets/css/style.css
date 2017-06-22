@@ -5317,6 +5317,10 @@ Pattern 20. Emphasis blocks
 .emphasisblock--post-it .emphasisblock-inner {
   position: relative; }
 
+.emphasisblock--cta .emphasisblock-inner {
+  padding: 1rem;
+  overflow: hidden; }
+
 .emphasisblock--cta p a,
 .emphasisblock--cta p a:hover {
   background-color: transparent;
