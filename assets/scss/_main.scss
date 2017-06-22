@@ -2448,12 +2448,16 @@ Pattern 21 & 22 Grids
 .masonry__gutter-sizer {
 	width: 0;
 }
+.featuredgrid__griditem {
+	min-width: 100%;
+}
 @include breakpoint( medium ) {
 	.masonry__grid-sizer,
 	.archive__grid__griditem,
 	.featuredgrid__griditem,
 	.search .griditem--participant,
 	.page-template-archive .griditem--participant {
+		min-width: auto;
 		width: 48.5%;
 		padding-bottom: $global-padding;
 	}
