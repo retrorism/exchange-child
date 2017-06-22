@@ -29,7 +29,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 		'blue-bg-cl'          => 'd9ebed', //GIMP ATTEMPT 1: 7fb9c2
 		'purple-bg-cl'        => 'f0e0fd', //GIMP ATTEMPT 1
 		'green-bg-cl'         => 'b8c7a5', //GIMP ATTEMPT 1
-		'yellow-bg-cl'        => 'd9d391', //GIMP ATTEMPT 1
+		'yellow-bg-cl'        => 'e9e5be', //GIMP ATTEMPT 1
 		'black-tandem'        => '4c4d53', /* Tandem styleguide */
 		'white'               => 'fefefe',
 		'yellow-1-web'        => 'fffbdb', /* Section bg webguide */
@@ -173,8 +173,13 @@ if ( empty( $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOUR_PICKERS']['bg'] ) ) {
   if ( !empty ( $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS'] ) ) {
       $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOUR_PICKERS']['bg'] = array(
         $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['pink-cl'],
-        $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['sandbox-cl'],
-        $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['white'],
+        $GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['pink-bg-cl'],
+		$GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['yellow-bg-cl'],
+		$GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['orange-bg-cl'],
+		$GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['blue-bg-cl'],
+		$GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['purple-bg-cl'],
+		$GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['green-bg-cl'],
+		$GLOBALS['EXCHANGE_PLUGIN_CONFIG']['COLOURS']['white'],
       );
   }
 }
