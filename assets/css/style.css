@@ -5302,9 +5302,6 @@ Pattern 20. Emphasis blocks
       padding-left: 1rem;
       padding-right: 1rem; } }
 
-.emphasisblock-inner {
-  overflow: hidden; }
-
 .emphasisblock .emphasisblock-inner {
   padding-bottom: 2rem; }
 
@@ -5331,35 +5328,73 @@ Pattern 20. Emphasis blocks
 .emphasisblock--cta:not(.emphasisblock--white) .emphasisblock__paragraph a:hover {
   color: #fefefe; }
 
+@media screen and (min-width: 40em) {
+  .section__documentblock .post-it-bg::after,
+  .section__emphasisblock .post-it-bg::after {
+    display: block;
+    content: ' ';
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    right: -5rem;
+    bottom: -4rem;
+    background-size: 10em;
+    background-repeat: no-repeat;
+    background-position: bottom right; } }
+
 .emphasisblock--default .emphasisblock-inner,
 .emphasisblock--green-bg-cl .post-it-bg {
   background-color: #b8c7a5;
   border-color: rgba(134, 160, 102, 0.3); }
+  @media screen and (min-width: 40em) {
+    .emphasisblock--default .emphasisblock-inner::after,
+    .emphasisblock--green-bg-cl .post-it-bg::after {
+      background-image: url("../images/png/CL_Urban_Transformation_Bubble.png"); } }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--orange-bg-cl .post-it-bg {
   background-color: #FEEDD9;
   border-color: rgba(251, 190, 118, 0.3); }
+  @media screen and (min-width: 40em) {
+    .section__documentblock .post-it-bg::after,
+    .emphasisblock--orange-bg-cl .post-it-bg::after {
+      background-image: url("../images/png/CL_Democracy_Bubble.png"); } }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--pink-bg-cl .post-it-bg {
   background-color: #fbdce2;
   border-color: rgba(241, 128, 150, 0.3); }
+  @media screen and (min-width: 40em) {
+    .section__documentblock .post-it-bg::after,
+    .emphasisblock--pink-bg-cl .post-it-bg::after {
+      background-image: url("../images/png/CL_Bubble.png"); } }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--blue-bg-cl .post-it-bg {
   background-color: #d9ebed;
   border-color: rgba(148, 199, 204, 0.3); }
+  @media screen and (min-width: 40em) {
+    .section__documentblock .post-it-bg::after,
+    .emphasisblock--blue-bg-cl .post-it-bg::after {
+      background-image: url("../images/png/CL_Education_Bubble.png"); } }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--yellow-bg-cl .post-it-bg {
   background-color: #e9e5be;
   border-color: rgba(207, 199, 114, 0.3); }
+  @media screen and (min-width: 40em) {
+    .section__documentblock .post-it-bg::after,
+    .emphasisblock--yellow-bg-cl .post-it-bg::after {
+      background-image: url("../images/png/CL_Inclusion_Bubble.png"); } }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--purple-bg-cl .post-it-bg {
   background-color: #f0e0fd;
   border-color: rgba(194, 128, 247, 0.3); }
+  @media screen and (min-width: 40em) {
+    .section__documentblock .post-it-bg::after,
+    .emphasisblock--purple-bg-cl .post-it-bg::after {
+      background-image: url("../images/png/CL_Culture_and_Arts_Bubble.png"); } }
 
 .emphasisblock--white .emphasisblock-inner {
   background-color: #fefefe;
@@ -5412,8 +5447,34 @@ Pattern 20. Emphasis blocks
   padding-left: 1.5rem;
   margin-top: 0.75rem;
   background-size: 0.75rem auto;
-  background-position: top 0.25rem left;
+  background-position: center left;
   background-repeat: no-repeat; }
+
+.emphasisblock--pink-bg-cl li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0'?%3E%3Csvg viewBox='0 0 120 120' version='1.1'  xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='%23E51145' /%3E%3C/svg%3E"); }
+
+.emphasisblock--pink-bg-cl .post-it-bg::after {
+  background-image: url("../images/png/CL_Bubble_simple.png"); }
+
+.emphasisblock--yellow-bg-cl li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0'?%3E%3Csvg viewBox='0 0 120 120' version='1.1'  xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='%23B5A825' /%3E%3C/svg%3E"); }
+
+.emphasisblock--blue-bg-cl li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0'?%3E%3Csvg viewBox='0 0 120 120' version='1.1'  xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='%23007586' /%3E%3C/svg%3E"); }
+
+.emphasisblock--purple-bg-cl li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0'?%3E%3Csvg viewBox='0 0 120 120' version='1.1'  xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='%23a22cf5' /%3E%3C/svg%3E"); }
+
+.emphasisblock--purple-bg-cl .post-it-bg {
+  background-image: url("../images/png/CL_Culture_and_Arts_Bubble_simple.png");
+  background-size: 4em;
+  background-position: bottom right; }
+
+.emphasisblock--green-bg-cl li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0'?%3E%3Csvg viewBox='0 0 120 120' version='1.1'  xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='%2372904d' /%3E%3C/svg%3E"); }
+
+.emphasisblock--pink-cl li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0'?%3E%3Csvg viewBox='0 0 120 120' version='1.1'  xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='%23FFF' /%3E%3C/svg%3E"); }
 
 .emphasisblock__imagesvg {
   width: 60%;
@@ -5602,7 +5663,7 @@ Pattern 20.5 Documentblock
 
 .griditem--documentblock .documentblock__paragraph a:hover {
   color: #343438;
-  border-bottom: 2px solid #0f9fd6; }
+  border-bottom: 2px solid #E51145; }
 
 .griditem--documentblock .documentblock__paragraph {
   text-align: left; }
@@ -6503,8 +6564,19 @@ CITIZENSLAB MEMBER PAGE STYLES
 .participant__details__item-content {
   min-width: 10em;
   width: auto; }
-  .participant__details__item-content a:hover {
-    color: #E51145; }
+  .participant__details__item-content a:not(.participant__details__tag),
+  .participant__details__item-content a.participant__details__tag span {
+    border-bottom: 2px solid #E51145;
+    background-color: transparent;
+    transition: background-color 0.5s; }
+    .participant__details__item-content a:not(.participant__details__tag):hover,
+    .participant__details__item-content a.participant__details__tag span:hover {
+      color: #fefefe;
+      background-color: #E51145; }
+  .participant__details__item-content a.participant__details__tag::after {
+    border-bottom-width: 0; }
+  .participant__details__item-content a.participant__details__tag:hover::after {
+    background-color: transparent; }
 
 .single-participant .participant__details__items td {
   padding-bottom: 1rem; }

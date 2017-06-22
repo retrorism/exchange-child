@@ -2083,7 +2083,7 @@ Pattern 20. Emphasis blocks
 
 .emphasisblock-inner {
 	//padding: $global-padding;
-	overflow: hidden;
+	//overflow: hidden;
 }
 
 .emphasisblock {
@@ -2118,40 +2118,86 @@ Pattern 20. Emphasis blocks
 	color: $white;
 }
 
+@include breakpoint(medium) {
+	.section__documentblock .post-it-bg::after,
+	.section__emphasisblock .post-it-bg::after {
+			display: block;
+			content: ' ';
+			height: 10rem;
+			width: 10rem;
+			position: absolute;
+			right: -5rem;
+			bottom: -4rem;
+			background-size: 10em;
+			background-repeat: no-repeat;
+			background-position: bottom right;
+	}
+}
+
 .emphasisblock--default .emphasisblock-inner,
 .emphasisblock--green-bg-cl .post-it-bg {
 	background-color: $green-bg-cl;
 	border-color: transparentize( darken( $green-bg-cl, 20 ), 0.7 );
+	@include breakpoint(medium) {
+		&::after {
+			background-image: url('../images/png/CL_Urban_Transformation_Bubble.png');
+		}
+	}
 }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--orange-bg-cl .post-it-bg {
 	background-color: $orange-bg-cl;
 	border-color: transparentize( darken( $orange-bg-cl, 20 ), 0.7 );
+	@include breakpoint(medium) {
+		&::after {
+			background-image: url('../images/png/CL_Democracy_Bubble.png');
+		}
+	}
 }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--pink-bg-cl .post-it-bg {
 	background-color: $pink-bg-cl;
 	border-color: transparentize( darken( $pink-bg-cl, 20 ), 0.7 );
+	@include breakpoint(medium) {
+		&::after {
+			background-image: url('../images/png/CL_Bubble.png');
+		}
+	}
 }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--blue-bg-cl .post-it-bg {
 	background-color: $blue-bg-cl;
 	border-color: transparentize( darken( $blue-bg-cl, 20 ), 0.7 );
+	@include breakpoint(medium) {
+		&::after {
+			background-image: url('../images/png/CL_Education_Bubble.png');
+		}
+	}
 }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--yellow-bg-cl .post-it-bg {
 	background-color: $yellow-bg-cl;
 	border-color: transparentize( darken( $yellow-bg-cl, 20 ), 0.7 );
+	@include breakpoint(medium) {	
+		&::after {
+			background-image: url('../images/png/CL_Inclusion_Bubble.png');
+		}
+	}
 }
 
 .section__documentblock .post-it-bg,
 .emphasisblock--purple-bg-cl .post-it-bg {
 	background-color: $purple-bg-cl;
 	border-color: transparentize( darken( $purple-bg-cl, 20 ), 0.7 );
+	@include breakpoint(medium) {	
+		&::after {
+			background-image: url('../images/png/CL_Culture_and_Arts_Bubble.png');
+		}
+	}
 }
 
 .emphasisblock--white .emphasisblock-inner {
@@ -2220,8 +2266,48 @@ Pattern 20. Emphasis blocks
 	padding-left: 1.5 * $global-padding;
 	margin-top: 0.75 * $global-margin;
 	background-size: 0.75 * $global-padding auto;
-	background-position: top 0.25 * $global-padding left;
+	background-position: center left;
 	background-repeat: no-repeat;
+}
+
+.emphasisblock--pink-bg-cl {
+ 	li {
+		background-image: svg-url( '<?xml version="1.0"?><svg viewBox="0 0 120 120" version="1.1"  xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="#E51145" /></svg>' );
+	}
+	.post-it-bg::after {
+
+		background-image: url('../images/png/CL_Bubble_simple.png');
+	}
+}
+.emphasisblock--yellow-bg-cl {
+	li {
+		background-image: svg-url( '<?xml version="1.0"?><svg viewBox="0 0 120 120" version="1.1"  xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="#B5A825" /></svg>' );
+	}
+}
+.emphasisblock--blue-bg-cl {
+	li {
+		background-image: svg-url( '<?xml version="1.0"?><svg viewBox="0 0 120 120" version="1.1"  xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="#007586" /></svg>' );
+	}
+}
+.emphasisblock--purple-bg-cl {
+	li {
+		background-image: svg-url( '<?xml version="1.0"?><svg viewBox="0 0 120 120" version="1.1"  xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="#a22cf5" /></svg>' );
+	}
+	.post-it-bg {
+		background-image: url('../images/png/CL_Culture_and_Arts_Bubble_simple.png');
+		background-size: 4em;
+		background-position: bottom right;
+	}
+}
+.emphasisblock--green-bg-cl {
+	li {
+		background-image: svg-url( '<?xml version="1.0"?><svg viewBox="0 0 120 120" version="1.1"  xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="#72904d" /></svg>' );
+	}
+}
+.emphasisblock--pink-cl {
+	li {
+		background-image: svg-url( '<?xml version="1.0"?><svg viewBox="0 0 120 120" version="1.1"  xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="#FFF" /></svg>' );
+	}
 }
 
 .emphasisblock__imagesvg {
@@ -2349,7 +2435,7 @@ Pattern 20.5 Documentblock
 	}
 	.documentblock__paragraph a:hover {
 		color: $black;
-		border-bottom: 2px solid $blue-3;
+		border-bottom: 2px solid $pink-cl;
 	}
 	.documentblock__paragraph {
 		text-align: left;
@@ -3194,8 +3280,21 @@ CITIZENSLAB MEMBER PAGE STYLES
 .participant__details__item-content {
 	min-width: 10em;
 	width: auto;
-	a:hover {
-		color: $pink-cl;
+	a:not(.participant__details__tag),
+	a.participant__details__tag span {
+		border-bottom: 2px solid $pink-cl;
+		background-color: transparent;
+		transition: background-color 0.5s;
+		&:hover {
+			color: $white;
+			background-color: $pink-cl;
+		}
+	}
+	a.participant__details__tag::after {
+		border-bottom-width: 0;
+	}
+	a.participant__details__tag:hover::after {
+		background-color: transparent;
 	}
 }
 
