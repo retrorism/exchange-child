@@ -46,7 +46,7 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 		'blue-3'              => '0f9fd6', /* Accents on blue */
 		'blue-4'              => '1f588e',
 		'related-grid-background' => 'f6f2ed',
-		'primary-color' => 'e51145',
+		'primary-colour' => 'e51145',
 	),
 	'IMAGES' => array(
 		/* 'hq-norm' => 381024,  756 * 504 */
