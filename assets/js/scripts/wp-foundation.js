@@ -284,9 +284,10 @@ var masonryIsActive = false;
 
 		if ( allObjects.map_markers.length > 0 && FWP.settings.matches.length > 0 ) {
 			var matchedMarkers = allObjects.map_markers.filter( function( p ) {
-				if (  FWP.settings.matches.includes( p.id ) ) {
-					return true;
-				}
+				for ( var i = 0; FWP.settings.matches.length > i; i++ )
+					if (  FWP.settings.matches[i] === p.id ) {
+						return true;
+					}
 			});
 			if ( matchedMarkers.length > 0 ) {
 				var refreshObjects = {
