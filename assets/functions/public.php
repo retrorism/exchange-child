@@ -220,4 +220,43 @@ function exchange_cl_get_random_bubble_image() {
 	}
 }
 
+function exchange_cl_breadcrumb_type( $type, $exchange, $divider ) {
+	if ( 'story' !== $exchange->type ) {
+		return $type;
+	}
+	if ( ! empty( $exchange->category) && in_array( $exchange->category->name, array( 'Prototype', 'Resource' ), true ) ) {
+		$parent_link = get_the_permalink( get_page_by_title('Labs') );
+		$type_string = 'Labs';
+		$type = '<li><a href="' . $parent_link . '">' . $type_string . '</a></li>' . $divider;
+	}
+	if ( ! empty( $exchange->ordered_tag_list ) ) {
+		foreach ( $exchange->ordered_tag_list as $term ) {
+			if ( 'lab' !== $term->taxonomy ) {
+				continue;
+			}
+			$lab_parent = get_page_by_title( $term->name );
+			if ( empty( $lab_parent ) || ! $lab_parent instanceof WP_Post ) {
+				continue;
+			}
+			$lab_parent_link = get_the_permalink( $lab_parent );
+			$type .= '<li><a href="' . $lab_parent_link . '">' . $term->name . '</a></li>' . $divider;
+			// Prevent any further lab tags from being added.
+			return $type;
+		}
+	}
+	return $type;
+}
+add_filter( 'exchange_breadcrumb_type','exchange_cl_breadcrumb_type', 10, 3 );
+
+function exchange_cl_breadcrumb_title( $title, $exchange, $divider ) {
+	if ( 'story' !== $exchange->type ) {
+		return $title;
+	}
+	if ( in_array( $exchange->category->name, array( 'Prototype', 'Resource' ), true ) ) {
+		$title = str_replace( '<li>', '<li>' . $exchange->category->name . ': ', $title );
+	}
+	return $title;
+}
+add_filter( 'exchange_breadcrumb_title','exchange_cl_breadcrumb_title', 10, 3 );
+
 
