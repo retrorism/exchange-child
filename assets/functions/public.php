@@ -259,4 +259,21 @@ function exchange_cl_breadcrumb_title( $title, $exchange, $divider ) {
 }
 add_filter( 'exchange_breadcrumb_title','exchange_cl_breadcrumb_title', 10, 3 );
 
+function exchange_cl_section_border( $svg, $pos, $colour ) {
+if ( empty( $colour ) || false === strpos( $colour, '#' ) ) {
+			return;
+		}
+		switch ( $pos ) {
+			case 'top' :
+				$svg = '<svg xmlns="http://www.w3.org/2000/svg" class="section__edge--top" viewBox="0 0 840 20" preserveAspectRatio="none"><path fill="' . $colour . '" d="M445.6 9.4L478 9l25.4 3.4L527 10l21 .3 24.5-1.7 24.6 3 37 .4 26-.7 27 1.7 24-2 24.4.2L752 10l26 1 29.4 1.5L840 9v11.3L0 20v-7h46l29-.3 26.6-2L128 10l32.2-2 20.4 5h28l29.2-1.8 26.5.7 28.4 2 30-4 28-1.7L372 12l25.6.5 28.4.5z"/></svg>';
+				break;
+			case 'bottom' :
+				$svg = '<svg xmlns="http://www.w3.org/2000/svg" class="section__edge--bottom" viewBox="0 0 840 20" preserveAspectRatio="none"><path fill="' . $colour . '" d="M451 7l42.8 3 26.56-1.98L544 8l16.8 1 24.85-1.6 31.04 1.4L650 9l26 1 25.04-1.52 23.5.13 21.7-1.27 22.3 2.55 32.4-2.34L839.5 10l.5-9.27L0 0v9.26L46 7l29.05.28 27.9.48L128 10l28-2 24.6-1h28.1l29.08 1.8 26.5-.73 30.12 3.16 28.28-1.47 27.62-.94 26.02 2.26 21.32-3.56L426 7z"/></svg>';
+				break;
+			default:
+				return;
+		}
+		return $svg;
+}
+add_filter( 'exchange_section_border','exchange_cl_section_border', 10, 3 );
 
