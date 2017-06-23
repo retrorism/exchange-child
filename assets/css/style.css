@@ -6372,7 +6372,7 @@ ARTICLE EXTRAS STYLES
 /*****************************
 CITIZENSLAB FUNDER PAGE STYLES
 ******************************/
-.page-id-226 .section--has_grid {
+.page-id-226 .section--has_grid:not(.story__relatedcontent) {
   background-color: #fefefe; }
 
 /****************************
