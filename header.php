@@ -127,6 +127,7 @@
 			.fonts-loaded h6,
 			.fonts-loaded .top-bar a,
 			.fonts-loaded .single-participant .participant__details__item-label,
+			.fonts-loaded .page .participant__details__item-label,
 			.fonts-loaded .single-story .storyteller__details__item {
 				font-family: appo_paintregular, sans-serif;
 				font-weight: normal;

@@ -126,6 +126,13 @@
                 "operator": "==",
                 "value": "story"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
         ]
     ],
     "menu_order": 1,
@@ -143,5 +150,5 @@
     ],
     "active": 1,
     "description": "Sidebar for story editor",
-    "modified": 1493282791
+    "modified": 1498223044
 }
