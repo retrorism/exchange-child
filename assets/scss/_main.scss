@@ -26,7 +26,9 @@ Stylesheet: Main Stylesheet
 	max-width: $global-width;
 	margin: 0 auto;
 	position: relative;
-	padding-top: 2rem;
+	@include breakpoint( medium ) {
+		padding-top: 2rem;
+	}
 }
 
 /*********************
@@ -70,6 +72,10 @@ a, a:visited {
 	&:hover {
 		border-bottom: 2px solid $white;
 	}
+}
+
+button:focus {
+	outline-color: $pink-cl;
 }
 
 .button--large,
@@ -835,7 +841,10 @@ Pattern styles
 ***************/
 
 .section__slice {
-	margin: 4 * $global-margin 0 2 * $global-margin;
+	margin: 2 * $global-margin 0 2 * $global-margin;
+	@include breakpoint( medium ) {
+		margin-bottom: 4 * $global-margin;
+	}
 }
 
 .section__slice p,
@@ -1307,7 +1316,14 @@ Pattern 9. Image
 	z-index: 10;
 	position: relative;
 	z-index: 10;
-	padding: $global-padding;
+}
+
+.section__imageduo {
+	margin-bottom: 0;
+	@include breakpoint( medium ) {
+		padding: $global-padding;
+		margin-bottom: 2 * $global-margin;
+	}
 }
 
 .imageduo__wrapper {
@@ -1718,16 +1734,6 @@ li.team-member__story-link {
 	}
 }
 
-.section--has_contact_details.section--yellow-1-web {
-	.button--small {
-		border-color: $yellow-3;
-	}
-	.button--small:hover {
-		background-color: $yellow-3;
-		color: white;
-	}
-}
-
 .contactblock__image {
 	@include breakpoint( small ) {
 		@include grid_column( 7 );
@@ -1807,6 +1813,11 @@ select {
 	&:first-child {
 		padding-left: 0;
 	}
+}
+
+.gform_wrapper ul.gfield_checkbox li label, 
+.gform_wrapper ul.gfield_radio li label {
+	width: auto !important;
 }
 
 .archive__filter select {
@@ -1902,14 +1913,14 @@ a.token-form__submit {
 	top: 50%;
 	width: 100%;
 	transform: translateY(-50%);
-	color: $yellow-2;
+	color: $pink-cl;
 	&.loader-pointer {
 		text-align: center;
 	}
 	&.loader-wrapper {
 		display: none;
 		margin: auto 40%;
-		border: 1px solid $yellow-2;
+		border: 1px solid $pink-cl;
 		width: 20%;
 		height: 1rem;
 		padding: 0.25 * $global-padding 0;
@@ -2619,7 +2630,7 @@ section.section--has_grid {
 .relatedgrid__griditem,
 .archive__grid__griditem {
 	margin-bottom: $global-margin;
-	@include breakpoint( medium ) {
+	@include breakpoint( large ) {
 		margin-bottom: 0;
 	}
 }
@@ -2769,6 +2780,8 @@ a.read-full-story,
 	}
 	.participant__image {
 		padding: $global-padding 2 * $global-padding;
+		max-width: 15rem;
+		margin: auto;
 	}
 	.griditem__title,
 	.griditem__subtitle {
@@ -3214,11 +3227,16 @@ CITIZENSLAB MEMBER PAGE STYLES
 
 .participant__title__type,
 .storyteller__title__type {
-	position: relative;
-	top: -0.0625em;
 	font-size: 95%;
-	include breakpoint( medium ) {
+	display: block;
+	@include breakpoint( medium ) {
+		display: inline;
+		position: relative;
+		top: -0.0625em;
 		margin-left: 0.75 * $global-margin;
+		&::before {
+			content: '| ';
+		}
 	}
 }
 
@@ -3263,9 +3281,11 @@ CITIZENSLAB MEMBER PAGE STYLES
 ,
 .storyteller__main-inner--info {
 	@include grid-column( 12 );
+	@include grid-column-collapse;
 	@include breakpoint( large ) {
 		@include grid-column( 9.5 );
 		@include grid-column-end;
+		@include grid-column-uncollapse;
 	}
 }
 

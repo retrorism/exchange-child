@@ -22,7 +22,7 @@
 				if ( current_theme_supports( 'exchange_participant_types' ) && ! empty( $exchange->participant_type ) ) { 
 					$p_type = $exchange->participant_type->name; 
 				}; ?>
-			<h4 class="entry-title storyteller__title" itemprop="headline"><?php echo esc_html( $exchange->name ); ?><span class="storyteller__title__type"><?php echo ' | ' . esc_html( $p_type ); ?></span></h4>
+			<h4 class="entry-title storyteller__title" itemprop="headline"><?php echo esc_html( $exchange->name ); ?><span class="storyteller__title__type"><?php echo esc_html( $p_type ); ?></span></h4>
 
 		</div>
 

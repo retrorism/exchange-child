@@ -15,7 +15,7 @@
 
 		<div class="share-cta-wrapper">
 
-			<p class="share-cta-header share-cta-social"><?php printf( __( 'Share this %s with friends ( or take it with you! )','exchange'), $exchange->type ); ?></p>
+			<p class="share-cta-header share-cta-social"><?php printf( __( 'Share this %s:','exchange'), $exchange->type ); ?></p>
 
 			<?php echo exchange_cl_build_social_icons( 'footer', array('facebook','twitter','email'), $exchange ); ?>
 			<br />
