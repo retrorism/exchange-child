@@ -65,6 +65,9 @@ require_once( get_stylesheet_directory().'/assets/functions/public.php' );
 // Customize related-post-functions
 require_once( get_stylesheet_directory().'/assets/functions/related-posts.php' );
 
+// Customize Gravity Forms functionality
+require_once( get_stylesheet_directory().'/assets/functions/admin-gravity.php' );
+
 
 if ( is_admin() ) {
 
