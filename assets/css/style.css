@@ -6389,6 +6389,9 @@ CITIZENSLAB LABS PAGE STYLES
   padding-top: 0;
   max-width: inherit; }
 
+.page-id-118 article {
+  padding: 0; }
+
 .page-id-118 .story__footer {
   background-color: transparent; }
   .page-id-118 .story__footer .section-inner {
@@ -6402,10 +6405,6 @@ CITIZENSLAB LABS PAGE STYLES
 /****************************
 CITIZENSLAB LAB SUBPAGE STYLES
 ****************************/
-@media screen and (min-width: 40em) {
-  .parent-pageid-118 .section--has_grid.section--lab_grid .section-inner {
-    padding: 0; } }
-
 .parent-pageid-118 .lab_grid__sectionheader {
   text-align: center;
   margin: 2rem; }

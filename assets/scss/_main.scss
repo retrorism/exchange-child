@@ -3134,6 +3134,9 @@ CITIZENSLAB LABS PAGE STYLES
 		padding-top: 0;
 		max-width: inherit;
 	}
+	article {
+		padding: 0;
+	}
 	.story__footer {
 		background-color: transparent;
 		.section-inner {
@@ -3152,11 +3155,6 @@ CITIZENSLAB LAB SUBPAGE STYLES
 ****************************/
 
 .parent-pageid-118 {
-	.section--has_grid.section--lab_grid .section-inner {
-		@include breakpoint( medium ) {
-			padding: 0;
-		}
-	}
 	.lab_grid__sectionheader {
 		text-align: center;
 		margin: 2 * $global-margin;
