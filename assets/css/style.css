@@ -4329,6 +4329,9 @@ Pattern 5. Hero / cover image
     text-align: right;
     padding-right: 1rem; }
 
+.story__header__lowres-image-wrapper img {
+  min-width: 100%; }
+
 /*********************
 Pattern 6. Paragraph
 *********************/
