@@ -187,6 +187,22 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
+        },
+        {
+            "key": "field_59522acb0d103",
+            "label": "Story Update Form",
+            "name": "story_update_form",
+            "type": "gravity_forms_field",
+            "instructions": "Select the Gravity Forms form currently in use for story updates",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 0,
+            "allow_multiple": 0
         }
     ],
     "location": [
@@ -206,5 +222,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498137339
+    "modified": 1498557170
 }
