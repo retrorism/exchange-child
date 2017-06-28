@@ -950,16 +950,31 @@ Pattern 4. Tag list
 
 .story__meta__item--tags ol,
 .griditem__tags ol,
-.participant__details__tags ol {
+.participant__details__tags ol,
+.griditem__meta__storytellers ul {
 	list-style: none;
 	margin-left: 0;
 	margin-bottom: 0;
 }
 
+.griditem__meta__storytellers,
+.griditem__meta__storytellers ul {
+	display: inline;
+}
+
 .griditem__tags ol li,
 .story__meta__item--tags ol li,
-.participant__details__tags ol li {
+.participant__details__tags ol li,
+.griditem__meta__storytellers ul li {
 	display: inline-block;
+}
+
+.griditem__meta__storytellers ul li:not(:last-of-type)::after {
+	content: ', ';
+}
+
+.griditem__meta__divider {
+	margin: 0 0.2 * $global-margin;
 }
 
 .griditem__tags ol li,

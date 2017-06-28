@@ -22,6 +22,20 @@
 			<?php echo exchange_create_link( $exchange, false ); ?>
 				<h4 class="griditem__title"><?php echo $exchange->title; ?></h4>
 			</a>
+			
+			<div class='griditem__meta'>
+			<!-- STORYTELLER -->
+			<?php if ( ! empty( $exchange->storyteller ) ) : ?>
+				<div class="griditem__meta__storytellers">
+					<ul>
+					<?php foreach ( $exchange->storyteller as $s ) : ?>
+						<li class="griditem__meta__storyteller"><?php echo esc_html( $s->name ); ?></li>
+					<?php endforeach; ?>
+					</ul>
+				</div><span class="griditem__meta__divider">|</span> 
+			<?php endif; ?>
+			<span class="griditem__meta__date"><?php echo mysql2date('F jS, Y', $exchange->date ); ?></span>
+			</div>
 
 			<!-- INTRO / EXCERPT -->
 			<?php if ( ! empty( $exchange->has_editorial_intro ) ) : ?>
