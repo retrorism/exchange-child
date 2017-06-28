@@ -1300,7 +1300,7 @@ Pattern 8. Embedded Video
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
-	//overflow: hidden;
+	overflow: hidden;
 	max-width: 100%;
 	iframe,
 	object,
@@ -1317,7 +1317,6 @@ Pattern 8. Embedded Video
 .homepage__video {
 	width: 100%;
 	@include breakpoint( xlarge ) {
-		background-color: #000;
 		iframe, object, embed {
 			width: 100%;
 			--widthV: 1106px;

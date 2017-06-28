@@ -4503,6 +4503,7 @@ Pattern 8. Embedded Video
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
+  overflow: hidden;
   max-width: 100%; }
   .flex-video iframe,
   .flex-video object,
@@ -4516,14 +4517,12 @@ Pattern 8. Embedded Video
 .homepage__video {
   width: 100%; }
   @media screen and (min-width: 75em) {
-    .homepage__video {
-      background-color: #000; }
-      .homepage__video iframe, .homepage__video object, .homepage__video embed {
-        width: 100%;
-        --widthV: 1106px;
-        --heightV: calc(var(--widthV) * 0.5625);
-        width: var(--widthV);
-        height: var(--heightV); } }
+    .homepage__video iframe, .homepage__video object, .homepage__video embed {
+      width: 100%;
+      --widthV: 1106px;
+      --heightV: calc(var(--widthV) * 0.5625);
+      width: var(--widthV);
+      height: var(--heightV); } }
 
 /****************
 Pattern 9. Image
