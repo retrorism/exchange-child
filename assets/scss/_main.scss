@@ -1323,6 +1323,7 @@ Pattern 8. Embedded Video
 			--heightV: calc(var(--widthV) * 0.5625);
 			width: var(--widthV);
 			height: var(--heightV);
+			min-height: 622px;
 		}
 	}
 }
