@@ -1296,7 +1296,9 @@ Pattern 8. Embedded Video
 *************************/
 
 /* https://www.advancedcustomfields.com/resources/oembed/ */
-
+.homepage__video iframe {
+	visibility: hidden;
+},
 .flex-video {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -1306,6 +1308,7 @@ Pattern 8. Embedded Video
 	iframe,
 	object,
 	embed {
+		visibility: visible;
 		position: absolute;
 		top: 0;
 		left: 0;
