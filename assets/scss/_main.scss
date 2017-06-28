@@ -1316,6 +1316,7 @@ Pattern 8. Embedded Video
 
 .homepage__video {
 	width: 100%;
+	background: #000;
 	@include breakpoint( xlarge ) {
 		iframe, object, embed {
 			width: 100%;

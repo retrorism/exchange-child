@@ -4515,7 +4515,8 @@ Pattern 8. Embedded Video
     height: 100%; }
 
 .homepage__video {
-  width: 100%; }
+  width: 100%;
+  background: #000; }
   @media screen and (min-width: 75em) {
     .homepage__video iframe, .homepage__video object, .homepage__video embed {
       width: 100%;

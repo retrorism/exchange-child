@@ -38,8 +38,8 @@
                 "class": "",
                 "id": ""
             },
-            "width": "",
-            "height": ""
+            "width": 0,
+            "height": 0
         },
         {
             "key": "field_5908b551758e6",
@@ -137,5 +137,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1493743066
+    "modified": 1498664290
 }
