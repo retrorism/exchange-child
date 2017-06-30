@@ -3651,7 +3651,6 @@ nav.top-bar {
           direction: rtl; } }
 
 .top-bar__center {
-  background-color: #fefefe;
   position: absolute;
   width: 100%;
   height: 100%;

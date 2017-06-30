@@ -429,7 +429,6 @@ nav.top-bar {
 }
 
 .top-bar__center {
-	background-color: $white;
 	@include breakpoint( small ) {
 		position: absolute;
 		width: 100%;
