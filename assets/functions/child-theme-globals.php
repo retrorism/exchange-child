@@ -50,12 +50,11 @@ $GLOBALS['EXCHANGE_PLUGIN_CONFIG'] = array(
 	),
 	'IMAGES' => array(
 		/* 'hq-norm' => 381024,  756 * 504 */
-		'hq-norm'       => 345600, /* 720 * 480 */
-		'size-in-story' => 'medium-large',
-		'fallback_image_att_id' => 970,
-		'no-lazy-loading' => array(
-			'contactblock',
-		),
+		'hq-norm'                => 345600, /* 720 * 480 */
+		'header-image-min-width' => 1138,
+		'size-in-story'          => 'medium-large',
+		'fallback_image_att_id'  => 970,
+		'no-lazy-loading'        => array( 'contactblock' ),
 		'no-caption' => array(
 			'contactblock',
 			'griditem',
