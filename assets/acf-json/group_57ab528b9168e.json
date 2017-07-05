@@ -24,6 +24,38 @@
             "allow_archives": 1
         },
         {
+            "key": "field_595ca6a1ef56a",
+            "label": "Facebook Page URL",
+            "name": "facebook_page_url",
+            "type": "url",
+            "instructions": "Change the URL for the Facebook icon in the footer here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_595ca6ef143aa",
+            "label": "Twitter URL",
+            "name": "twitter_url",
+            "type": "url",
+            "instructions": "Change the URL for the Twitter icon in the footer here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_590c58eba8d21",
             "label": "Stories Overview Page Introduction",
             "name": "story_archive_page_introduction",
@@ -187,22 +219,6 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
-        },
-        {
-            "key": "field_59522acb0d103",
-            "label": "Story Update Form",
-            "name": "story_update_form",
-            "type": "gravity_forms_field",
-            "instructions": "Select the Gravity Forms form currently in use for story updates",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "allow_null": 0,
-            "allow_multiple": 0
         }
     ],
     "location": [
@@ -222,5 +238,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498557170
+    "modified": 1499244294
 }
