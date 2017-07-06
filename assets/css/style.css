@@ -4435,16 +4435,18 @@ h3.share-cta-header,
     top: 0;
     left: 0; }
 
-.sectionheader--decorated_header {
+.section__slice.sectionheader--decorated_header {
+  margin-top: 4rem;
+  margin-bottom: -1rem;
   text-align: center; }
-  .sectionheader--decorated_header h4 {
+  .section__slice.sectionheader--decorated_header h4 {
     position: relative;
     display: inline-block;
     min-width: 6em; }
-  .sectionheader--decorated_header span {
+  .section__slice.sectionheader--decorated_header span {
     position: relative;
     z-index: 3; }
-  .sectionheader--decorated_header .sectionheader__decoration {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration {
     position: absolute;
     z-index: 2;
     height: 6em;
@@ -4453,43 +4455,46 @@ h3.share-cta-header,
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center center; }
-  .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--pink-cl {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--pink-cl {
     background-image: url("../images/png/CL_Default_Bubble_simple.png"); }
-  .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--green-cl {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--green-cl {
     background-image: url("../images/png/CL_Urban_Transformation_Bubble_simple.png"); }
-  .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--purple-cl {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--purple-cl {
     background-image: url("../images/png/CL_Culture_and_Arts_Bubble_simple.png"); }
-  .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--yellow-cl {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--yellow-cl {
     background-image: url("../images/png/CL_Inclusion_Bubble_simple.png"); }
-  .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--blue-cl {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--blue-cl {
     background-image: url("../images/png/CL_Education_Bubble_simple.png"); }
-  .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--orange-cl {
+  .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--orange-cl {
     background-image: url("../images/png/CL_Democracy_Bubble_simple.png"); }
   @media screen and (min-width: 40em) {
-    .sectionheader--decorated_header.sectionheader--left .sectionheader__decoration {
-      left: 0;
-      transform: translateX(-3em); }
-    .sectionheader--decorated_header.sectionheader--right .sectionheader__decoration {
-      right: 0;
-      transform: translateX(3em); }
-    .sectionheader--decorated_header .sectionheader__decoration {
-      position: absolute;
-      z-index: 2;
-      height: 6em;
-      width: 6em;
-      top: -2.5em; }
-      .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--pink-cl {
-        background-image: url("../images/png/CL_Default_Bubble.png"); }
-      .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--green-cl {
-        background-image: url("../images/png/CL_Urban_Transformation_Bubble.png"); }
-      .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--purple-cl {
-        background-image: url("../images/png/CL_Culture_and_Arts_Bubble.png"); }
-      .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--yellow-cl {
-        background-image: url("../images/png/CL_Inclusion_Bubble.png"); }
-      .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--blue-cl {
-        background-image: url("../images/png/CL_Education_Bubble.png"); }
-      .sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--orange-cl {
-        background-image: url("../images/png/CL_Democracy_Bubble.png"); } }
+    .section__slice.sectionheader--decorated_header {
+      margin-top: 2rem;
+      margin-bottom: 0; }
+      .section__slice.sectionheader--decorated_header.sectionheader--left .sectionheader__decoration {
+        left: 0;
+        transform: translateX(-3em); }
+      .section__slice.sectionheader--decorated_header.sectionheader--right .sectionheader__decoration {
+        right: 0;
+        transform: translateX(3em); }
+      .section__slice.sectionheader--decorated_header .sectionheader__decoration {
+        position: absolute;
+        z-index: 2;
+        height: 6em;
+        width: 6em;
+        top: -2.5em; }
+        .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--pink-cl {
+          background-image: url("../images/png/CL_Default_Bubble.png"); }
+        .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--green-cl {
+          background-image: url("../images/png/CL_Urban_Transformation_Bubble.png"); }
+        .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--purple-cl {
+          background-image: url("../images/png/CL_Culture_and_Arts_Bubble.png"); }
+        .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--yellow-cl {
+          background-image: url("../images/png/CL_Inclusion_Bubble.png"); }
+        .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--blue-cl {
+          background-image: url("../images/png/CL_Education_Bubble.png"); }
+        .section__slice.sectionheader--decorated_header .sectionheader__decoration.sectionheader__decoration--orange-cl {
+          background-image: url("../images/png/CL_Democracy_Bubble.png"); } }
 
 .sectionheader__text--white {
   color: #fefefe; }

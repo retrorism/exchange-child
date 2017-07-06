@@ -1202,7 +1202,9 @@ h3.share-cta-header,
 	}
 }
 
-.sectionheader--decorated_header {
+.section__slice.sectionheader--decorated_header {
+	margin-top: 4 * $global-margin;
+	margin-bottom: -1 * $global-margin;
 	text-align: center;
 	h4 {
 		position: relative;
@@ -1246,6 +1248,8 @@ h3.share-cta-header,
 		}
 	}
 	@include breakpoint( medium ) {
+		margin-top: 2 * $global-margin;
+		margin-bottom: 0;
 		&.sectionheader--left .sectionheader__decoration {
  			left: 0;
 			transform: translateX( -3em );
@@ -1281,9 +1285,6 @@ h3.share-cta-header,
 		}
 	}
 }
-
-
-
 
 .sectionheader__text--white {
 	color: $white;
