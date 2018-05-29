@@ -16,10 +16,15 @@
 					title="<?php _e('Find out more about this license','exchange'); ?>"
 					target="_blank">
 					<?php echo __( 'CC BY-NC 3.0','exchange'); ?></a> -->
-				<?php $page = get_option('options_imprint_page_link' );
-					if ( ! empty( $page ) ) {
-						echo ' | ' . exchange_create_link( $page );
-					} ?>
+				<?php 
+				$imprint_page = get_option('options_imprint_page_link' );
+				$privacy_page = get_option('wp_page_for_privacy_policy');
+				if ( ! empty( $imprint_page ) ) {
+					echo ' | ' . exchange_create_link( $imprint_page );
+				}
+				if ( ! empty( $privacy_page ) ) {
+					echo ' | ' . exchange_create_link( $privacy_page );
+				} ?>
 				</p>
 			</section>
 		</footer> <!-- end .footer -->
